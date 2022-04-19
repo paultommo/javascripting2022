@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Testimonials from "../components/testimonials"
 
+console.log(Seo.title)
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
@@ -49,9 +51,11 @@ const IndexPage = () => (
 
         <ul className="listings">
           
-          <li>Build high-performing & super-secure Wordpress websites</li>   
-          <li>Develop a wide range of Javascript applications namely with ReactJS</li>
-          <li>Promise to use the latest skills and technologies available on the web</li>
+          {/*<li>Build high-performing & super-secure Wordpress websites</li>   */}
+          {/*<li>Develop a wide range of Javascript applications namely with ReactJS</li>*/}
+          <li>Build you a super-quick Wordpress website</li>
+          <li>Ensure your site is highly optimised for SEO</li>
+          <li>Offer you optimum security for your website</li>
           <li>Provide 15+ years of web development experience</li>      
           <li>Offer excellent communication and management skills throughout any project</li>
 
@@ -68,8 +72,8 @@ const IndexPage = () => (
           <li>A modern and superior approach to creating a Wordpress website</li>   
           <li>Headless combines the simplicity of a traditional Wordpress CMS alongside a bespoke front-end</li>
           <li>High performance and therefore great SEO</li>
-          <li>Very few plugins, making site maintenance much easier</li>      
-          <li>Using a super-modern stack of tools, namely GatsbyJS, WPGraphQL and Netlify</li>
+          <li>Very few plugins, making site maintenance much easier and cheaper!</li>      
+          <li>Using a very modern stack of tools, namely GatsbyJS, WPGraphQL and Netlify</li>
 
         </ul>
 

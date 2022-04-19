@@ -7,8 +7,8 @@ const SEO = () => {
     const titleTemplate= `%s`
     const description= `Hello! I'm Paul Tomlinson. Specialist in Headless Wordpress web development and all things Javascript`
     const url= `https://javascripting.uk` // No trailing slash!
-    //const siteUrl= `https://javascripting.uk` //change this when changing URL
-    const image= '/images/static.png' // Path to your image you placed in the 'static' folder
+    // const siteUrl= `https://javascripting.uk` //change this when changing URL
+    const image= 'https://javascripting.uk/images/static-pt.png' // Path to your image you placed in the 'static' folder
     //const author= `@paultommmo`
     const twitterUsername= '@paultommmo'
   

@@ -1,0 +1,8 @@
+
+
+SEO
+-  add gatsby-plugin-sitemap & gatsby-plugin-robots-txt
+
+Robots.txt will appear on the root and point at the sitemap
+
+Use https://seositecheckup.com/ to check
