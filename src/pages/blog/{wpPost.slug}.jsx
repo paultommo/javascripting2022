@@ -61,9 +61,6 @@ const wpPost = ({
 
   const {title, content} = wpPost
 
-  console.clear()
-  console.log(content)
-
   return (
     <Layout>
       {seoPage ?
