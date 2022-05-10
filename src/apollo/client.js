@@ -2,7 +2,7 @@ import ApolloClient from 'apollo-boost';
 import fetch from 'isomorphic-fetch';
 
 const client = new ApolloClient({
- 	uri: 'https://javascripting.uk/jsgraphql/graphql',
+ 	uri: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
     fetch,
 });
 

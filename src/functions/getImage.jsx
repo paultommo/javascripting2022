@@ -1,62 +1,72 @@
+function sortList(list){
+
+	return list.sort((a,b) => {
+        return parseFloat(a.width) - parseFloat(b.width);
+    });
+ 
+}
+
 export default function getImage(array){
 
 	let item
-	if (typeof window !== "undefined") {
+	if (typeof window !== "undefined" && array) {
 
 		const width = window.innerWidth
-		// console.log(width)
+		
+		const sortedArray = sortList(array)
+		const thumbnail = sortedArray.filter(array => array.name ==='thumbnail')
+		const medium = sortedArray.filter(array => array.name ==='medium')
+		const medium_large = sortedArray.filter(array => array.name ==='medium_large')
+		const large = sortedArray.filter(array => array.name ==='large')
+		
 		switch(true){
 
 			case width < 600:
-				// console.log('1---------')
-				// item = array.find(a => a.width == '300')
-				// item = array.find(a => a.name === 'medium')
-				item = array.find(a => a.name === 'medium_large')
-				// item = array.find(a => a.name === 'large')
+				
+				if(medium_large[0]){
+
+					item = medium_large[0]
+				}
+				else{
+
+					item = large[0]
+
+				}
 
 			break;
-			case width > 600 && width < 1200:
-				// console.log('2---------')	
-				// item = array.find(a => a.width == '768')
-				item = array.find(a => a.name === 'medium_large')
-				// item = array.find(a => a.name === 'large')
+			case width >= 600:
+				
+				if(large[0]){
 
-			break;
-			case width > 1200:
-				// console.log('3---------')	
-				// item = array.find(a => a.width == '1024')
-				item = array.find(a => a.name === 'large')
+					item = large[0]
+				}
+				else{
+
+					item = medium_large[0]
+
+				}
 
 			break;
 			default:
-				// console.log('4------------')
-				// item = array.find(a => a.name === 'medium')
-				item = array.find(a => a.name === 'large')
-
+			
 			break;
 
 		}
-	}
-	else{
-		// console.log('5----------------')
-		// item = array.find(a => a.width = '300')
-		// item = array.find(a => a.name === 'medium')
-		item = array.find(a => a.name === 'large')
 
-	}
-	
+		
+		if(item && item.sourceUrl){
 
-	// console.log(array)
-	// console.log(item)
-	// console.log(item.sourceUrl)
+			return item.sourceUrl
 
-	if(item){
+		}
+		else{
 
-		return item.sourceUrl	
-	}
-	else{
+			return null
+		}
 
-		return array[0].sourceUrl
+	}else{
+
+		return null
 	}
 	
 }

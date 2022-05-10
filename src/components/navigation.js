@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
           <li><Link activeClassName="active" to="/about/">About</Link></li>
           <li><Link activeClassName="active" to="/skills/">Skills</Link></li>
           <li><Link activeClassName="active" to="/portfolio/">Portfolio</Link></li>
-          {/*<li><li><Link activeClassName="active" to="/contact/">Contact</Link></li></li>*/}
+          <li><li><Link activeClassName="active" to="/blog/">Blog</Link></li></li>
           <li>
             <a href="mailto:paul@javascripting.uk"><StaticImage
               src="../images/email.png"

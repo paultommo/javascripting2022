@@ -1,31 +1,21 @@
-
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SeoBasic from "../components/seo"
+import Layout from "../../components/layout"
+import SeoBasic from "../../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import ReactHtmlParser from "react-html-parser"
-import getImage from "../functions/getImage"
+import getImage from "../../functions/getImage"
 import { useQuery } from "react-apollo"
-import FadeIn from "react-lazyload-fadein";
+import { motion } from "framer-motion";
 import { Link } from "gatsby"
 
 export const query = graphql`
-  query {
-   allWpPortfolio {
-    edges {
-      node {
-        thumb {
-          thumb {
-            sourceUrl
-          }
-        }
-        title
-        slug
-      }
+  query($slug: String) {
+    wpPost(slug: {eq: $slug}) {
+      title
+      content
     }
-  }
-    seoPage:wpPage(slug: {eq: "portfolio"}) {
+    seoPage:wpPost(slug: {eq: $slug}) {
     nodeType
     title
     uri
@@ -58,44 +48,49 @@ export const query = graphql`
             raw
         }
     }
-    }
+  }
   }
 `
 
 
-const IndexPage = ({
+const wpPost = ({
   data: {
-    allWpPortfolio, seoPage
+    wpPost, seoPage
   },
 }) => {
 
-  const {title, slug, thumb } =  allWpPortfolio
+  const {title, content} = wpPost
 
-  return(
-  <Layout>
-
-     {seoPage ?
+  return (
+    <Layout>
+      {seoPage ?
         <Seo post={seoPage} />
       :
         <SeoBasic title={title} />
-     }
+      }
 
-     <div className="portfolio">
+       <div className="work-container">
+         
+         <div>
 
-     { allWpPortfolio.edges.map((item, index) => (
+         <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ duration:0.5, delay:0 }}>
+
+          <div className='work' >
+          {/*<h1 className='h1WorkItem' >{title}</h1>*/}
+
+          <div className='copyLarge workCopy'>{  ReactHtmlParser(content) }</div>
+
+         
+        </div></motion.div>
 
 
-      <Link rel="prefetch" key={index} to={`/work/${item.node.slug}`} ><div>  <FadeIn height={300}>{onload => (<img className="work" alt={item.node.title} onLoad={onload} src={item.node.thumb.thumb.sourceUrl} />)}</FadeIn></div></Link>
-      
+         </div>
 
-      ))
-    }
+      </div>
 
-    </div>
-  
-    
-  </Layout>
+    </Layout>
   )
 }
 
-export default IndexPage
+
+export default wpPost

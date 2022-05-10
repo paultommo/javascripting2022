@@ -12,20 +12,25 @@ import { Link } from "gatsby"
 
 export const query = graphql`
   query {
-   allWpPortfolio {
+   allWpPost {
     edges {
       node {
-        thumb {
-          thumb {
-            sourceUrl
+        slug
+        title
+        featuredImage {
+          node {
+            mediaDetails {
+              sizes {
+                sourceUrl
+                width
+              }
+            }
           }
         }
-        title
-        slug
       }
     }
   }
-    seoPage:wpPage(slug: {eq: "portfolio"}) {
+    seoPage:wpPage(slug: {eq: "posts"}) {
     nodeType
     title
     uri
@@ -62,14 +67,13 @@ export const query = graphql`
   }
 `
 
-
 const IndexPage = ({
   data: {
-    allWpPortfolio, seoPage
+    allWpPost, seoPage
   },
 }) => {
 
-  const {title, slug, thumb } =  allWpPortfolio
+  const {title, slug, featuredImage } =  allWpPost
 
   return(
   <Layout>
@@ -82,11 +86,9 @@ const IndexPage = ({
 
      <div className="portfolio">
 
-     { allWpPortfolio.edges.map((item, index) => (
+     { allWpPost.edges.map((item, index) => (
 
-
-      <Link rel="prefetch" key={index} to={`/work/${item.node.slug}`} ><div>  <FadeIn height={300}>{onload => (<img className="work" alt={item.node.title} onLoad={onload} src={item.node.thumb.thumb.sourceUrl} />)}</FadeIn></div></Link>
-      
+     <Link rel="prefetch" key={index} to={`/blog/${item.node.slug}`} ><div className="work">  <FadeIn height={300}>{onload => (<img alt={item.node.title} onLoad={onload} src={item.node.featuredImage.node.mediaDetails.sizes[0].sourceUrl} />)}</FadeIn></div></Link>
 
       ))
     }

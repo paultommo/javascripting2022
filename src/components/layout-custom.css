@@ -316,6 +316,7 @@ ul.navigation  {
 
   padding: 20px 50px;
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 .about-testimonials-container {
@@ -408,9 +409,15 @@ ul.navigation  {
 /* portfolio */
 .portfolio {
 
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap;*/
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 24% );
+  justify-content: center;
+  min-height: 100vh;
+  
 }
 
 .portfolio .work {
@@ -450,14 +457,43 @@ ul.navigation  {
      width: 300px;
   }
 
+  .portfolio { 
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+  }
+
 }
 
-@media (min-width: 600px) and (max-width: 1200px) {
+@media (min-width: 600px) and (max-width: 992px) {
+
+
+  .portfolio {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 40% );
+    justify-content: center;
+    
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
 
 
   .skills-copy {
 
      width: 550px;
+  }
+
+  .portfolio {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30% );
+    justify-content: center;
+    
   }
 
 }
