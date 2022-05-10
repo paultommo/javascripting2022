@@ -16,6 +16,7 @@ module.exports = {
 
   },
   plugins: [
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-robots-txt',
@@ -29,21 +30,35 @@ module.exports = {
     },
 
 
+    // {
+    //   resolve: `gatsby-source-wordpress`,
+    //   options: {
+    //     /*
+    //      * The full URL of the WordPress site's GraphQL API.
+    //      * Example : 'https://www.example-site.com/graphql'
+    //      */
+    //      url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
+    //     schema: {
+    //       perPage: 20, // currently set to 100
+    //       requestConcurrency: 5, // currently set to 15
+    //       previewRequestConcurrency: 2, // currently set to 5
+    //     }
+    //   },
+    // },
+
     {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        /*
-         * The full URL of the WordPress site's GraphQL API.
-         * Example : 'https://www.example-site.com/graphql'
-         */
-         url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-        schema: {
-      perPage: 20, // currently set to 100
-      requestConcurrency: 5, // currently set to 15
-      previewRequestConcurrency: 2, // currently set to 5
-    }
-      },
+    resolve: `gatsby-source-wordpress`,
+    options: {
+        url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
+        html: {
+            createStaticFiles: false,
+            useGatsbyImage: false,
+        },
+        type: {
+            MediaItem: { createFileNodes: false },
+        },
     },
+},
 
 
 
