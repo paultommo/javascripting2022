@@ -1,4 +1,10 @@
 
+LOADING IMAGES IN A CONTENT FIELD
+GUTENBERG & createStaticFiles: true / useGatsbyImage: true / createFileNodes: true - works locally
+
+
+
+
 
 SEO
 -  add gatsby-plugin-sitemap & gatsby-plugin-robots-txt
