@@ -63,6 +63,9 @@ module.exports = {
           type: {
               MediaItem: { createFileNodes: true },
           },
+          production: {
+            allow404Images: true,
+          },
       },
     },
 
