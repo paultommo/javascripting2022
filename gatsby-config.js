@@ -69,20 +69,36 @@ module.exports = {
     //   },
     // },
 
-    {
-    resolve: `gatsby-source-wordpress`,
-    options: {
-        url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-        verbose: true,
-        // html: {
-        //     createStaticFiles: false,
-        //     useGatsbyImage: false,
-        // },
-        // type: {
-        //     MediaItem: { createFileNodes: false },
-        // },
-    },
-  },
+  //   {
+  //   resolve: `gatsby-source-wordpress`,
+  //   options: {
+  //       url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
+  //       verbose: true,
+  //       // html: {
+  //       //     createStaticFiles: false,
+  //       //     useGatsbyImage: false,
+  //       // },
+  //       // type: {
+  //       //     MediaItem: { createFileNodes: false },
+  //       // },
+  //   },
+  // },
+
+  {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        /*
+         * The full URL of the WordPress site's GraphQL API.
+         * Example : 'https://www.example-site.com/graphql'
+         */
+        url:process.env.GATSBY_WPGRAPHQL_ENDPOINT,
+        schema: {
+        perPage: 20, // currently set to 100
+        requestConcurrency: 5, // currently set to 15
+        previewRequestConcurrency: 2, // currently set to 5
+      }
+        },
+      },
 
 
 
