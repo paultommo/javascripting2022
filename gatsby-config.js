@@ -57,11 +57,11 @@ module.exports = {
       options: {
           url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
           html: {
-              createStaticFiles: false,
-              useGatsbyImage: false,
+              createStaticFiles: true,
+              useGatsbyImage: true,
           },
           type: {
-              MediaItem: { createFileNodes: false },
+              MediaItem: { createFileNodes: true },
           },
       },
     },
