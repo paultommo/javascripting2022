@@ -73,6 +73,7 @@ module.exports = {
     resolve: `gatsby-source-wordpress`,
     options: {
         url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
+        verbose: true,
         html: {
             createStaticFiles: false,
             useGatsbyImage: false,
