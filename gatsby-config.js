@@ -52,22 +52,36 @@ module.exports = {
     // },
 
     /* https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/docs/features/media-item-processing.md */
+    // {
+    // resolve: `gatsby-source-wordpress`,
+    //   options: {
+    //       url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
+    //       html: {
+    //           createStaticFiles: true,
+    //           useGatsbyImage: true,
+    //       },
+    //       type: {
+    //           MediaItem: { createFileNodes: true },
+    //       },
+    //       production: {
+    //         allow404Images: true,
+    //       },
+    //   },
+    // },
+
     {
     resolve: `gatsby-source-wordpress`,
-      options: {
-          url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-          html: {
-              createStaticFiles: true,
-              useGatsbyImage: true,
-          },
-          type: {
-              MediaItem: { createFileNodes: true },
-          },
-          production: {
-            allow404Images: true,
-          },
-      },
+    options: {
+        url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
+        html: {
+            createStaticFiles: false,
+            useGatsbyImage: false,
+        },
+        type: {
+            MediaItem: { createFileNodes: false },
+        },
     },
+  },
 
 
 
