@@ -319,6 +319,11 @@ ul.navigation  {
   min-height: 100vh;
 }
 
+.about-container {
+
+  min-height: unset;
+}
+
 .about-testimonials-container {
 
   background-color: #dfe3ee;
