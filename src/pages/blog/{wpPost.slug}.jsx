@@ -61,6 +61,8 @@ const wpPost = ({
 
   const {title, content} = wpPost
 
+  const refinedContent = content.replace("data-src", "src");
+
   return (
     <Layout>
       {seoPage ?
@@ -73,17 +75,16 @@ const wpPost = ({
          
          <div>
 
-         <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ duration:0.5, delay:0 }}>
+         {/*<motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ duration:0.5, delay:0 }}>*/}
 
           <div className='work' >
           {/*<h1 className='h1WorkItem' >{title}</h1>*/}
 
-          <div className='copyLarge workCopy'>{  ReactHtmlParser(content) }</div>
+          <div className='copyLarge workCopy'>{  ReactHtmlParser(refinedContent) }</div>
 
-          {/*<img src="/_gatsby/image/041c27c4e0a2697039e59f62eb57d332/194f1a3bebbc1f7996398153ae126cdf/4.png?u=https%3A%2F%2Fjavascripting.uk%2Fjsgraphql%2Fwp-content%2Fuploads%2F2022%2F03%2F4.png&a=w%3D256%26h%3D192%26fm%3Dpng%26q%3D70" />*/}
+        </div>
 
-         
-        </div></motion.div>
+        {/*</motion.div>*/}
 
 
          </div>
