@@ -48,9 +48,13 @@ li {
   list-style-type: none;
 }
 
-img {
+/*img {
 
   margin: 0;
+}*/
+img {
+height: 100%;
+object-fit: contain;
 }
 
 footer {

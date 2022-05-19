@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SeoBasic from "../../components/seo"
@@ -53,7 +53,7 @@ export const query = graphql`
 `
 
 
-const wpPost = ({
+const WpPost = ({
   data: {
     wpPost, seoPage
   },
@@ -61,7 +61,37 @@ const wpPost = ({
 
   const {title, content} = wpPost
 
-  const refinedContent = content.replace("data-src", "src");
+  function hydrateImages(){
+
+    const gatsbyImages = document.querySelectorAll('img[data-main-image]');
+
+      for (let mainImage of gatsbyImages) {
+        if (mainImage.dataset.src) {
+          mainImage.setAttribute('src', mainImage.dataset.src)
+          mainImage.removeAttribute('data-src')
+        }
+        if (mainImage.dataset.srcset) {
+          mainImage.setAttribute('srcset', mainImage.dataset.srcset)
+          mainImage.removeAttribute('data-srcset')
+        }
+        const sources = mainImage.parentNode.querySelectorAll('source[data-srcset]');
+        for (let source of sources) {
+          source.setAttribute('srcset', source.dataset.srcset)
+          source.removeAttribute('data-srcset')
+        }
+
+        mainImage.style.opacity = 1;
+        
+      }
+
+  }
+  
+  useEffect(() => {
+
+    hydrateImages()
+
+
+  }, [])
 
   return (
     <Layout>
@@ -75,16 +105,12 @@ const wpPost = ({
          
          <div>
 
-         {/*<motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ duration:0.5, delay:0 }}>*/}
 
           <div className='work' >
-          {/*<h1 className='h1WorkItem' >{title}</h1>*/}
-
-          <div className='copyLarge workCopy'>{  ReactHtmlParser(refinedContent) }</div>
+          
+          <div className='copyLarge workCopy'>{  ReactHtmlParser(content) }</div>
 
         </div>
-
-        {/*</motion.div>*/}
 
 
          </div>
@@ -96,4 +122,4 @@ const wpPost = ({
 }
 
 
-export default wpPost
+export default WpPost

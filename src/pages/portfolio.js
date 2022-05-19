@@ -85,7 +85,7 @@ const IndexPage = ({
      { allWpPortfolio.edges.map((item, index) => (
 
 
-      <Link rel="prefetch" key={index} to={`/work/${item.node.slug}`} ><div>  <FadeIn height={300}>{onload => (<img className="work" alt={item.node.title} onLoad={onload} src={item.node.thumb.thumb.sourceUrl} />)}</FadeIn></div></Link>
+      <Link rel="prefetch" key={index} to={`/work/${item.node.slug}`} ><div> <img className="work" alt={item.node.title} src={item.node.thumb.thumb.sourceUrl} /> </div></Link>
       
 
       ))
