@@ -30,60 +30,6 @@ module.exports = {
     },
 
 
-    // {
-    //   resolve: `gatsby-source-wordpress`,
-    //   options: {
-    //     /*
-    //      * The full URL of the WordPress site's GraphQL API.
-    //      * Example : 'https://www.example-site.com/graphql'
-    //      */
-    //      verbose: true,
-    //      url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-    //      html: {
-    //       // useGatsbyImage: true,
-    //       createStaticFiles: true,
-    //      },
-    //      schema: {
-    //         perPage: 20, // currently set to 100
-    //         requestConcurrency: 5, // currently set to 15
-    //         previewRequestConcurrency: 2, // currently set to 5
-    //      }
-    //   },
-    // },
-
-    /* https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/docs/features/media-item-processing.md */
-    // {
-    // resolve: `gatsby-source-wordpress`,
-    //   options: {
-    //       url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-    //       html: {
-    //           createStaticFiles: true,
-    //           useGatsbyImage: true,
-    //       },
-    //       type: {
-    //           MediaItem: { createFileNodes: true },
-    //       },
-    //       production: {
-    //         allow404Images: true,
-    //       },
-    //   },
-    // },
-
-  //   {
-  //   resolve: `gatsby-source-wordpress`,
-  //   options: {
-  //       url: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-  //       // verbose: true,
-  //       html: {
-  //           createStaticFiles: false,
-  //           useGatsbyImage: false,
-  //       },
-  //       type: {
-  //           MediaItem: { createFileNodes: false },
-  //       },
-  //   },
-  // },
-
   {
       resolve: `gatsby-source-wordpress`,
       options: {
@@ -92,14 +38,6 @@ module.exports = {
          * Example : 'https://www.example-site.com/graphql'
          */
         url:process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-        // type: {
-        //   MediaItem: {
-        //     createFileNodes: false,
-        //   },
-        // },
-        // html: {
-        //   useGatsbyImage: false
-        // },
         schema: {
         perPage: 20, // currently set to 100
         requestConcurrency: 5, // currently set to 15

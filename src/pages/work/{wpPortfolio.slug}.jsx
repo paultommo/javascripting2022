@@ -5,8 +5,8 @@ import SeoBasic from "../../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import ReactHtmlParser from "react-html-parser"
 import getImage from "../../functions/getImage"
-import { useQuery } from "react-apollo"
-import { motion } from "framer-motion";
+// import { useQuery } from "react-apollo"
+// import { motion } from "framer-motion";
 import { Link } from "gatsby"
 
 export const query = graphql`
@@ -132,7 +132,7 @@ const wpPortfolio = ({
          
          <div>
 
-         <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} transition={{ duration:0.5, delay:0 }}><div className='work' ><h1 className='h1WorkItem' >{title}</h1>
+         <div className='work' ><h1 className='h1WorkItem' >{title}</h1>
 
           <div className='copyLarge workCopy'>{  ReactHtmlParser(content) }</div>
 
@@ -148,7 +148,7 @@ const wpPortfolio = ({
 
           {image5 && image5.image5 && image5.image5.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image5.image5.mediaDetails.sizes)} /></div>}
 
-        </div></motion.div>
+        </div>
 
 
          </div>

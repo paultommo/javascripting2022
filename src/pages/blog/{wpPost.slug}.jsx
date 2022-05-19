@@ -5,8 +5,8 @@ import SeoBasic from "../../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import ReactHtmlParser from "react-html-parser"
 import getImage from "../../functions/getImage"
-import { useQuery } from "react-apollo"
-import { motion } from "framer-motion";
+// import { useQuery } from "react-apollo"
+// import { motion } from "framer-motion";
 import { Link } from "gatsby"
 
 export const query = graphql`

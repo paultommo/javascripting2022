@@ -6,8 +6,8 @@ import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import ReactHtmlParser from "react-html-parser"
 import getImage from "../functions/getImage"
-import { useQuery } from "react-apollo"
-import FadeIn from "react-lazyload-fadein";
+// import { useQuery } from "react-apollo"
+// import FadeIn from "react-lazyload-fadein";
 import { Link } from "gatsby"
 
 export const query = graphql`
@@ -85,7 +85,7 @@ const IndexPage = ({
      { allWpPortfolio.edges.map((item, index) => (
 
 
-      <Link rel="prefetch" key={index} to={`/work/${item.node.slug}`} ><div> <img className="work" alt={item.node.title} src={item.node.thumb.thumb.sourceUrl} /> </div></Link>
+      <Link key={index} to={`/work/${item.node.slug}`} ><div> <img className="work" alt={item.node.title} src={item.node.thumb.thumb.sourceUrl} /> </div></Link>
       
 
       ))

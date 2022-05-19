@@ -6,8 +6,8 @@ import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import ReactHtmlParser from "react-html-parser"
 import getImage from "../functions/getImage"
-import { useQuery } from "react-apollo"
-import FadeIn from "react-lazyload-fadein";
+// import { useQuery } from "react-apollo"
+// import FadeIn from "react-lazyload-fadein";
 import { Link } from "gatsby"
 
 export const query = graphql`
@@ -88,7 +88,7 @@ const IndexPage = ({
 
      { allWpPost.edges.map((item, index) => (
 
-     <Link rel="prefetch" key={index} to={`/blog/${item.node.slug}`} ><div className="work">  <FadeIn height={300}>{onload => (<img alt={item.node.title} onLoad={onload} src={item.node.featuredImage.node.mediaDetails.sizes[0].sourceUrl} />)}</FadeIn></div></Link>
+     <Link rel="prefetch" key={index} to={`/blog/${item.node.slug}`} ><div className="work">  <img alt={item.node.title} src={item.node.featuredImage.node.mediaDetails.sizes[0].sourceUrl} /> </div></Link>
 
       ))
     }
