@@ -429,12 +429,28 @@ ul.navigation  {
   
 }
 
+.portfolio .title {
+
+  background-blend-mode: multiply;
+  background-color: rgb(0,0,0,.4);
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  width: 300px;
+  height: 300px;
+}
+
 .portfolio .work {
 
   width: 300px;
   height: auto;
   margin: 10px;
 }
+
+.portfolio ul.a {list-style-type: circle;}
 
 /* skills */
 .skills-container {
@@ -510,6 +526,34 @@ ul.navigation  {
 .work-container h1 {
 
   font-size: 20px;
+}
+
+/* blog page */
+@media (min-width: 1300px) {
+  .work.blog {
+
+    width: 60% !important;
+    
+  }
+}
+
+.work.blog h1 {
+
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.work.blog h2 {
+
+  font-size: 15px;
+}
+
+.work.blog ul li {
+    list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
 }
 
 /*****************************************************************************/

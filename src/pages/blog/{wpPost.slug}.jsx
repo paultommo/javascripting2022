@@ -4,16 +4,14 @@ import Layout from "../../components/layout"
 import SeoBasic from "../../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import ReactHtmlParser from "react-html-parser"
-import getImage from "../../functions/getImage"
-// import { useQuery } from "react-apollo"
-// import { motion } from "framer-motion";
-import { Link } from "gatsby"
+import formatDate from '../../functions/formatDate'
 
 export const query = graphql`
   query($slug: String) {
     wpPost(slug: {eq: $slug}) {
       title
       content
+      dateGmt
     }
     seoPage:wpPost(slug: {eq: $slug}) {
     nodeType
@@ -59,7 +57,7 @@ const WpPost = ({
   },
 }) => {
 
-  const {title, content} = wpPost
+  const {title, content, dateGmt } = wpPost
 
   function hydrateImages(){
 
@@ -106,8 +104,10 @@ const WpPost = ({
          <div>
 
 
-          <div className='work' >
+          <div className='work blog' >
           
+          <h1>{ title }</h1>
+          <h2> {formatDate(dateGmt)}</h2>
           <div className='copyLarge workCopy'>{  ReactHtmlParser(content) }</div>
 
         </div>

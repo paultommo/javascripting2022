@@ -4,10 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
-import ReactHtmlParser from "react-html-parser"
-import getImage from "../functions/getImage"
-// import { useQuery } from "react-apollo"
-// import FadeIn from "react-lazyload-fadein";
 import { Link } from "gatsby"
 
 export const query = graphql`
@@ -69,7 +65,7 @@ const IndexPage = ({
   },
 }) => {
 
-  const {title, slug, thumb } =  allWpPortfolio
+  const { title } =  allWpPortfolio
 
   return(
   <Layout>

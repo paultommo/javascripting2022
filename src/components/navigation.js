@@ -43,6 +43,16 @@ const Header = ({ siteTitle }) => (
             /></a>
           </li>
            <li>
+            <a rel="noreferrer" target="_blank" href="https://app.yunojuno.com/p/paul-r-tomlinson/"><StaticImage
+              src="../images/yunojuno.png"
+              width={20}
+              quality={95}
+              formats={["auto", "webp", "avif"]}
+              alt="Paul Tomlinson"
+              style={{ marginTop: `0.1rem` }}
+            /></a>
+          </li>
+           <li>
             <a rel="noreferrer" target="_blank" href="https://twitter.com/paultommmo"><StaticImage
               src="../images/twitter.png"
               width={20}

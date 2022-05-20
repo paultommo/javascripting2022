@@ -1,16 +1,85 @@
-import * as React from "react"
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import SeoBasic from "../components/seo"
+import Seo from 'gatsby-plugin-wpgraphql-seo';
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
-import Layout from "../components/layout"
-import Seo from "../components/seo"
 import Testimonials from "../components/testimonials"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
+export const query = graphql`
+  query {
+   allWpPost {
+    edges {
+      node {
+        slug
+        title
+        featuredImage {
+          node {
+            mediaDetails {
+              sizes {
+                sourceUrl
+                width
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+    seoPage:wpPage(slug: {eq: "homepage"}) {
+    nodeType
+    title
+    uri
+    seo {
+        title
+        metaDesc
+        focuskw
+        metaKeywords
+        metaRobotsNoindex
+        metaRobotsNofollow
+        opengraphTitle
+        opengraphDescription
+        opengraphImage {
+            altText
+            sourceUrl
+            srcSet
+        }
+        twitterTitle
+        twitterDescription
+        twitterImage {
+            altText
+            sourceUrl
+            srcSet
+        }
+        canonical
+        cornerstone
+        schema {
+            articleType
+            pageType
+            raw
+        }
+    }
+    }
+  }
+`
 
-    <div className="homepage-section one">
+const IndexPage = ({
+  data: {
+    seoPage
+  },
+}) => {
+
+  return(
+  <Layout>
+
+     {seoPage ?
+        <Seo post={seoPage} />
+      :
+        <SeoBasic title='Homepage' />
+     }
+
+     <div className="homepage-section one">
 
       <div className="intro">
       
@@ -49,9 +118,9 @@ const IndexPage = () => (
 
         <ul className="listings">
           
-          {/*<li>Build high-performing & super-secure Wordpress websites</li>   */}
+          <li>Build high-performing & super-secure websites</li>   
           {/*<li>Develop a wide range of Javascript applications namely with ReactJS</li>*/}
-          <li>Increase your conversions by creating high-performing websites</li>
+          {/*<li>Increase your conversions by creating high-performing websites</li>*/}
           <li>Maximise your website's SEO potential</li>
           <li>Ensure your site is super-secure</li>
           <li>Provide you with 15+ years of web development experience</li>      
@@ -90,8 +159,11 @@ const IndexPage = () => (
     Contact
 
     </div>*/}
+  
     
   </Layout>
-)
+  )
+}
 
 export default IndexPage
+

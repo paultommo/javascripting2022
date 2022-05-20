@@ -5,9 +5,6 @@ import SeoBasic from "../../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import ReactHtmlParser from "react-html-parser"
 import getImage from "../../functions/getImage"
-// import { useQuery } from "react-apollo"
-// import { motion } from "framer-motion";
-import { Link } from "gatsby"
 
 export const query = graphql`
   query($slug: String) {
@@ -118,7 +115,7 @@ const wpPortfolio = ({
   },
 }) => {
 
-  const {title, content, slug, url, image1, image2, image3, image4, image5 } = wpPortfolio
+  const {title, content, url, image1, image2, image3, image4, image5 } = wpPortfolio
 
   return (
     <Layout>

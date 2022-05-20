@@ -4,10 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
-import ReactHtmlParser from "react-html-parser"
-import getImage from "../functions/getImage"
-// import { useQuery } from "react-apollo"
-// import FadeIn from "react-lazyload-fadein";
 import { Link } from "gatsby"
 
 export const query = graphql`
@@ -73,7 +69,7 @@ const IndexPage = ({
   },
 }) => {
 
-  const {title, slug, featuredImage } =  allWpPost
+  const { title } =  allWpPost
 
   return(
   <Layout>
@@ -88,7 +84,13 @@ const IndexPage = ({
 
      { allWpPost.edges.map((item, index) => (
 
-     <Link rel="prefetch" key={index} to={`/blog/${item.node.slug}`} ><div className="work">  <img alt={item.node.title} src={item.node.featuredImage.node.mediaDetails.sizes[0].sourceUrl} /> </div></Link>
+      <>
+     
+      <Link rel="prefetch" key={index} to={`/blog/${item.node.slug}`} ><div className="work">  <div className="title">{ item.node.title }</div> <img alt={item.node.title} src={item.node.featuredImage.node.mediaDetails.sizes[0].sourceUrl} /> </div></Link>
+
+      
+     
+      </>
 
       ))
     }

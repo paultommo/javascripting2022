@@ -14,8 +14,8 @@ export default function getImage(array){
 		const width = window.innerWidth
 		
 		const sortedArray = sortList(array)
-		const thumbnail = sortedArray.filter(array => array.name ==='thumbnail')
-		const medium = sortedArray.filter(array => array.name ==='medium')
+		// const thumbnail = sortedArray.filter(array => array.name ==='thumbnail')
+		// const medium = sortedArray.filter(array => array.name ==='medium')
 		const medium_large = sortedArray.filter(array => array.name ==='medium_large')
 		const large = sortedArray.filter(array => array.name ==='large')
 		
