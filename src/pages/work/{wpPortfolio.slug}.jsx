@@ -117,6 +117,8 @@ const wpPortfolio = ({
 
   const {title, content, url, image1, image2, image3, image4, image5 } = wpPortfolio
 
+  console.log(image1)
+
   return (
     <Layout>
       {seoPage ?
