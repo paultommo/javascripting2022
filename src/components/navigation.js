@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
   
     <div className="navigation-container">
         <div className="logo"><Link activeClassName="active" to="/">PAUL TOMLINSON</Link></div>
-        {/*<ul className="navigation desktop">
+        <ul className="navigation desktop">
           <li><Link activeClassName="active" to="/">Home</Link></li>
           <li><Link activeClassName="active" to="/about/">About</Link></li>
           <li><Link activeClassName="active" to="/skills/">Skills</Link></li>
@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) => (
             /></a>
           </li>
 
-        </ul>  */}
+        </ul>  
 
         <div className="navigation mobile" role="button" tabIndex={0} onClick={openMenu} onKeyDown={openMenu}>
 

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
