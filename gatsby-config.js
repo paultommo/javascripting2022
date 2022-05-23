@@ -1,25 +1,12 @@
-require('dotenv').config({
-    path: `.env.${process.env.NODE_ENV}`
-});
-
 module.exports = {
   siteMetadata: {
-    
-    title: `Paul Tomlinson: Specialist in Headless Wordpress web development and all things Javascript`,
-    titleTemplate: `%s`,
-    description: `Hello! I'm Paul Tomlinson. Specialist in Headless Wordpress web development and all things Javascript`,
-    url: `https://javascripting.uk`, // No trailing slash!
-    siteUrl: `https://javascripting.uk`, //change this when changing URL
-    image: '/images/static.png', // Path to your image you placed in the 'static' folder
-    author: `@paultommmo`,
-    twitterUsername: '@paultommmo',
-
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    'gatsby-plugin-robots-txt',
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -28,25 +15,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-
-
-  {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        /*
-         * The full URL of the WordPress site's GraphQL API.
-         * Example : 'https://www.example-site.com/graphql'
-         */
-        url:process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-        schema: {
-        perPage: 20, // currently set to 100
-        requestConcurrency: 5, // currently set to 15
-        previewRequestConcurrency: 2, // currently set to 5
-      }
-        },
-      },
-
-
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -55,12 +23,12 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#663399`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
