@@ -137,6 +137,8 @@ const wpPortfolio = ({
 
           <p><a className='viewLink' target="_blank" rel="noopener noreferrer" href={url.url}>VIEW &#62;&#62;</a></p>
 
+
+            
           {image1 && image1.image1 && image1.image1.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image1.image1.mediaDetails.sizes)} /></div>}
 
           {image2 && image2.image2 && image2.image2.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image2.image2.mediaDetails.sizes)} /></div>}

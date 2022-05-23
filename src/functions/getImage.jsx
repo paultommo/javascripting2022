@@ -53,7 +53,7 @@ export default function getImage(array){
 
 		}
 
-		
+		console.log(item.sourceUrl)
 		if(item && item.sourceUrl){
 
 			return item.sourceUrl

@@ -83,12 +83,12 @@ const IndexPage = ({
 
   }
   
-  useEffect(() => {
+  // useEffect(() => {
 
-    hydrateImages()
+  //   hydrateImages()
 
 
-  }, [])
+  // }, [])
 
   return(
   <Layout>
@@ -100,7 +100,7 @@ const IndexPage = ({
 
     <div className="skills-container">
 
-    {ReactHtmlParser(content)}
+    {/*{ReactHtmlParser(content)}*/}
 
 
     </div>
