@@ -1,9 +1,23 @@
 
-LOADING IMAGES IN A CONTENT FIELD
-GUTENBERG & createStaticFiles: true / useGatsbyImage: true / createFileNodes: true - works locally
+Cpanel Zone Editor
+In this case you'd update the A record that is just for 'javascripting.uk' itself to 199.232.194.22, then create another one, also named 'javascripting.uk' (we only use one, but this service wants two) to add the IP 199.232.198.22. The www is already a CNAME so it's just a case of updating the right hand side to that new value.
+
+javascripting.uk.	14400	IN	A	62.182.20.50
+to
+javascripting.uk	A	199.232.194.22
+
+www.javascripting.uk.	14400	IN	CNAME	javascripting.uk
+to
+www.javascripting.uk	CNAME	javascripting2022master.gatsbyjs.io
 
 
+Email
+Just pre-empting an issue - your 'mail' subdomain was set to CNAME (alias) the main domain, so if you changed the domain then it would have been pointing to the new server, too. I've fixed this now so you can change the ones they requested without affecting mail.
 
+
+mail.javascripting.uk.	14400	IN	CNAME	javascripting.uk
+to
+mail.javascripting.uk.	14400	IN	A	62.182.20.50
 
 
 SEO

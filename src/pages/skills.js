@@ -9,7 +9,7 @@ const IndexPage = () => (
 
     <div className="skills-container">
 
-      Over my 15 years+ as a freelance developer, I've built a whole range of <Link to='/workItem?id=good-growth-hub'>websites</Link>, <Link to='/workItem?id=wdmp'>banners</Link>, <Link to='/workItem?id=victorian-olympics'>games</Link> and even a facial recognition system. However, here's a list of my favourite tools:
+      {/*Over my 15 years+ as a freelance developer, I've built a whole range of <Link to='/workItem?id=good-growth-hub'>websites</Link>, <Link to='/workItem?id=wdmp'>banners</Link>, <Link to='/workItem?id=victorian-olympics'>games</Link> and even a facial recognition system. However, here's a list of my favourite tools:
       
       <div className="skills-table" style={{margin:'20px 0 0 0'}}>
 
@@ -55,7 +55,7 @@ const IndexPage = () => (
           </div>
 
 
-      </div>
+      </div>*/}
 
 
     </div>
