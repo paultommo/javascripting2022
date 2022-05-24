@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 
 export const query = graphql`
   query {
-   allWpPortfolio {
+   allWpPortfolio(sort: {order: DESC, fields: date}) {
     edges {
       node {
         thumb {
