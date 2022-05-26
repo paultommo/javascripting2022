@@ -118,7 +118,8 @@ const IndexPage = ({
 
         <ul className="listings">
           
-          <li>Build high-performing & super-secure websites</li>   
+          <li>Build high-performing & super-secure websites</li>  
+          <li><a rel="noreferrer" target="_blank" href="https://www.gatsbyjs.com/blog/static-sites-fight-climate-change/">Reduce your website's carbon footprint</a></li> 
           {/*<li>Develop a wide range of Javascript applications namely with ReactJS</li>*/}
           {/*<li>Increase your conversions by creating high-performing websites</li>*/}
           <li>Maximise your website's SEO potential</li>
