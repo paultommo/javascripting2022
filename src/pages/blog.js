@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 
 export const query = graphql`
   query {
-   allWpPost {
+   allWpPost(sort: {fields: date, order: DESC}) {
     edges {
       node {
         slug
