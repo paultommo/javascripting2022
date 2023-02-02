@@ -14,14 +14,46 @@ export default function getImage(array){
 		const width = window.innerWidth
 		
 		const sortedArray = sortList(array)
-		// const thumbnail = sortedArray.filter(array => array.name ==='thumbnail')
+		const thumbnail = sortedArray.filter(array => array.name ==='thumbnail')
 		const medium = sortedArray.filter(array => array.name ==='medium')
 		const medium_large = sortedArray.filter(array => array.name ==='medium_large')
 		const large = sortedArray.filter(array => array.name ==='large')
 		
-		// console.log(medium[0])
+		console.clear()
+		console.log('large')
+		console.log(large)
+		console.log('medium')
+		console.log(medium)
 
-		return medium[0].sourceUrl
+		if(large[0] && large[0].sourceUrl){
+
+			return large[0].sourceUrl
+		}
+
+		if(medium[0] && medium[0].sourceUrl){
+
+			return medium[0].sourceUrl
+		}
+
+		if(thumbnail[0] && thumbnail[0].sourceUrl){
+
+			return thumbnail[0].sourceUrl
+		}
+
+		// if(!large[0].sourceUrl && medium[0].sourceUrl){
+
+		// 	return medium[0].sourceUrl
+		// }
+
+		// else{
+
+		// 	return null
+		// }
+
+
+
+
+		
 
 	// 	switch(true){
 
