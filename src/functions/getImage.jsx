@@ -15,54 +15,58 @@ export default function getImage(array){
 		
 		const sortedArray = sortList(array)
 		// const thumbnail = sortedArray.filter(array => array.name ==='thumbnail')
-		// const medium = sortedArray.filter(array => array.name ==='medium')
+		const medium = sortedArray.filter(array => array.name ==='medium')
 		const medium_large = sortedArray.filter(array => array.name ==='medium_large')
 		const large = sortedArray.filter(array => array.name ==='large')
 		
-		switch(true){
+		// console.log(medium[0])
 
-			case width < 600:
+		return medium[0].sourceUrl
+
+	// 	switch(true){
+
+	// 		case width < 600:
 				
-				if(medium_large[0]){
+	// 			if(medium_large[0]){
 
-					item = medium_large[0]
-				}
-				else{
+	// 				item = medium_large[0]
+	// 			}
+	// 			else{
 
-					item = large[0]
+	// 				item = large[0]
 
-				}
+	// 			}
 
-			break;
-			case width >= 600:
+	// 		break;
+	// 		case width >= 600:
 				
-				if(large[0]){
+	// 			if(large[0]){
 
-					item = large[0]
-				}
-				else{
+	// 				item = large[0]
+	// 			}
+	// 			else{
 
-					item = medium_large[0]
+	// 				item = medium_large[0]
 
-				}
+	// 			}
 
-			break;
-			default:
+	// 		break;
+	// 		default:
 			
-			break;
+	// 		break;
 
-		}
+	// 	}
 
 		
-		if(item && item.sourceUrl){
+	// 	if(item && item.sourceUrl){
 
-			return item.sourceUrl
+	// 		return item.sourceUrl
 
-		}
-		else{
+	// 	}
+	// 	else{
 
-			return null
-		}
+	// 		return null
+	// 	}
 
 	}else{
 

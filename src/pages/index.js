@@ -85,7 +85,7 @@ const IndexPage = ({
       
         <h1>Hello! I’m web developer Paul Tomlinson.</h1>
 
-        <h2>I specialise in Headless Wordpress web development and all things Javascript.</h2>
+        <h2>I specialise in  Wordpress web development and all things Javascript.</h2>
 
         <div className="button-holder">
 
@@ -113,15 +113,15 @@ const IndexPage = ({
 
     <div className="homepage-section two">
 
-      <div className="copy">
+      {/* <div className="copy">
       <h2>What can I do for you?</h2>
 
         <ul className="listings">
           
           <li>Build high-performing & super-secure websites</li>  
           <li><a rel="noreferrer" target="_blank" href="https://www.gatsbyjs.com/blog/static-sites-fight-climate-change/">Reduce your website's carbon footprint</a></li> 
-          {/*<li>Develop a wide range of Javascript applications namely with ReactJS</li>*/}
-          {/*<li>Increase your conversions by creating high-performing websites</li>*/}
+          <li>Develop a wide range of Javascript applications namely with ReactJS</li>
+          <li>Increase your conversions by creating high-performing websites</li>
           <li>Maximise your website's SEO potential</li>
           <li>Ensure your site is super-secure</li>
           <li>Provide you with 15+ years of web development experience</li>      
@@ -130,14 +130,14 @@ const IndexPage = ({
         </ul>
 
 
-      </div>
+      </div> */}
 
-      <div className="copy">
+      {/* <div className="copy">
       <h2>What does Headless Wordpress mean?</h2>
 
         <ul className="listings">
           
-          {/*<li>A modern and superior approach to creating a Wordpress website</li>   */}
+          li>A xmodern and superior approach to creating a Wordpress website</li> 
           <li>Headless combines the simplicity of a traditional Wordpress CMS alongside a bespoke front-end</li>
           <li>Really high performance and therefore great SEO</li>
           <li>Very few plugins, making site maintenance much easier and cheaper!</li>      
@@ -145,7 +145,17 @@ const IndexPage = ({
 
         </ul>
 
+      </div> */}
+
+
+      <div className="copy narrow">
+
+      I'm a London-based web developer and I've been freelancing for the past 15 years. I specialise in Front-end development, Wordpress, Headless Wordpress and Javascript / ReactJS applications.  I've also got lots of experience in building HTML5 banners. I've worked with a wide range of clients from large brands, such as Unilever, RedBull and the BBC to many smaller and medium sized companies. In addition, I pride myself on being a great communicator and a hard worker who creates pixel-perfect websites and always gets things done.
+
       </div>
+
+
+      
 
     </div>
 
