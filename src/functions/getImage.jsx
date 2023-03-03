@@ -20,14 +20,19 @@ export default function getImage(array){
 		const large = sortedArray.filter(array => array.name ==='large')
 		
 		// console.clear()
-		// console.log('large')
-		// console.log(large)
+		//console.log('large')
+		//console.log(large)
 		// console.log('medium')
 		// console.log(medium)
 
 		if(large[0] && large[0].sourceUrl){
 
 			return large[0].sourceUrl
+		}
+
+		if(medium_large[0] && medium_large[0].sourceUrl){
+
+			return medium_large[0].sourceUrl
 		}
 
 		if(medium[0] && medium[0].sourceUrl){
