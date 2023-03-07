@@ -15,11 +15,26 @@ const openMenu = () => {
 const Header = ({ siteTitle }) => (
   
     <div className="navigation-container">
-        <div className="logo"><Link activeClassName="active" to="/">PAUL TOMLINSON</Link></div>
+        <div className="logo">
+          
+          {/* <Link activeClassName="active" to="/">PAUL TOMLINSON</Link> */}
+
+          
+            <StaticImage
+            src="../images/logo.png"
+            width={100}
+            quality={95}
+            formats={["auto", "webp", "avif"]}
+            alt="Paul Tomlinson"
+            style={{ marginTop: `0rem` }}
+          />
+        
+        
+        </div>
         <ul className="navigation desktop">
           <li><Link activeClassName="active" to="/">Home</Link></li>
           <li><Link activeClassName="active" to="/about/">About</Link></li>
-          <li><Link activeClassName="active" to="/skills/">Skills</Link></li>
+          {/* <li><Link activeClassName="active" to="/skills/">Skills</Link></li> */}
           <li><Link activeClassName="active" to="/portfolio/">Portfolio</Link></li>
           <li><Link activeClassName="active" to="/blog/">Blog</Link></li>
           <li>
@@ -42,7 +57,7 @@ const Header = ({ siteTitle }) => (
               style={{ marginTop: `0.05rem` }}
             /></a>
           </li>
-           <li>
+           {/* <li>
             <a rel="noreferrer" target="_blank" href="https://app.yunojuno.com/p/paul-r-tomlinson/"><StaticImage
               src="../images/yunojuno.png"
               width={20}
@@ -51,7 +66,7 @@ const Header = ({ siteTitle }) => (
               alt="Paul Tomlinson"
               style={{ marginTop: `0.1rem` }}
             /></a>
-          </li>
+          </li> */}
            <li>
             <a rel="noreferrer" target="_blank" href="https://twitter.com/paultommmo"><StaticImage
               src="../images/twitter.png"

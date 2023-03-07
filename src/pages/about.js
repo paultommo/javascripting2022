@@ -10,15 +10,13 @@ const IndexPage = () => (
 
     <div className="about-container">
       
-      <p>Hello there! I'm Paul, a London-based web developer and I've been freelancing for the past 15 years.</p>
+     <p>Hello there, thanks for stopping by! My name is Paul and I've been a freelance web developer for the past 20 years. I live and work in Hackney, East London although I'm originally from Bolton in Northern England.</p>
 
-      <p>I specialise in Wordpress websites and Javascript applications (hence the domain name!). I've worked with a wide range of clients from large brands, such as Unilever, RedBull and the BBC to many smaller and medium sized companies. I also once worked with Bill Bailey and animated the inside of his head!</p>
+     <p>In my 20 years of web development, I done so many things. I originally started a web design company with a friend, which we used to create some really fun creative projects, especially in the music industry. Since then, I've worked extensively inside advertising agencies in London, but I now focus on finding, developing and managing web projects myself. From best sellling musicians and big campaigns for tech companies to vending machines for drinks brands, I've worked on so many varied and interesting projects. I also once animated the inside of Bill Bailey's head!</p>
 
-      <p>I pride myself on being a great communicator and a hard worker who creates pixel-perfect websites and always gets things done.</p>
+     <p>I've also used my technical and creative skills to collaborate on installations for exhibitions and to develop a pop-up interactive aquarium. While outside of web development, I also once had a chocolate business, attempted to launch a wooden board game and now I'm excited about a new ecommerce venture!</p>
 
-      <p>I'm also very interested in developing other opportunities for myself. I've had a luxury chocolate business, launched a board game and I'm now also pushing a new ecommerce brand.</p>
-
-      <a className="red" href="mailto:paul@javascripting.uk">Hire me here</a>. I always aim to respond within 24 hours.
+     <a className="red" href="mailto:paul@javascripting.uk">Hire me here</a>. I always aim to respond within 24 hours.
 
     </div>
 

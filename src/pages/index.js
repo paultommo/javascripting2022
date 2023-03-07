@@ -83,18 +83,8 @@ const IndexPage = ({
 
       <div className="intro">
       
-        <h1>Hello! I’m web developer Paul Tomlinson.</h1>
-
-        <h2>I specialise in  Wordpress web development and all things Javascript.</h2>
-
-        <div className="button-holder">
-
-          <Link activeClassName="active" to="/about/"><button>Learn More</button></Link>
-
-          <a href="mailto:paul@javascripting.uk"><button>Hire Me</button></a>
-
-        </div>
-
+        <h1><span className="hello">Hello!</span> I’m freelance web developer Paul Tomlinson.</h1>
+        
       </div>
 
       <div className="image">
@@ -113,49 +103,59 @@ const IndexPage = ({
 
     <div className="homepage-section two">
 
-      {/* <div className="copy">
-      <h2>What can I do for you?</h2>
 
-        <ul className="listings">
-          
-          <li>Build high-performing & super-secure websites</li>  
-          <li><a rel="noreferrer" target="_blank" href="https://www.gatsbyjs.com/blog/static-sites-fight-climate-change/">Reduce your website's carbon footprint</a></li> 
-          <li>Develop a wide range of Javascript applications namely with ReactJS</li>
-          <li>Increase your conversions by creating high-performing websites</li>
-          <li>Maximise your website's SEO potential</li>
-          <li>Ensure your site is super-secure</li>
-          <li>Provide you with 15+ years of web development experience</li>      
-          <li>Offer you excellent communication and management skills throughout any project</li>
+      <div className="copy">
 
-        </ul>
+      Having been a freelance web developer for 20 years, I can offer you:
 
 
-      </div> */}
+      <ul>
 
-      {/* <div className="copy">
-      <h2>What does Headless Wordpress mean?</h2>
+      <li><h2>A friendly, calm voice and positive attitude</h2>
+      I love working and chatting with people and try to make every project as enjoyable as possible.
+      </li>
 
-        <ul className="listings">
-          
-          li>A xmodern and superior approach to creating a Wordpress website</li> 
-          <li>Headless combines the simplicity of a traditional Wordpress CMS alongside a bespoke front-end</li>
-          <li>Really high performance and therefore great SEO</li>
-          <li>Very few plugins, making site maintenance much easier and cheaper!</li>      
-          <li>Using a very modern stack of tools, namely GatsbyJS, WPGraphQL and Netlify</li>
+      <li><h2>Vast technical knowledge</h2>
+      Having worked with so many different technologies and worked on so many different projects, I can help you select and develop the best approach and solution for you.
+      </li>
 
-        </ul>
+      <li><h2>Excellent time management and organisation skills</h2>
+      I always ensure a project is under control and deadlines are always met.
+      </li>
 
-      </div> */}
+      <li><h2>Great communication</h2>
+      I pride myself on my interpersonal skills - whether with clients, developers or designers - and I will always listen to everyone’s needs and offer my thoughts, to ensure we create a product that everyone is delighted with.
+      </li>
+
+      <li><h2>Confident and proactive</h2>
+      I have lots of confidence in my abilities and always get the job done!
+      </li>
+
+      <li><h2>Attention to detail </h2>
+      I’m a perfectionist and understand how to make pixel perfect products and keep going until we create something brilliant!
+      </li>
+
+      <li><h2>Guarantee</h2>
+      That your product will be fully responsive, secure and optimised for SEO, so it performs to the best of it’s ability.
+      </li>
+
+      <li><h2>High quality design, SEO and copywriting skills</h2>
+      I work with a range of experts in the fields of design, SEO and copywriting if you require help with more than just the development of your project.
+      </li>
 
 
-      <div className="copy narrow">
-
-      I'm a London-based web developer and I've been freelancing for the past 15 years. I specialise in Front-end development, Wordpress, Headless Wordpress and Javascript / ReactJS applications.  I've also got lots of experience in building HTML5 banners. I've worked with a wide range of clients from large brands, such as Unilever, RedBull and the BBC to many smaller and medium sized companies. In addition, I pride myself on being a great communicator and a hard worker who creates pixel-perfect websites and always gets things done.
+      </ul>
 
       </div>
 
+      <div className="button-holder">
 
-      
+        <Link activeClassName="active" to="/about/"><button>Learn More</button></Link>
+
+        <a href="mailto:paul@javascripting.uk"><button>Hire Me</button></a>
+
+        </div>
+
 
     </div>
 
@@ -165,13 +165,6 @@ const IndexPage = ({
 
     </div>
 
-  {/*  <div className="homepage-section four">
-
-    Contact
-
-    </div>*/}
-  
-    
   </Layout>
   )
 }
