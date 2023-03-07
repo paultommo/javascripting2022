@@ -83,7 +83,7 @@ const IndexPage = ({
 
       <div className="intro">
       
-        <h1><span className="hello">Hello!</span> I’m freelance web developer Paul Tomlinson.</h1>
+        <h1><span className="hello">Hello!</span> I’m freelance web developer<br/>Paul Tomlinson.</h1>
         
       </div>
 
@@ -111,12 +111,8 @@ const IndexPage = ({
 
       <ul>
 
-      <li><h2>A friendly, calm voice and positive attitude</h2>
-      I love working and chatting with people and try to make every project as enjoyable as possible.
-      </li>
-
       <li><h2>Vast technical knowledge</h2>
-      Having worked with so many different technologies and worked on so many different projects, I can help you select and develop the best approach and solution for you.
+      Having worked with so many different technologies and worked on so many different projects, I can help select and develop the best approach and solution for you.
       </li>
 
       <li><h2>Excellent time management and organisation skills</h2>
@@ -127,7 +123,11 @@ const IndexPage = ({
       I pride myself on my interpersonal skills - whether with clients, developers or designers - and I will always listen to everyone’s needs and offer my thoughts, to ensure we create a product that everyone is delighted with.
       </li>
 
-      <li><h2>Confident and proactive</h2>
+      <li><h2>A friendly, calm voice and positive attitude</h2>
+      I love working and chatting with people and try to make every project as enjoyable as possible.
+      </li>
+
+      <li><h2>Confidence and proactivity</h2>
       I have lots of confidence in my abilities and always get the job done!
       </li>
 
@@ -135,7 +135,7 @@ const IndexPage = ({
       I’m a perfectionist and understand how to make pixel perfect products and keep going until we create something brilliant!
       </li>
 
-      <li><h2>Guarantee</h2>
+      <li><h2>Guarantees</h2>
       That your product will be fully responsive, secure and optimised for SEO, so it performs to the best of it’s ability.
       </li>
 
