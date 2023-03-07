@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet"
 
 const SEO = () => {
  
-    const title = `Paul Tomlinson: Specialist in Headless Wordpress web development and all things Javascript`
+    const title = `Paul Tomlinson: A freelance web developer with 20 years experience`
     const titleTemplate= `%s`
-    const description= `Hello! I'm Paul Tomlinson. Specialist in Headless Wordpress web development and all things Javascript`
+    const description= `Hello! I'm Paul Tomlinson. A freelance web developer with 20 years experience`
     const url= `https://javascripting.uk` // No trailing slash!
     // const siteUrl= `https://javascripting.uk` //change this when changing URL
     const image= 'https://javascripting.uk/images/static-pt.png' // Path to your image you placed in the 'static' folder

@@ -112,7 +112,7 @@ const IndexPage = ({
       <ul>
 
       <li><h2>Vast technical knowledge</h2>
-      Having worked with so many different technologies and worked on so many different projects, I can help select and develop the best approach and solution for you.
+      Having worked with so many different technologies and worked on so many different projects, I can help select and develop the best solution for you.
       </li>
 
       <li><h2>Excellent time management and organisation skills</h2>
