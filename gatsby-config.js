@@ -15,20 +15,7 @@ siteMetadata: {
   twitterUsername: '@paultommmo',
 
 },
-plugins: [
-  `gatsby-plugin-gatsby-cloud`,
-  `gatsby-plugin-react-helmet`,
-  `gatsby-plugin-sitemap`,
-  'gatsby-plugin-robots-txt',
-  `gatsby-plugin-image`,
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `images`,
-      path: `${__dirname}/src/images`,
-    },
-  },
-  },
+
   plugins: [
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-react-helmet`,
@@ -42,17 +29,7 @@ plugins: [
         path: `${__dirname}/src/images`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-netlify`,
-    //   options: {
-    //     headers: {
-    //       // Add your desired Access-Control-Allow-Origin configuration here
-    //       '/*': ['Access-Control-Allow-Origin: *'],
-    //     },
-    //   },
-    // },
-
-
+  
 {
     resolve: `gatsby-source-wordpress`,
     options: {
