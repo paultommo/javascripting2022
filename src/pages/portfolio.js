@@ -8,24 +8,24 @@ import { Link } from "gatsby"
 
 export const query = graphql`
   query {
-   allWpPortfolio(sort: {order: DESC, fields: date}) {
-    edges {
-      node {
-        thumb {
+    allWpPortfolio(sort: {date: DESC}) {
+      edges {
+        node {
           thumb {
-            sourceUrl
+            thumb {
+              sourceUrl
+            }
           }
+          title
+          slug
         }
-        title
-        slug
       }
     }
-  }
-    seoPage:wpPage(slug: {eq: "portfolio"}) {
-    nodeType
-    title
-    uri
-    seo {
+    seoPage: wpPage(slug: {eq: "portfolio"}) {
+      nodeType
+      title
+      uri
+      seo {
         title
         metaDesc
         focuskw
@@ -35,25 +35,25 @@ export const query = graphql`
         opengraphTitle
         opengraphDescription
         opengraphImage {
-            altText
-            sourceUrl
-            srcSet
+          altText
+          sourceUrl
+          srcSet
         }
         twitterTitle
         twitterDescription
         twitterImage {
-            altText
-            sourceUrl
-            srcSet
+          altText
+          sourceUrl
+          srcSet
         }
         canonical
         cornerstone
         schema {
-            articleType
-            pageType
-            raw
+          articleType
+          pageType
+          raw
         }
-    }
+      }
     }
   }
 `
