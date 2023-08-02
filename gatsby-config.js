@@ -28,6 +28,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-netlify`,
+    //   options: {
+    //     headers: {
+    //       // Add your desired Access-Control-Allow-Origin configuration here
+    //       '/*': ['Access-Control-Allow-Origin: *'],
+    //     },
+    //   },
+    // },
 
 
   {
