@@ -8,29 +8,29 @@ import { Link } from "gatsby"
 
 export const query = graphql`
   query {
-    allWpPost(sort: {date: DESC}) {
-      edges {
-        node {
-          slug
-          title
-          featuredImage {
-            node {
-              mediaDetails {
-                sizes {
-                  sourceUrl
-                  width
-                }
+   allWpPost(sort: {fields: date, order: DESC}) {
+    edges {
+      node {
+        slug
+        title
+        featuredImage {
+          node {
+            mediaDetails {
+              sizes {
+                sourceUrl
+                width
               }
             }
           }
         }
       }
     }
-    seoPage: wpPage(slug: {eq: "posts"}) {
-      nodeType
-      title
-      uri
-      seo {
+  }
+    seoPage:wpPage(slug: {eq: "posts"}) {
+    nodeType
+    title
+    uri
+    seo {
         title
         metaDesc
         focuskw
@@ -40,25 +40,25 @@ export const query = graphql`
         opengraphTitle
         opengraphDescription
         opengraphImage {
-          altText
-          sourceUrl
-          srcSet
+            altText
+            sourceUrl
+            srcSet
         }
         twitterTitle
         twitterDescription
         twitterImage {
-          altText
-          sourceUrl
-          srcSet
+            altText
+            sourceUrl
+            srcSet
         }
         canonical
         cornerstone
         schema {
-          articleType
-          pageType
-          raw
+            articleType
+            pageType
+            raw
         }
-      }
+    }
     }
   }
 `
