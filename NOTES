@@ -1,9 +1,0 @@
-https://stackoverflow.com/questions/70362755/netlify-says-error-gatsby-requires-node-js-14-15-0-or-higher-you-have-v12-18
-
-- Run this on the root
-- node -v > .nvmrc
-- create a .nvmrc file to show Netlify what version of Node you're using, so it will install dependencies correctly
-
-If builds will not work on Netlify etc, try a fresh Gatsby build and then copy the src folder over
-
-imagesCanLoad!!!!!
