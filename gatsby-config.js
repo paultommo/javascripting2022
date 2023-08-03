@@ -15,21 +15,21 @@ siteMetadata: {
   twitterUsername: '@paultommmo',
 
 },
-plugins: [
-  `gatsby-plugin-gatsby-cloud`,
-  `gatsby-plugin-react-helmet`,
-  `gatsby-plugin-sitemap`,
-  'gatsby-plugin-robots-txt',
-  `gatsby-plugin-image`,
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `images`,
-      path: `${__dirname}/src/images`,
+
+  plugins: [
+    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt',
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
     },
-  },
-
-
+  
 {
     resolve: `gatsby-source-wordpress`,
     options: {
