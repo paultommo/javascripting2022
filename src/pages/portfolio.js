@@ -21,6 +21,7 @@ export const query = graphql`
       }
     }
   }
+  
     seoPage:wpPage(slug: {eq: "portfolio"}) {
     nodeType
     title

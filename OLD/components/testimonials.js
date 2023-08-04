@@ -3,26 +3,6 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import ReactHtmlParser from "react-html-parser"
 
-// define client-side query
-// const APOLLO_QUERY = gql`
-//   {
-
-//    testimonials {
-//     edges {
-//       node {
-//         id
-//         title
-//         featuredImage {
-//           mediaItemUrl
-//         }
-//         content
-//       }
-//     }
-//   }
-
-//   }
-// `
-
 const APOLLO_QUERY = gql`
   {
   testimonials {
@@ -59,7 +39,7 @@ const Index = ({data}) => (
               return (
 
                 <div key={index} className="testimonial">
-                  {testimonial.node.featuredImage &&
+                  {testimonial && testimonial.node && testimonial.node.featuredImage &&
                     <div><img alt={testimonial.node.title} src={testimonial.node.featuredImage.node.mediaItemUrl} /></div>
                   }
                   <div className="content">{ReactHtmlParser(testimonial.node.content)}</div>

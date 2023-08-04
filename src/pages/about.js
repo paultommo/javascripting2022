@@ -1,10 +1,39 @@
 import * as React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Testimonials from "../components/testimonials"
+import ReactHtmlParser from "react-html-parser"
+// import Testimonials from "../components/testimonials"
 
-const IndexPage = () => (
+export const query = graphql`
+  query {
+  
+
+  allWpTestimonial {
+    edges {
+      node {
+        id
+        title
+        featuredImage {
+          node {
+            mediaItemUrl
+          }
+        }
+        content
+      }
+    }
+  }
+
+  }
+`
+
+const IndexPage = ({
+  data: {
+    allWpTestimonial
+  },
+}) => {
+
+  return (
   <Layout>
     <Seo title="About" />
 
@@ -22,11 +51,29 @@ const IndexPage = () => (
 
     <div className="about-testimonials-container">
 
-        <Testimonials />
+        {/* <Testimonials /> */}
+        <div className="testimonials-container">
+
+            { allWpTestimonial.edges.map((item, index) => (
+
+              <div key={index} className="testimonial">
+            
+                <div><img alt={item.node.title} src={item.node.featuredImage.node.mediaItemUrl} /></div>
+            
+                <div className="content">{ReactHtmlParser(item.node.content)}</div>
+                <div className="name">{item.node.title}</div>
+
+              </div>
+
+            ))
+            }
+          
+        </div>
 
     </div>
 
   </Layout>
 )
+}
 
 export default IndexPage

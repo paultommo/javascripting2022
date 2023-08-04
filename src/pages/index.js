@@ -5,7 +5,8 @@ import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Testimonials from "../components/testimonials"
+import ReactHtmlParser from "react-html-parser"
+// import Testimonials from "../components/testimonials"
 
 export const query = graphql`
   query {
@@ -27,6 +28,22 @@ export const query = graphql`
       }
     }
   }
+
+  allWpTestimonial {
+    edges {
+      node {
+        id
+        title
+        featuredImage {
+          node {
+            mediaItemUrl
+          }
+        }
+        content
+      }
+    }
+  }
+
     seoPage:wpPage(slug: {eq: "homepage"}) {
     nodeType
     title
@@ -66,7 +83,7 @@ export const query = graphql`
 
 const IndexPage = ({
   data: {
-    seoPage
+    seoPage, allWpTestimonial
   },
 }) => {
 
@@ -161,7 +178,24 @@ const IndexPage = ({
 
     <div className="homepage-section three">
 
-        <Testimonials />
+        {/* <Testimonials /> */}
+        <div className="testimonials-container">
+
+            { allWpTestimonial.edges.map((item, index) => (
+
+              <div key={index} className="testimonial">
+            
+                <div><img alt={item.node.title} src={item.node.featuredImage.node.mediaItemUrl} /></div>
+            
+                <div className="content">{ReactHtmlParser(item.node.content)}</div>
+                <div className="name">{item.node.title}</div>
+
+              </div>
+
+            ))
+            }
+          
+        </div>
 
     </div>
 
