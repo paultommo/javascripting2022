@@ -150,13 +150,13 @@ const WpPortfolio = ({
 
           {imagesCanLoad && image1 && image1.image1 && image1.image1.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image1.image1.mediaDetails.sizes)} /></div>}
 
-          {imagesCanLoad && image2 && image2.image2 && image2.image2.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image2.image2.mediaDetails.sizes)} /></div>}
+          {/* {imagesCanLoad && image2 && image2.image2 && image2.image2.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image2.image2.mediaDetails.sizes)} /></div>}
 
           {imagesCanLoad && image3 && image3.image3 && image3.image3.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image3.image3.mediaDetails.sizes)} /></div>}
 
           {imagesCanLoad && image4 && image4.image4 && image4.image4.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image4.image4.mediaDetails.sizes)} /></div>}
 
-          {imagesCanLoad && image5 && image5.image5 && image5.image5.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image5.image5.mediaDetails.sizes)} /></div>}
+          {imagesCanLoad && image5 && image5.image5 && image5.image5.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image5.image5.mediaDetails.sizes)} /></div>} */}
 
         </div>
 
