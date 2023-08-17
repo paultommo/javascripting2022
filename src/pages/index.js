@@ -128,6 +128,11 @@ const IndexPage = ({
 
       <ul>
 
+      
+      <li><h2>Advice on how to create a successful website</h2>
+      I help businesses improve their online presence, website user experience and conversion rates.
+      </li>
+
       <li><h2>Vast technical knowledge</h2>
       Having worked with so many different technologies and worked on so many different projects, I can help select and develop the best solution for you.
       </li>
