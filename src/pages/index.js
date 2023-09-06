@@ -99,18 +99,28 @@ const IndexPage = ({
         {/* <h1><span className="hello">Hello!</span> I’m freelance web developer<br/>Paul Tomlinson.</h1> */}
         <h1><span className="hello">Paul Tomlinson</span>Building websites that your<br/>customers will love ❤️</h1>
         
+
+        <div className="button-holder">
+
+          <Link activeClassName="active" to="/about/"><button>Learn More</button></Link>
+
+          <a href="mailto:paul@javascripting.uk"><button>Hire Me</button></a>
+
+        </div>
+
+
       </div>
 
-      <div className="image">
-      <StaticImage
-      src="../images/paultomlinson.png"
-      width={500}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="Paul Tomlinson"
-      style={{ marginTop: `3rem` }}
-    />
-      </div>
+        <div className="image">
+        <StaticImage
+        src="../images/paultomlinson.png"
+        width={500}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Paul Tomlinson"
+        style={{ marginTop: `3rem` }}
+      />
+        </div>
 
     </div>
 

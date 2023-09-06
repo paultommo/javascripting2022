@@ -191,7 +191,8 @@ ul.navigation  {
 
   padding: 0 0 0 10%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  flex-direction: column;
   
 }
 
@@ -409,6 +410,11 @@ ul.navigation  {
 .button-holder {
 
   padding: 0 10% 50px 10%;
+}
+
+.homepage-section .intro .button-holder {
+
+  padding: 0 0 10% 0;
 }
 
 
