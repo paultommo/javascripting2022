@@ -6,7 +6,8 @@ html, body {
 	width: 100%;
 	/* overflow-x: hidden; */
   font-family: Avenir, Arial, sans-serif ;
-  background-color: #ffdb58;
+  /* background-color: #ffdb58; */
+  background-color: #e63b59;
 }
 
 a {
@@ -196,7 +197,7 @@ ul.navigation  {
 
 .homepage-section h1 {
 
-  font-size: 60px;
+  font-size: 50px;
   display: flex;
   flex-wrap: wrap;
   /* width: 70%; */
@@ -204,8 +205,9 @@ ul.navigation  {
 
 .homepage-section h1 .hello {
 
-  font-size: 160px;
+  font-size: 100px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .homepage-section h2 {
@@ -241,13 +243,13 @@ ul.navigation  {
 
   .homepage-section h1 {
 
-    font-size: 15px;
+    font-size: 13px;
 
   }
 
   .homepage-section h1 .hello {
 
-    font-size: 80px;
+    font-size: 40px;
   }
 
   .homepage-section h2 {

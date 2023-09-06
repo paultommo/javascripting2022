@@ -100,7 +100,8 @@ const IndexPage = ({
 
       <div className="intro">
       
-        <h1><span className="hello">Hello!</span> I’m freelance web developer<br/>Paul Tomlinson.</h1>
+        {/* <h1><span className="hello">Hello!</span> I’m freelance web developer<br/>Paul Tomlinson.</h1> */}
+        <h1><span className="hello">Paul Tomlinson</span>Building websites that your<br/>customers will love ❤️</h1>
         
       </div>
 
@@ -123,7 +124,8 @@ const IndexPage = ({
 
       <div className="copy">
 
-      Having been a freelance web developer for 20 years, I can offer you:
+      {/* Having been a freelance web developer for 20 years, I can offer you: */}
+      What I can offer you:
 
 
       <ul>
