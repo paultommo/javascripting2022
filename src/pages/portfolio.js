@@ -2,7 +2,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SeoBasic from "../components/seo"
+// import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import { Link } from "gatsby"
 
@@ -66,16 +66,17 @@ const IndexPage = ({
   },
 }) => {
 
-  const { title } =  allWpPortfolio
+  // const { title } =  allWpPortfolio
 
   return(
   <Layout>
 
-     {seoPage ?
+     {/* {seoPage ?
         <Seo post={seoPage} />
       :
         <SeoBasic title={title} />
-     }
+     } */}
+     <Seo title="Paul Tomlinson: Building websites that your customers will love ❤️" />
 
      <div className="portfolio">
 

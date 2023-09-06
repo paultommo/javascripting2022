@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SeoBasic from "../components/seo"
+// import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -90,11 +90,7 @@ const IndexPage = ({
   return(
   <Layout>
 
-     {seoPage ?
-        <Seo post={seoPage} />
-      :
-        <SeoBasic title='Homepage' />
-     }
+    <Seo title="Paul Tomlinson: Building websites that your customers will love ❤️" />
 
      <div className="homepage-section one">
 
