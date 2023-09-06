@@ -272,6 +272,17 @@ ul.navigation  {
   .intro {
 
     padding-left: 50px;
+    justify-content: center;
+  }
+
+  .homepage-section h1 {
+
+    font-size: 30px;
+  }
+
+  .homepage-section h1 .hello {
+
+    font-size: 60px;
   }
 
 }
