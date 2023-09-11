@@ -99,6 +99,7 @@ const IndexPage = ({
         {/* <h1><span className="hello">Hello!</span> I’m freelance web developer<br/>Paul Tomlinson.</h1> */}
         <h1><span className="hello">Paul Tomlinson</span>Building websites that your<br/>customers will love ❤️</h1>
         
+        <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2>
 
         <div className="button-holder">
 

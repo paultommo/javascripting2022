@@ -122,6 +122,11 @@ ul.navigation  {
 }
 
 
+.navigation-container .logo {
+
+  width: 70px;
+}
+
 .navigation-container .logo a {
 
   font-family: 'Alata', 'Arial', 'sans-serif;';
@@ -139,6 +144,15 @@ ul.navigation  {
 .navigation.mobile {
 
     display: none;
+
+}
+
+@media (max-width: 600px) {
+
+  .navigation-container .logo {
+
+    width: 50px;
+  }
 
 }
 
@@ -226,6 +240,8 @@ ul.navigation  {
   background-repeat: no-repeat;
   background-size: 110%;
   background-position: 0% 130px; */
+  display: flex;
+  align-items: center;
   
 }
 
@@ -233,6 +249,11 @@ ul.navigation  {
 
   display: flex;
   
+}
+
+.homepage-section.one h2 {
+
+  font-style: italic;
 }
 
 
@@ -426,7 +447,7 @@ ul.navigation  {
 
 .homepage-section .intro .button-holder {
 
-  padding: 0 0 10% 0;
+  padding: 0 0 0% 0;
 }
 
 
