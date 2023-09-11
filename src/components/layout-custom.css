@@ -304,6 +304,11 @@ ul.navigation  {
     padding: 3px;
   }
 
+  .homepage-section .intro .button-holder {
+
+  padding: 0 0 0% 0 !important;
+  }
+
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
@@ -464,7 +469,7 @@ ul.navigation  {
 
 .homepage-section .intro .button-holder {
 
-  padding: 0 0 0% 0 !important;
+  padding: 0 0 0% 0;
 }
 
 
