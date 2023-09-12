@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
       <div>
         <Navigation />
         <main>{children}</main>
+        
         <footer>
           © {new Date().getFullYear()}
         </footer>
