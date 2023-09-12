@@ -149,6 +149,11 @@ ul.navigation  {
 
 @media (max-width: 600px) {
 
+  .navigation-container {
+
+    padding: 0;
+  }
+
   .navigation-container .logo {
 
     width: 50px;
