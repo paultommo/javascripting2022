@@ -55,6 +55,12 @@ const IndexPage = ({
 
     <p>Ready to embark on a web development journey that transcends the ordinary? <a className="red" href="mailto:paul@javascripting.uk">Connect with me right here</a>, and rest assured, I'm committed to responding promptly within 24 hours. Let's turn your digital dreams into reality!</p>
 
+    <div className="button-holder">
+
+      <a href="mailto:paul@javascripting.uk"><button>Get in touch now</button></a>
+
+    </div>
+
     </div>
 
     <div className="about-testimonials-container">
