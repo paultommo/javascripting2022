@@ -197,16 +197,13 @@ ul.navigation  {
 .homepage-section {
 
   display: flex;
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
-
+  
 }
 
 .homepage-section .intro {
 
   padding: 0 0 0 10%;
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   
 }
@@ -216,7 +213,8 @@ ul.navigation  {
   font-size: 50px;
   display: flex;
   flex-wrap: wrap;
-  /* width: 70%; */
+  
+
 }
 
 .homepage-section h1 .hello {
@@ -302,11 +300,6 @@ ul.navigation  {
 
     font-size: 10px;
     padding: 3px;
-  }
-
-  .homepage-section .intro .button-holder {
-
-    padding: 0 0 0% 0 !important;
   }
 
 }
