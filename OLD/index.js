@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 // import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import ReactHtmlParser from "react-html-parser"
 // import Testimonials from "../components/testimonials"
@@ -128,48 +128,44 @@ const IndexPage = ({
 
       <div className="copy">
 
-      My approach to achieving this involves:
+      What I can offer you:
 
       <ul>
       
-      <li><h2>Helping you select the best solution for your business</h2>
-      With extensive experience across various technologies and a diverse range of projects, I am well-equipped to assist you in selecting the ideal approach with confidence.
+      <li><h2>Advice on how to create a successful website</h2>
+      I help businesses improve their online presence, website user experience and conversion rates.
       </li>
 
-      <li><h2>Creating a website that delivers high conversion rates</h2>
-      I grasp website user experience, online visibility, and the factors that will effectively convert your customers.
+      <li><h2>Vast technical knowledge</h2>
+      Having worked with so many different technologies and worked on so many different projects, I can help select and develop the best solution for you.
       </li>
 
-      <li><h2>Designing a visually appealing website</h2>
-      I take pride in my keen sense of design, along with my ability to understand what your customers will appreciate and what may not resonate with them.
+      <li><h2>Excellent time management and organisation skills</h2>
+      I always ensure a project is under control and deadlines are always met.
       </li>
 
-      <li><h2>Developing a website that is fully responsive on all devices</h2>
-      I guarantee comprehensive testing of your website across various screen sizes and operating systems.
+      <li><h2>Great communication</h2>
+      I pride myself on my interpersonal skills - whether with clients, developers or designers - and I will always listen to everyone’s needs and offer my thoughts, to ensure we create a product that everyone is delighted with.
       </li>
 
-      <li><h2>Crafting a website that operates at peak performance</h2>
-      I will consistently analyse your site during the design and development phases to ensure it achieves optimal speed and performance.
+      <li><h2>A friendly, calm voice and positive attitude</h2>
+      I love working and chatting with people and try to make every project as enjoyable as possible.
       </li>
 
-      <li><h2>Providing you with seasoned expertise and guidance</h2>
-      With more than two decades of experience in website development, I can provide you with a wealth of knowledge and guidance at every stage of the development process.
+      <li><h2>Confidence and proactivity</h2>
+      I have lots of confidence in my abilities and always get the job done!
       </li>
 
-      <li><h2>Delivering meticulous attention to detail</h2>
-      To establish trust with your customers, it's crucial to eliminate any errors, and I fully grasp the importance of this.
+      <li><h2>Attention to detail </h2>
+      I’m a perfectionist and understand how to make pixel perfect products and keep going until we create something brilliant!
       </li>
 
-      <li><h2>Creating a website that is finely tuned for SEO optimization</h2>
-      I will provide you with all the key ingredients to ensure Google loves your website!
+      <li><h2>Guarantees</h2>
+      That your product will be fully responsive, secure and optimised for SEO, so it performs to the best of it’s ability.
       </li>
 
-      <li><h2>Attentively hearing and understanding your requirements</h2>
-      I also take pride in my strong interpersonal skills, whether interacting with clients, developers, or designers. I am committed to actively listening to your requirements to ensure that we collaboratively build a website that truly delights you.
-      </li>
-
-      <li><h2>Assisting you to the fullest extent possible</h2>
-      I collaborate with a diverse team of experts in design, SEO, and copywriting, ready to assist you with various aspects beyond just project development if needed.
+      <li><h2>High quality design, SEO and copywriting skills</h2>
+      I work with a range of experts in the fields of design, SEO and copywriting if you require help with more than just the development of your project.
       </li>
 
 
