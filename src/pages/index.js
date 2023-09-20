@@ -128,17 +128,17 @@ const IndexPage = ({
 
       <div className="copy">
 
-      My approach to achieving this involves:
+      And I can achieve this by:
 
       <ul>
       
-      <li><h2>Helping you select the best solution for your business</h2>
+      <li><h2>Helping you select the best solution for your project</h2>
       With extensive experience across various technologies and a diverse range of projects, I am well-equipped to assist you in selecting the ideal approach with confidence.
       </li>
 
-      <li><h2>Creating a website that delivers high conversion rates</h2>
+      {/* <li><h2>Creating a website that delivers high conversion rates</h2>
       I grasp website user experience, online visibility, and the factors that will effectively convert your customers.
-      </li>
+      </li> */}
 
       <li><h2>Designing a visually appealing website</h2>
       I take pride in my keen sense of design, along with my ability to understand what your customers will appreciate and what may not resonate with them.
