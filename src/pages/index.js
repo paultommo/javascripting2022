@@ -140,14 +140,6 @@ const IndexPage = ({
       From selecting colors to crafting compelling CTAs, I've gained valuable insights into user experience and what can effectively engage visitors on your website.
       </li>
 
-      {/* <li><h2>Designing a visually appealing website</h2>
-      I take pride in my keen sense of design, along with my ability to understand what your customers will appreciate and what may not resonate with them.
-      </li> */}
-
-      {/* <li><h2>Developing a website that is fully responsive on all devices</h2>
-      I guarantee comprehensive testing of your website across various screen sizes and operating systems.
-      </li> */}
-
       <li><h2>Crafting a website that operates at peak performance</h2>
       I will consistently analyse your site during the design and development phases to ensure it achieves optimal speed and performance.
       </li>
@@ -169,7 +161,7 @@ const IndexPage = ({
       </li>
 
       <li><h2>Attentively hearing and understanding your requirements</h2>
-      I also take pride in my strong interpersonal skills, whether interacting with clients, developers, or designers. I am committed to actively listening to your requirements to ensure that we collaboratively build a website that truly delights you.
+      I also take pride in my strong interpersonal skills, whether interacting with clients, developers, or designers. I am committed to actively listening to your requirements to ensure that we collaboratively build a website that truly delights you and your customers!
       </li>
 
       <li><h2>Assisting you to the fullest extent possible</h2>
