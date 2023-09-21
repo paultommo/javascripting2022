@@ -153,16 +153,16 @@ const IndexPage = ({
       </li>
 
       <li><h2>Addressing all the foundational aspects of web development</h2>
-      I assure you that I will check off all the essential web development tasks, ranging from crafting a fully responsive website to implementing all the appropriate HTML tags.
+      I assure you that I will check off all the essential web development tasks, ranging from crafting a fully responsive website and SEO optimisation to implementing all the appropriate HTML tags.
       </li>
 
-      <li><h2>Creating a website that is finely tuned for SEO optimization</h2>
+      {/* <li><h2>Creating a website that is finely tuned for SEO optimization</h2>
       I will provide you with all the key ingredients to ensure Google loves your website!
-      </li>
+      </li> */}
 
-      <li><h2>Attentively hearing and understanding your requirements</h2>
+      {/* <li><h2>Attentively hearing and understanding your requirements</h2>
       I also take pride in my strong interpersonal skills, whether interacting with clients, developers, or designers. I am committed to actively listening to your requirements to ensure that we collaboratively build a website that truly delights you and your customers!
-      </li>
+      </li> */}
 
       <li><h2>Assisting you to the fullest extent possible</h2>
       I collaborate with a diverse team of experts in design, SEO, and copywriting, ready to assist you with various aspects beyond just project development if needed.
