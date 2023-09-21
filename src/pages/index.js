@@ -128,7 +128,7 @@ const IndexPage = ({
 
       <div className="copy">
 
-      And I can achieve this by:
+      And I can bring in the love by:
 
       <ul>
       
@@ -136,17 +136,17 @@ const IndexPage = ({
       With extensive experience across various technologies and a diverse range of projects, I am well-equipped to assist you in selecting the ideal approach with confidence.
       </li>
 
-      {/* <li><h2>Creating a website that delivers high conversion rates</h2>
-      I grasp website user experience, online visibility, and the factors that will effectively convert your customers.
+      <li><h2>Designing a website that captivates and delights visitors</h2>
+      From selecting colors to crafting compelling CTAs, I've gained valuable insights into user experience and what can effectively engage visitors on your website.
+      </li>
+
+      {/* <li><h2>Designing a visually appealing website</h2>
+      I take pride in my keen sense of design, along with my ability to understand what your customers will appreciate and what may not resonate with them.
       </li> */}
 
-      <li><h2>Designing a visually appealing website</h2>
-      I take pride in my keen sense of design, along with my ability to understand what your customers will appreciate and what may not resonate with them.
-      </li>
-
-      <li><h2>Developing a website that is fully responsive on all devices</h2>
+      {/* <li><h2>Developing a website that is fully responsive on all devices</h2>
       I guarantee comprehensive testing of your website across various screen sizes and operating systems.
-      </li>
+      </li> */}
 
       <li><h2>Crafting a website that operates at peak performance</h2>
       I will consistently analyse your site during the design and development phases to ensure it achieves optimal speed and performance.
@@ -158,6 +158,10 @@ const IndexPage = ({
 
       <li><h2>Delivering meticulous attention to detail</h2>
       To establish trust with your customers, it's crucial to eliminate any errors, and I fully grasp the importance of this.
+      </li>
+
+      <li><h2>Addressing all the foundational aspects of web development</h2>
+      I assure you that I will check off all the essential web development tasks, ranging from crafting a fully responsive website to implementing all the appropriate HTML tags.
       </li>
 
       <li><h2>Creating a website that is finely tuned for SEO optimization</h2>
