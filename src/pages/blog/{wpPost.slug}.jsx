@@ -110,7 +110,13 @@ const WpPost = ({
           <h2> {formatDate(dateGmt)}</h2>
           <div className='copyLarge workCopy'>{  ReactHtmlParser(content) }</div>
 
-        </div>
+          </div>
+
+          <div className="button-holder">
+
+          <a href="mailto:paul@javascripting.uk?subject=Hello Paul!"><button>Say Hello!</button></a>
+
+          </div>
 
 
          </div>

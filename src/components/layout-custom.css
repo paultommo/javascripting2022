@@ -32,8 +32,8 @@ a.red:hover {
 button {
 
   /* background-color: #3b5998; */
-  background-color: #000;
-  color: #fff;
+  background-color: #FFC407;
+  color: #000;
   border: 0;
   padding: 10px 15px;
   margin-right: 10px;
@@ -610,6 +610,13 @@ ul.navigation  {
   height: auto;
   object-fit: unset;
   
+}
+
+.portfolio .work .button-holder,
+.work-container .button-holder
+{
+
+  padding-left: 0;
 }
 
 /* .portfolio div img {

@@ -146,7 +146,11 @@ const WpPortfolio = ({
 
           <div className='copyLarge workCopy'>{  ReactHtmlParser(content) }</div>
 
-          <p><a className='viewLink' target="_blank" rel="noopener noreferrer" href={url.url}>VIEW &#62;&#62;</a></p>
+          <div className="button-holder">
+
+          <a href="mailto:paul@javascripting.uk?subject=Hello Paul!"><button>Say Hello!</button></a>
+
+          </div>
 
           {imagesCanLoad && image1 && image1.image1 && image1.image1.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image1.image1.mediaDetails.sizes)} /></div>}
 
@@ -158,10 +162,16 @@ const WpPortfolio = ({
 
           {imagesCanLoad && image5 && image5.image5 && image5.image5.mediaDetails && <div className='workImage'><img className='imageWork' alt={title} src={getImage(image5.image5.mediaDetails.sizes)} /></div>}
 
-        </div>
+          </div>
+
+          <p><a className='viewLink' target="_blank" rel="noopener noreferrer" href={url.url}>VIEW WEBSITE&#62;&#62;</a></p>
+
+          
 
 
          </div>
+
+         
 
       </div>
 

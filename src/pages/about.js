@@ -53,11 +53,13 @@ const IndexPage = ({
 
     <p>Beyond web development, I've applied my technical prowess and creative flair to collaborate on captivating installations for exhibitions and even breathed life into a pop-up interactive aquarium. My interests extend beyond the digital realm; I once had a luxury chocolate business, ventured into creating wooden board games, and now, I'm working on both an exciting Youtube channel and a niche clothing business.</p>
 
-    <p>Ready to embark on a web development journey that transcends the ordinary? <a className="red" href="mailto:paul@javascripting.uk">Connect with me right here</a>, and rest assured, I'm committed to responding promptly within 24 hours. Let's turn your digital dreams into reality!</p>
+    <p>So whether you need a new website, some freelance help or just want some technical advice, please get in touch.</p>
+    
+    {/* <p>Ready to embark on a web development journey that transcends the ordinary? <a className="red" href="mailto:paul@javascripting.uk">Connect with me right here</a>, and rest assured, I'm committed to responding promptly within 24 hours. Let's turn your digital dreams into reality!</p> */}
 
     <div className="button-holder">
 
-      <a href="mailto:paul@javascripting.uk?subject=Hello Paul!"><button>Get in touch now</button></a>
+      <a href="mailto:paul@javascripting.uk?subject=Hello Paul!"><button>Say Hello!</button></a>
 
     </div>
 
