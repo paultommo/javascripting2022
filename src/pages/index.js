@@ -10,7 +10,7 @@ import ReactHtmlParser from "react-html-parser"
 
 export const query = graphql`
   query {
-   allWpPost {
+   allWpPost (limit:4) {
     edges {
       node {
         slug
@@ -43,6 +43,7 @@ export const query = graphql`
       }
     }
   }
+  
 
     seoPage:wpPage(slug: {eq: "homepage"}) {
     nodeType
@@ -83,7 +84,7 @@ export const query = graphql`
 
 const IndexPage = ({
   data: {
-    seoPage, allWpTestimonial
+    seoPage, allWpTestimonial, allWpPost
   },
 }) => {
 
@@ -204,6 +205,25 @@ const IndexPage = ({
         </div>
 
     </div>
+
+    <div className="portfolio-homepage">
+    <h3>From the Blog</h3>
+    <div className="portfolio">
+
+
+      { allWpPost.edges.map((item, index) => (
+
+      <>
+
+      <Link rel="prefetch" key={index} to={`/blog/${item.node.slug}`} ><div className="work">  <div className="title">{ item.node.title }</div> <img alt={item.node.title} src={item.node.featuredImage.node.mediaDetails.sizes[0].sourceUrl} /> </div></Link>
+
+      </>
+
+      ))
+      }
+
+      </div>
+      </div>
 
   </Layout>
   )

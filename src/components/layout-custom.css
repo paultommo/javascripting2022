@@ -402,6 +402,13 @@ ul.navigation  {
 
 }
 
+.homepage-section.four {
+
+  background-color: #fff;
+  padding-top: 40px;
+  display: grid;
+}
+
 @media (min-width: 600px) and (max-width: 1200px) {
 
   .testimonials-container {
@@ -423,6 +430,27 @@ ul.navigation  {
   padding: 20px 0;
   display: flex;
   justify-content:  center;
+}
+
+.portfolio-homepage {
+
+  background-color: #fff;
+  padding-top: 40px;
+  
+}
+
+.portfolio-homepage h3 {
+
+  padding-left: 4%;
+}
+
+@media (max-width: 1000px) {
+
+  .portfolio-homepage h3 {
+
+    text-align: center;
+  }
+
 }
 
 /* about */
