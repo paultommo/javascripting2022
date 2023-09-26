@@ -88,7 +88,7 @@ const Layout = ({ children }) => {
 
           <div>
 
-          <h4>Sign up for valuable insights on enhancing your website!</h4>
+          <h4>Subscribe for tips on how to create a loveable website ❤️</h4>
 
           {emailMessage &&
                 <div className="mailinglist_message">
