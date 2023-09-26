@@ -17,9 +17,7 @@ const Header = ({ siteTitle }) => (
     <div className="navigation-container">
         <div className="logo">
           
-          {/* <Link activeClassName="active" to="/">PAUL TOMLINSON</Link> */}
-
-          
+          <Link to="/">
             <StaticImage
             src="../images/logo.png"
             width={100}
@@ -28,6 +26,7 @@ const Header = ({ siteTitle }) => (
             alt="Paul Tomlinson"
             style={{ marginTop: `0rem` }}
           />
+          </Link>
         
         
         </div>

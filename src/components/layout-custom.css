@@ -29,7 +29,15 @@ a.red:hover {
   color: #000;
 }
 
-button {
+footer a {
+
+  color: #fff;
+  font-size: 0.6em;
+}
+
+button,
+input[type="submit"]
+{
 
   /* background-color: #3b5998; */
   background-color: #FFC407;
@@ -40,6 +48,13 @@ button {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* sign up */
+input[type="text"] {
+
+  padding: 8px 10px;
+  margin-right: 10px;
 }
 
 button:hover {
@@ -61,6 +76,30 @@ height: 100%;
 object-fit: contain;
 }
 
+h2, h3, h4, h5, h6 {
+
+  font-size: 1.3rem;
+  margin: 20px 0 10px 0;
+}
+
+.consentHolder {
+
+  background-color: #3b94e6 !important;
+  color: #000 !important;
+}
+
+#rcc-decline-button {
+
+  background-color: #000 !important;
+  border-radius: 5px !important;
+}
+
+#rcc-confirm-button {
+
+  background-color: #fff !important;
+  border-radius: 5px !important;
+}
+
 @media (max-width: 600px) {
 
   img {
@@ -75,10 +114,23 @@ object-fit: contain;
 footer {
 
     /* background-color: #3b5998; */
-    background-color: #fff;
-    padding: 20px;
-    text-align: right;
-    color: #000;
+    background-color: #000;
+    padding: 4%;
+    /* text-align: right; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+/* shift footer date down */
+@media (max-width: 600px) {
+
+  footer div:last-child {
+
+    margin-top: 10px;
+  }
 }
 
 /* navigation */
