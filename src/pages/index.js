@@ -103,7 +103,7 @@ const IndexPage = ({
 
         <div className="button-holder">
 
-          <a href="mailto:paul@javascripting.uk?subject=Hello Paul!"><button>Say Hello!</button></a>
+          <a href="mailto:paul@javascripting.uk?subject=Please give me a free website audit"><button>Get a free website audit now!</button></a>
 
         </div>
 
