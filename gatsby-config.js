@@ -51,7 +51,7 @@ siteMetadata: {
   {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
-      trackingId: 'UA-130770268-1',
+      trackingId: 'G-YBH47E1P1M',
     },
   },
 
