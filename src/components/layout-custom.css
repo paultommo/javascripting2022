@@ -287,13 +287,26 @@ ul.navigation  {
   font-weight: normal;
   /*width: 60%;*/
   margin: 0 0 20px 0;
+  
 }
 
 .homepage-section.one {
 
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   
+}
+
+.homepage-section.one h2 {
+
+  color: #fff;
+  font-weight: bold;
+}
+
+.homepage-section.one .audit {
+
+  width: 50%;
+  margin: 20px 0;
 }
 
 .homepage-section.one .image {
@@ -349,6 +362,14 @@ ul.navigation  {
     margin: 10px 0;
   }
 
+  .homepage-section.one .audit {
+
+    font-size: 12px;
+    line-height: 1.2;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
   button {
 
     font-size: 10px;
@@ -391,6 +412,7 @@ ul.navigation  {
   /* color: #3b5998; */
   font-weight: bold;
   font-size: 25px;
+  margin: 0;
 }
 
 .homepage-section.two .copy {
