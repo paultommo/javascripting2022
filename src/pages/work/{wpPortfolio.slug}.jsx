@@ -148,7 +148,7 @@ const WpPortfolio = ({
 
           <div className="button-holder">
 
-          <a href="mailto:paul@javascripting.uk?subject=Hello Paul!"><button>Get in touch to work with me!</button></a>
+          <a href="mailto:hello@paultommo.com?subject=Hello Paul!"><button>Get in touch to work with me!</button></a>
 
           </div>
 

@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => (
           <li><Link activeClassName="active" to="/portfolio/">Portfolio</Link></li>
           <li><Link activeClassName="active" to="/blog/">Blog</Link></li>
           <li>
-            <a href="mailto:paul@javascripting.uk"><StaticImage
+            <a href="mailto:hello@paultommo.com"><StaticImage
               src="../images/email.png"
               width={20}
               quality={95}
