@@ -109,7 +109,7 @@ const IndexPage = ({
 
         <div class="audit">
         
-        I'd be thrilled to conduct a comprehensive review of your website and explore ways to enhance its appeal to your customers.
+        I'd be delighted to conduct a comprehensive review of your website and explore ways to enhance its appeal to your customers.
 
         </div>
 
