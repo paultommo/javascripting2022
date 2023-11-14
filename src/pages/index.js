@@ -97,7 +97,7 @@ const IndexPage = ({
 
       <div className="intro">
       
-        <h1><span className="hello">Paul Tomlinson</span>For websites that<br/>wow Marketers</h1>
+        <h1><span className="hello">Paul Tomlinson</span>For Websites that<br/>Wow Marketers</h1>
         
         <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2>
 
