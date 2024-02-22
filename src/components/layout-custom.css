@@ -463,11 +463,71 @@ ul.navigation  {
   padding: 20px 0;
 }
 
+.homepage-section.four {
+
+  /* justify-content:  center; */
+  align-items: unset;
+  flex-wrap: wrap;
+  background-color: #dfe3ee;
+  padding: 20px 0;
+  justify-content: flex-start !important;
+}
+
+.homepage-section.four .copy {
+  width: 100%;
+  /* padding: 20px 0; */
+  padding: 20px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.homepage-section.four .copy h3 {
+
+  margin: 0;
+}
+
+.homepage-section.four .copy .prices {
+
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homepage-section.four .copy .prices div {
+
+  width: 45%;
+  border-radius: 5px;
+  background-color: #3b94e6;
+  margin: 10px 0;
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+  border: 1px #000 solid;
+}
+
+.portfolio-homepage.blog {
+
+  background-color: #3b94e6;
+}
+
 @media (max-width: 600px) {
 
   .homepage-section.three {
 
     padding: 10px 20px;
+  }
+
+  .homepage-section.four .copy .prices {
+
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  .homepage-section.four .copy .prices div {
+
+    width: 100%;
   }
 
 }

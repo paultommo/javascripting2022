@@ -220,7 +220,28 @@ const IndexPage = ({
 
     </div>
 
-    <div className="portfolio-homepage">
+    <div className="homepage-section four">
+
+    
+        <div className="copy">
+       
+        <h3>My Prices</h3>
+
+
+            <div className="prices">
+
+ 
+          <div className="work"><h3>Fixed Projects: Start from £4000</h3>Dependent on the scope of the project</div>
+          <div className="work"><h3>One-off Tasks: £400 / day</h3>For any updates or maintenance to your site</div>
+
+              </div>
+
+
+        </div>
+
+    </div>
+
+    <div className="portfolio-homepage blog">
     <h3>From the Blog</h3>
     <div className="portfolio">
 
