@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 // import SeoBasic from "../components/seo"
@@ -81,12 +81,70 @@ export const query = graphql`
     }
   }
 `
+const axios = require('axios');
 
 const IndexPage = ({
   data: {
     seoPage, allWpTestimonial, allWpPost
   },
 }) => {
+
+  const [emailValue, setEmailValue] = useState('');
+  const [emailMessage, setEmailMessage] = useState('');
+
+  const handleMailSubmit = () => {
+
+    if(validateEmail(emailValue)){
+
+      console.log(emailValue)
+
+      axios.post('https://story-spinner-vjrm.temp-dns.com/paultommo-php/addcontact.php', {
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        data:{
+          email: emailValue,
+        }
+      
+      })
+      .then(response => {
+        
+        switch(true){
+
+          case response.data.id!==undefined:
+
+            setEmailMessage('Thanks for signing up!')
+
+            setEmailValue('') 
+
+          break;
+
+          case response.data.code=="duplicate_parameter":
+           
+              setEmailMessage('Email is already on the list!')
+
+          break
+
+
+        }
+
+        // console.log(response.data)
+         
+       })
+      .catch(error => {
+        console.log(error);
+      });
+
+      }
+      else{
+
+        setEmailMessage('Invalid email. Please try again!')
+      }
+
+  }
+
+  function validateEmail(email) {
+    const res = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return res.test(String(email).toLowerCase());
+  }
 
   return(
   <Layout>
@@ -101,15 +159,36 @@ const IndexPage = ({
         
         <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2>
 
-        <div className="button-holder">
+        {/* <div className="button-holder">
 
           <a href="mailto:hello@paultommo.com?subject=Please give me a free website audit"><button>Get a free website audit now!</button></a>
 
-        </div>
+        </div> */}
 
-        <div class="audit">
+        {/* <div class="audit">
         
         I'd be delighted to conduct a comprehensive review of your website and explore ways to make it wow for you and your customers.
+
+        </div> */}
+
+        <div>
+
+        <h4>Sign up for tips to wow with your digital marketing👇</h4>
+
+{emailMessage &&
+      <div className="mailinglist_message">
+      {emailMessage}
+      </div>
+}
+  <div>
+  <input onChange={event => {
+  setEmailValue(event.target.value)
+    }}
+    type="text" name="email" value={emailValue} /><input onClick={ handleMailSubmit } type="submit" value="Sign up" />
+
+  </div>
+
+
 
         </div>
 

@@ -514,6 +514,11 @@ ul.navigation  {
 
 @media (max-width: 600px) {
 
+  .homepage-section.one input[type=submit]{
+
+    margin-bottom: 20px;
+  }
+
   .homepage-section.three {
 
     padding: 10px 20px;
