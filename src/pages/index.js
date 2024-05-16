@@ -155,9 +155,11 @@ const IndexPage = ({
 
       <div className="intro">
       
-        <h1><span className="hello">Paul Tomlinson</span>For Websites that<br/>Wow Marketers</h1>
+        <h1><span className="hello">Paul Tomlinson</span>For Websites that<br/>Wow Google</h1>
         
-        <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2>
+        {/* <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2> */}
+
+        <h2>"We’ve certainly made a big impact on the organic performance of the site"</h2>
 
         {/* <div className="button-holder">
 
@@ -173,7 +175,7 @@ const IndexPage = ({
 
         <div>
 
-        <h4>Sign up for tips to wow with your digital marketing👇</h4>
+        <h4>Sign up for tips to wow Google👇</h4>
 
 {emailMessage &&
       <div className="mailinglist_message">
@@ -214,18 +216,27 @@ const IndexPage = ({
 
       <div className="copy">
 
-      And I can wow marketers by:
+      {/* And I can wow marketers by: */}
+      <h4>How can I build you a website that Google loves?</h4>
+    <ul>
+    <li>I know what Google wants to see from website design and content</li>
+    <li>I build high performance websites - a key Google metric</li>
+    <li>I build sites that create a great experience for your customers - another key Google metric</li>
+    <li>I can also help you develop a long term content strategy for SEO</li>
+    <li>In addition:</li>
+    <li>I can look after all your design, copy, technology and project management needs and create you something great!</li>
+    <li>I will save you time. I’ll build you an intuitive CMS solution, which make website updates a breeze.</li>
+    <li>I will save you money. I’ll future-proof your website, so that you won’t need to pay for another in 12 months time</li>
 
-      <ul>
-
-      <li><h2>Giving you a top quality service</h2>I will build you a high performing and seo-loving website.</li>
+  
+      {/* <li><h2>Giving you a top quality service</h2>I will build you a high performing and seo-loving website.</li>
       <li><h2>Taking care of all your worries</h2>I can look after all your design, copy, technology and project management needs and create you something great!</li>
       <li><h2>Offering my experience</h2>I have 20 years experience in this industry, so I understand how to make high impact, user-friendly websites.</li>
       <li><h2>Saving you time</h2>I’ll build you an intuitive CMS solution, which make website updates a breeze.</li>
       <li><h2>Saving you money</h2>I’ll future-proof your website, so that you won’t need to pay for another in 12 months time.</li>
       <li><h2>By being on the ball</h2>I always keep a close eye on the latest technology and trends in order to offer my clients the best solutions available.</li>
       <li><h2>Giving you a marketing hand</h2>Having worked with so many marketers and previously run my own luxury chocolate business, I’m always here if you need a second opinion with your marketing!</li>
-      
+       */}
       {/* <li><h2>Helping you select the best solution for your project</h2>
       With extensive experience across various technologies and a diverse range of projects, I am well-equipped to assist you in selecting the ideal approach with confidence.
       </li>

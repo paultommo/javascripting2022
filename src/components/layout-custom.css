@@ -436,7 +436,13 @@ ul.navigation  {
 .homepage-section.two ul li {
 
   width: 100%;
-  margin: 20px 0;
+  margin: 10px 0;
+}
+
+.homepage-section.two ul li:first-child {
+
+  margin-top: 20px;
+
 }
 
 .homepage-section.two ul li h2 {
