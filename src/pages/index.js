@@ -149,7 +149,7 @@ const IndexPage = ({
   return(
   <Layout>
 
-    <Seo title="Paul Tomlinson: For Websites that Wow Marketers" />
+    <Seo title="Paul Tomlinson: For Websites that Wow Google" />
 
      <div className="homepage-section one">
 
