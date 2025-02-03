@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
         
         <footer>
 
-          <div>
+          {/* <div>
 
           <h4>Sign up for tips to wow Google👇</h4>
 
@@ -102,8 +102,11 @@ const Layout = ({ children }) => {
               type="text" name="email" value={emailValue} /><input onClick={ handleMailSubmit } type="submit" value="Sign up" />
 
             </div>
-          </div>
+          </div> */}
 
+          <a href="mailto:hello@paultommo.com?subject=Hello Paul!I'd like a free consultation"><button>Want a free 10-minute consultation?</button></a>
+
+          <div><a href="https://maps.app.goo.gl/3q4WSbage9wozrrv6" target="_blank">Units 1-28, Hackney Bridge ECHO BUILDING, E Bay Ln, London E15 2SJ</a></div>
 
          <div><span><Link activeClassName="active" to="/privacy">Privacy Policy</Link></span> © {new Date().getFullYear()} </div>
         </footer>

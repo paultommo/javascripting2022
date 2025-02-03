@@ -18,6 +18,11 @@ a {
 
 }
 
+a.mainlink {
+
+  font-weight: bold;
+}
+
 a.red {
 
   color: #000;
@@ -32,7 +37,7 @@ a.red:hover {
 footer a {
 
   color: #fff;
-  font-size: 0.6em;
+  /* font-size: 0.6em; */
 }
 
 button,
@@ -122,14 +127,18 @@ footer {
     align-items: flex-end;
     flex-wrap: wrap;
     color: #fff;
+    font-size: 0.8em;
 }
 
 /* shift footer date down */
 @media (max-width: 600px) {
 
-  footer div:last-child {
+  footer div:nth-child(2),
+  footer div:last-child
+  {
 
     margin-top: 10px;
+    line-height: 1.2;
   }
 }
 
@@ -431,6 +440,7 @@ ul.navigation  {
     flex-wrap: wrap;
     /* margin: 0; */
     padding: 0;
+    width: 100%;
 }
 
 .homepage-section.two ul li {

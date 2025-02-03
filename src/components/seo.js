@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet"
 
 const SEO = () => {
  
-    const title = `Paul Tomlinson: For Websites that Wow Google`
+    const title = `Paul Tomlinson: High-End Website Design for London Businesses`
     const titleTemplate= `%s`
-    const description= `Paul Tomlinson: For Websites that Wow Google`
-    const url= `https://javascripting.uk` // No trailing slash!
+    const description= `Paul Tomlinson: High-End Website Design for London Businesses`
+    const url= `https://paultommo.com` // No trailing slash!
     // const siteUrl= `https://javascripting.uk` //change this when changing URL
-    const image= 'https://javascripting.uk/images/static-pt.png' // Path to your image you placed in the 'static' folder
+    const image= 'https://paultommo.com/images/static-pt.png' // Path to your image you placed in the 'static' folder
     //const author= `@paultommmo`
     const twitterUsername= '@paultommmo'
   

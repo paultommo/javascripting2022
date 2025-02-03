@@ -5,11 +5,11 @@ require('dotenv').config({
 module.exports = {
 siteMetadata: {
   
-  title: `Paul Tomlinson: Freelance web developer`,
+  title: `Paul Tomlinson: High-End Website Design for London Businesses`,
   titleTemplate: `%s`,
-  description: `Hello! I'm Paul Tomlinson. A freelance web developer with 20 years experience`,
-  url: `https://javascripting.uk`, // No trailing slash!
-  siteUrl: `https://javascripting.uk`, //change this when changing URL
+  description: `Paul Tomlinson: High-End Website Design for London Businesses`,
+  url: `https://paultommo.com`, // No trailing slash!
+  siteUrl: `https://paultommo.com`, //change this when changing URL
   image: '/images/static.png', // Path to your image you placed in the 'static' folder
   author: `@paultommmo`,
   twitterUsername: '@paultommmo',
@@ -68,7 +68,7 @@ siteMetadata: {
       // https://css-tricks.com/meta-theme-color-and-trickery/
       // theme_color: `#663399`,
       display: `minimal-ui`,
-      icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
+      icon: `src/images/logo.png`, // This path is relative to the root of the site.
     },
   },
   // this (optional) plugin enables Progressive Web App + Offline functionality
