@@ -155,7 +155,7 @@ const IndexPage = ({
 
       <div className="intro">
       
-        <h1><span className="hello">Paul Tomlinson</span>High-End Website Design<br/>for London Businesses</h1>
+        <h1><span className="hello">Paul Tomlinson</span>High-End Website Design</h1>
         
         {/* <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2> */}
 
@@ -278,8 +278,8 @@ const IndexPage = ({
 
       <h2>My solution:</h2>
       <ul>
-      <li>I design high-converting, custom websites that capture attention, build trust, and generate leads for luxury brands and professional services in London 🙌</li>
-      <li>I can look after all your design, copy, technology and project management needs and create you something great! 👌</li>
+      <li>High-converting, custom websites that capture attention, build trust, and generate leads for luxury brands and professional services 🙌</li>
+      <li>I can look after all your design, copy, technology, SEO and project management needs and create you something great! 👌</li>
       <li>I will save you time. I’ll build you an intuitive CMS solution, which makes website updates a breeze 😊</li>
       <li>I will save you money. I’ll future-proof your website, so that you won’t need to pay for another in 12 months time 💰</li>
       </ul>

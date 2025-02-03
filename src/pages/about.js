@@ -47,7 +47,7 @@ const IndexPage = ({
 
      {/* <p>Greetings and welcome! I'm Paul, a seasoned freelance web developer with two decades of experience under my belt. While I call Hackney, East London, my current home and workplace, my roots trace back to Bolton in Northern England.</p> */}
 
-    <p>Hi there! I'm Paul and I specialise in High-End Website Design for London Businesses.</p>
+    <p>Hi there! I'm Paul and I specialise in High-End Website Design.</p>
 
     <p>I live and work in <a class="mainlink" href="https://maps.app.goo.gl/3q4WSbage9wozrrv6" target="_blank">Hackney</a>, East London although I'm originally from Bolton in Northern England.</p>
 
