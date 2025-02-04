@@ -5,12 +5,12 @@ require('dotenv').config({
 module.exports = {
 siteMetadata: {
   
-  title: `Paul Tomlinson: High-End Website Design for London Businesses`,
+  title: `Paul Tomlinson: High-End Website Design`,
   titleTemplate: `%s`,
-  description: `Paul Tomlinson: High-End Website Design for London Businesses`,
+  description: `Paul Tomlinson: High-End Website Design`,
   url: `https://paultommo.com`, // No trailing slash!
   siteUrl: `https://paultommo.com`, //change this when changing URL
-  image: '/images/static.png', // Path to your image you placed in the 'static' folder
+  image: '/images/static-pt.png', // Path to your image you placed in the 'static' folder
   author: `@paultommmo`,
   twitterUsername: '@paultommmo',
 
