@@ -22,11 +22,14 @@ const SEO = () => {
 
       {title && <meta property="og:title" content={title} />}
 
-      {description && (
+      {/* {description && (
         <meta property="og:description" content={description} />
-      )}
+      )} */}
+      <meta property="og:description" content={description} />
 
-      {image && <meta property="og:image" content={image} />}
+      {/* {image && <meta property="og:image" content={image} />} */}
+
+      <meta property="og:image" content={image} />
 
       <meta name="twitter:card" content="summary_large_image" />
 
