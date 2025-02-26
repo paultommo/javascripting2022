@@ -149,13 +149,15 @@ const IndexPage = ({
   return(
   <Layout>
 
-    <Seo title="Paul Tomlinson: High-End Website Design for London Businesses." />
+    <Seo title="Paul Tomlinson: Building online presences" image="https://paultommo.com/images/static-pt.png" description="Paul Tomlinson: High-End Website Design" />
+    
+
 
      <div className="homepage-section one">
 
       <div className="intro">
       
-        <h1><span className="hello">Paul Tomlinson</span>High-End Website Design</h1>
+        <h1><span className="hello">Paul Tomlinson</span>Building online presences</h1>
         
         {/* <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2> */}
 
@@ -225,7 +227,7 @@ const IndexPage = ({
       {/* <h4>How can I build you a website that Google loves?</h4> */}
       <h2>Your pain points:</h2>
     <ul>
-    <li>Your business offers high-end services, but does your website reflect that? 🤔</li>
+    <li>Your business offers a great service, but does your online presence reflect that? 🤔</li>
     <li> Inconsistent branding and slow loading times can drive potential clients away 🤨</li>
     
       {/* <li><h2>Giving you a top quality service</h2>I will build you a high performing and seo-loving website.</li>
@@ -278,7 +280,7 @@ const IndexPage = ({
 
       <h2>My solution:</h2>
       <ul>
-      <li>High-converting, custom websites that capture attention, build trust, and generate leads for luxury brands and professional services 🙌</li>
+      <li>High-converting, custom websites that capture attention, build trust, and generate leads for your business 🙌</li>
       <li>I can look after all your design, copy, technology, SEO and project management needs and create you something great! 👌</li>
       <li>I will save you time. I’ll build you an intuitive CMS solution, which makes website updates a breeze 😊</li>
       <li>I will save you money. I’ll future-proof your website, so that you won’t need to pay for another in 12 months time 💰</li>

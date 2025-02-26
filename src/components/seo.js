@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet"
 
 const SEO = () => {
  
-    const title = `Paul Tomlinson: High-End Website Design`
+    const title = `Paul Tomlinson: Building online presences`
     const titleTemplate= `%s`
-    const description= `Paul Tomlinson: High-End Website Design`
+    const description= `Paul Tomlinson: Building online presences`
     const url= `https://paultommo.com` // No trailing slash!
     // const siteUrl= `https://javascripting.uk` //change this when changing URL
     const image= 'https://paultommo.com/images/static-pt.png' // Path to your image you placed in the 'static' folder
@@ -15,21 +15,18 @@ const SEO = () => {
   return (
 
     <Helmet title={title} titleTemplate={titleTemplate +' : '+title}>
-      <meta name="description" content={description} />
-      <meta name="image" content={image} />
+      {description && <meta name="description" content={description} />}
+      {image && <meta name="image" content={image} />}
 
       {url && <meta property="og:url" content={url} />}
 
       {title && <meta property="og:title" content={title} />}
 
-      {/* {description && (
+      {description && (
         <meta property="og:description" content={description} />
-      )} */}
-      <meta property="og:description" content={description} />
+      )}
 
-      {/* {image && <meta property="og:image" content={image} />} */}
-
-      <meta property="og:image" content={image} />
+      {image && <meta property="og:image" content={image} />}
 
       <meta name="twitter:card" content="summary_large_image" />
 
