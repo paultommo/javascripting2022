@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-// import SeoBasic from "../components/seo"
+import SeoBasic from "../components/seo"
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -89,6 +89,8 @@ const IndexPage = ({
   },
 }) => {
 
+
+  
   const [emailValue, setEmailValue] = useState('');
   const [emailMessage, setEmailMessage] = useState('');
 
@@ -149,7 +151,7 @@ const IndexPage = ({
   return(
   <Layout>
 
-    <Seo title="Paul Tomlinson: Building online presences" image="https://paultommo.com/images/static-pt.png" description="Paul Tomlinson: High-End Website Design" />
+    <SeoBasic title="Paul Tomlinson: Building online presences" image="https://paultommo.com/images/static-pt.png" description="Paul Tomlinson: Building online presences" />
     
 
 

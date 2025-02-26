@@ -11,8 +11,12 @@ const SEO = () => {
     const image= 'https://paultommo.com/images/static-pt.png' // Path to your image you placed in the 'static' folder
     //const author= `@paultommmo`
     const twitterUsername= '@paultommmo'
+
+    console.log('img: '+image)
   
   return (
+
+    console.log('img: '+image),
 
     <Helmet title={title} titleTemplate={titleTemplate +' : '+title}>
       {description && <meta name="description" content={description} />}
