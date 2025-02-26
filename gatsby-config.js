@@ -5,9 +5,9 @@ require('dotenv').config({
 module.exports = {
 siteMetadata: {
   
-  title: `Paul Tomlinson: High-End Website Design`,
+  title: `Paul Tomlinson: Building online presences`,
   titleTemplate: `%s`,
-  description: `Paul Tomlinson: High-End Website Design`,
+  description: `Paul Tomlinson: Building online presences`,
   url: `https://paultommo.com`, // No trailing slash!
   siteUrl: `https://paultommo.com`, //change this when changing URL
   image: '/images/static-pt.png', // Path to your image you placed in the 'static' folder
