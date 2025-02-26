@@ -159,7 +159,7 @@ const IndexPage = ({
 
       <div className="intro">
       
-        <h1><span className="hello">Paul Tomlinson</span>Building online presences</h1>
+        <h1><span className="hello">Paul Tomlinson</span>Building online presences:<br/>Web & video developer</h1>
         
         {/* <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2> */}
 
@@ -231,7 +231,7 @@ const IndexPage = ({
     <ul>
     <li>Your business offers a great service, but does your online presence reflect that? 🤔</li>
     <li> Inconsistent branding and slow loading times can drive potential clients away 🤨</li>
-    <li> Poor user-experience can also annoy visitors to your site 🤨</li>
+    <li> Poor user-experience can also annoy visitors to your online presence 🤨</li>
     
       {/* <li><h2>Giving you a top quality service</h2>I will build you a high performing and seo-loving website.</li>
       <li><h2>Taking care of all your worries</h2>I can look after all your design, copy, technology and project management needs and create you something great!</li>
