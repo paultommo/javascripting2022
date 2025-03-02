@@ -76,7 +76,7 @@ const IndexPage = ({
       :
         <SeoBasic title={title} />
      } */}
-     <SeoBasic title="Paul Tomlinson: Building online presences" />
+     <SeoBasic title="Paul Tomlinson: Building digital presences" />
 
      <div className="portfolio">
 
