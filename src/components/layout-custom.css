@@ -332,9 +332,14 @@ ul.navigation  {
 
   .homepage-section.one .hubspot-clients {
 
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    margin-right: 20px;
     gap: 0;
+
+  }
+
+  .homepage-section.one .image {
+
 
   }
 
