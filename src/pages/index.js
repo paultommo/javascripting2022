@@ -151,7 +151,7 @@ const IndexPage = ({
   return(
   <Layout>
 
-    <SeoBasic title="Paul Tomlinson: Building digital presences" image="https://paultommo.com/images/static-pt.png" description="Paul Tomlinson: Building digital presences" />
+    <SeoBasic title="Paul Tomlinson: Impactful websites for small businesses" image="https://paultommo.com/images/static-pt.png" description="Paul Tomlinson: Impactful websites for small businesses" />
     
 
 
@@ -159,7 +159,9 @@ const IndexPage = ({
 
       <div className="intro">
       
-        <h1><span className="hello">Paul Tomlinson</span>Building digital presences:<br/>Web & video developer</h1>
+        {/* <h1><span className="hello">Paul Tomlinson</span>Building digital presences:<br/>Web & video developer</h1> */}
+
+        <h1><span className="hello">Paul Tomlinson</span>Impactful websites for small businesses</h1>
         
         {/* <h2>"Our client is thrilled with the end result. Thank you, Paul!"</h2> */}
 
@@ -229,9 +231,9 @@ const IndexPage = ({
       {/* <h4>How can I build you a website that Google loves?</h4> */}
       <h2>Your pain points:</h2>
     <ul>
-    <li>Your business offers a great service, but does your digital presence reflect that? 🤔</li>
+    <li>Your business offers a great service, but does your website reflect that? 🤔</li>
     <li> Inconsistent branding and slow loading times can drive potential clients away 🤨</li>
-    <li> Poor user-experience can also annoy visitors to your digital presence 🤨</li>
+    <li> Poor user-experience can also annoy visitors to your website 🤨</li>
     
       {/* <li><h2>Giving you a top quality service</h2>I will build you a high performing and seo-loving website.</li>
       <li><h2>Taking care of all your worries</h2>I can look after all your design, copy, technology and project management needs and create you something great!</li>
