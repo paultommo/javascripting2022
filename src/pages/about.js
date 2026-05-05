@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ReactHtmlParser from "react-html-parser"
+import { StaticImage } from "gatsby-plugin-image"
 
 export const query = graphql`
   query {
