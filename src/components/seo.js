@@ -3,16 +3,20 @@ import { Helmet } from "react-helmet"
 
 const SEO = () => {
  
-    const title = `Paul Tomlinson: High-End Website Design`
+    const title = `Paul Tomlinson: Impactful websites for small businesses`
     const titleTemplate= `%s`
-    const description= `Paul Tomlinson: High-End Website Design`
+    const description= `Paul Tomlinson: Impactful websites for small businesses`
     const url= `https://paultommo.com` // No trailing slash!
     // const siteUrl= `https://javascripting.uk` //change this when changing URL
     const image= 'https://paultommo.com/images/static-pt.png' // Path to your image you placed in the 'static' folder
     //const author= `@paultommmo`
     const twitterUsername= '@paultommmo'
+
+    console.log('img: '+image)
   
   return (
+
+    console.log('img: '+image),
 
     <Helmet title={title} titleTemplate={titleTemplate +' : '+title}>
       <meta name="description" content={description} />
@@ -22,14 +26,11 @@ const SEO = () => {
 
       {title && <meta property="og:title" content={title} />}
 
-      {/* {description && (
+      {description && (
         <meta property="og:description" content={description} />
-      )} */}
-      <meta property="og:description" content={description} />
+      )}
 
-      {/* {image && <meta property="og:image" content={image} />} */}
-
-      <meta property="og:image" content={image} />
+      {image && <meta property="og:image" content={image} />}
 
       <meta name="twitter:card" content="summary_large_image" />
 

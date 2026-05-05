@@ -73,6 +73,18 @@ const IndexPage = ({
         <a href="mailto:hello@paultommo.com?subject=Hello Paul!"><button>Start with a free 10-minute chat</button></a>
       </div>
 
+    <div className="image">
+        <StaticImage
+        src="../images/office.jpeg"
+        width={500}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Paul Tomlinson"
+        style={{ marginTop: `0.5rem` }}
+      />
+        </div>
+
+
     </div>
 
     <div className="about-testimonials-container">
