@@ -47,7 +47,6 @@ siteMetadata: {
     },
 
 
-
   {
     resolve: 'gatsby-plugin-google-analytics',
     options: {

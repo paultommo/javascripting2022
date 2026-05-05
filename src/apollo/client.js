@@ -1,9 +1,8 @@
-import ApolloClient from 'apollo-boost';
-import fetch from 'isomorphic-fetch';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
- 	uri: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
-    fetch,
+  uri: process.env.GATSBY_WPGRAPHQL_ENDPOINT,
+  cache: new InMemoryCache(),
 });
 
 export default client;
