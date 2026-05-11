@@ -88,15 +88,15 @@ const IndexPage = ({
   return(
   <Layout>
 
-    <Seo title="Paul Tomlinson | Shopify Studio for Food &amp; Wellness Brands" />
+    <Seo title="Paul Tomlinson | Shopify Studio for Wellness Food &amp; Brands" />
 
      <div className="homepage-section one">
 
       <div className="intro">
 
-        <h1><span className="hello">Paul Tomlinson</span>Your Shopify store should work as hard as your product does.</h1>
+        <h1><span className="hello">Paul Tomlinson</span>Shopify Studio for Wellness Food &amp; Brands</h1>
 
-        <h2>I'm Paul Tomlinson — a Shopify studio for food, drink and wellness brands. I design, build and grow stores that turn browsers into buyers and first-timers into fans.</h2>
+        <h2>I obsess over food. I ferment my own kombucha. I read ingredient labels. And I build bespoke, high-performing Shopify stores for brands like yours.</h2>
 
         <div>
           <a href="mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free consultation"><button>Start with a free 10-minute chat</button></a>
@@ -134,7 +134,7 @@ const IndexPage = ({
         <ul>
           <li><strong>Design &amp; brand:</strong> A store that looks as good as your product tastes — on-brand, high-converting, and built for your customer.</li>
           <li><strong>Shopify build:</strong> Custom Shopify development with an intuitive CMS, so you're never reliant on a developer for day-to-day updates.</li>
-          <li><strong>Copy &amp; content:</strong> Words that connect with food and wellness shoppers — from product descriptions to full landing pages.</li>
+          <li><strong>Copy &amp; content:</strong> Words that connect with wellness food and drink shoppers — from product descriptions to full landing pages.</li>
           <li><strong>SEO &amp; performance:</strong> Faster load times, cleaner code and search visibility that brings the right people to your store.</li>
         </ul>
 

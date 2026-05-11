@@ -42,6 +42,11 @@ footer a {
   /* font-size: 0.6em; */
 }
 
+.sidenav .nav a {
+
+  color: #000;
+}
+
 button,
 input[type="submit"]
 {
