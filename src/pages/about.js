@@ -82,7 +82,7 @@ const IndexPage = ({
 
       <div className="image">
         <StaticImage
-          src="../images/dal-pakwan.JPG"
+          src="../images/dal-pakwan.png"
           width={500}
           quality={95}
           formats={["auto", "webp", "avif"]}
