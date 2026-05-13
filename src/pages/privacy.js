@@ -7,7 +7,7 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Privacy" />
 
-    <div className="about-container">
+    <div className="about-container privacy">
     <h1>Privacy Policy</h1>
 
 <p>Last updated: {new Date().getFullYear()}</p>

@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 
 const SEO = () => {
  
-    const title = `Paul Tomlinson: Impactful websites for small businesses`
+    const title = `Shopify Studio for Craft Food & Drink Brands`
     const titleTemplate= `%s`
     const description= `Paul Tomlinson: Impactful websites for small businesses`
     const url= `https://paultommo.com` // No trailing slash!

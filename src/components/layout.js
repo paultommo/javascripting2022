@@ -103,8 +103,11 @@ const Layout = ({ children }) => {
 
             </div>
           </div> */}
-
-          <a href="mailto:hello@paultommo.com?subject=Hello Paul!I'd like a free consultation"><button>Want a free 10-minute consultation?</button></a>
+          <div>
+            <strong style={{display: 'block', fontSize: '1.1em', marginBottom: '8px'}}>Ready to build a store your brand deserves?</strong>
+            <span style={{display: 'block', marginBottom: '12px', opacity: '0.85'}}>Start with a free 15-minute chat — no pitch, no pressure.</span>
+            <a href="mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free consultation"><button>Let's have a chat</button></a>
+          </div>
 
           <div><a href="https://maps.app.goo.gl/3q4WSbage9wozrrv6" target="_blank">Units 1-28, Hackney Bridge ECHO BUILDING, E Bay Ln, London E15 2SJ</a></div>
 

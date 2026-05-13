@@ -40,50 +40,53 @@ const IndexPage = ({
 
       <div className="copy">
 
-        <h1>I'm Paul — and I've been building websites for over 20 years. These days, I do it for wellness food and drink brands who want a Shopify store that actually sells.</h1>
+        <h1>About Paul</h1>
 
-        <p>I'm based in <a className="mainlink" href="https://maps.app.goo.gl/3q4WSbage9wozrrv6" target="_blank" rel="noopener noreferrer">Hackney</a>, East London, and I run a full-service Shopify studio for wellness food and drink brands. That means I handle everything — design, build, copy, SEO and project management — so you get one person who's responsible for the whole thing, not a chain of contractors pointing at each other.</p>
+        <p>I build Shopify stores for craft food and drink brands — because I've been a craft food founder myself.</p>
 
-        <p>I've worked across advertising agencies, startups and global organisations, but smaller, product-led brands are where I do my best work. I like the directness of it — working with founders who care deeply about what they've made, and helping them find customers who'll feel the same way.</p>
+        <h2>The short version</h2>
 
-        <h2>Why food &amp; wellness</h2>
+        <p>I ran Cocoa Hernando, a luxury chocolate business that ended up stocked in Selfridges. I learned, the hard way, what it takes to make a small food brand work — from sourcing and packaging to margins and the painful moments when your website doesn't do justice to what's in the box.</p>
 
-        <p>The food and wellness niche isn't random. I've always been drawn to the space — I thoroughly enjoyed running my own luxury chocolate business called Cocoa Hernando for a number of years and managed to get my products stocked in department stores nationwide - which taught me more about what it takes to sell a product online than any client brief ever could. I know what it feels like to obsess over packaging, worry about conversions, and wonder why customers aren't coming back.</p>
+        <p>Now I build Shopify stores for founders going through the same thing.</p>
 
-        <p>That experience shapes how I approach every project. I'm not just building you a website — I'm thinking about your customer's journey, your margins, your repeat purchase rate, and how your store makes someone feel the first time they land on it.</p>
+        <h2>Why craft food and drink?</h2>
 
-        <p>That founder mindset has never really left me. Right now, alongside the studio, I'm developing my own wellness product — <a href="https://www.instagram.com/the_dopameany/" target="_blank" rel="noopener noreferrer">Dopameany (coming soon)</a>, a physical accessory designed to help people reduce their screentime.</p>
+        <p>Because I'm obsessed with it. I ferment my own kombucha and kefir at home. I read every ingredient label. I'm building my own wellness product right now, which means I'm learning the modern DTC playbook from the founder's side of the table — paid acquisition, retention, subscription, social commerce, AI — and bringing all of it back to the brands I work with.</p>
 
-        <p>It means when a wellness brand comes to me for help, I'm not just drawing on twenty years of web experience — I'm also drawing on my retail experience and my passion for food, drink and health living.</p>
+        <p>When you hire me, you're not hiring someone who learned about your category from a brief. You're hiring someone who lives and breathes the world of food and drink.</p>
 
-        <h2>Experience &amp; credibility</h2>
+        <h2>The longer version</h2>
 
-        <p>My background is deliberately broad. I started out co-founding a web design studio, working with musicians such as Doves, John Cale and Elbow and record labels such as EMI. I spent years in London advertising agencies — McCann, Saatchi &amp; Saatchi — before going independent. Along the way I've built sites for global health organisations, interactive installations for exhibitions, animated the inside of Bill Bailey's head and built multiple ecommerce projects of my own.</p>
+        <p>I'm originally from Bolton, now based in Hackney, East London. I've been building websites for over twenty years.</p>
 
-      
-        <h2>Working with me</h2>
+        <p>I started out co-founding a web design studio with a friend, working with music industry clients including Doves and John Cale of the Velvet Underground. From there I spent years inside London's big advertising agencies — McCann, Saatchi &amp; Saatchi — building digital work for global brands. Along the way I've done some strange and wonderful things: interactive vending machines, exhibition installations, a pop-up aquarium, an animated website inside Bill Bailey's head.</p>
 
-        <p>I love running projects from start to finish and I'm always happy to chat about your project and how I can help you.</p>
+        <p>All of that adds up to one thing: I know how to build websites that work. Custom development, clean code, real performance — not just a Shopify theme with the colours changed.</p>
 
-        <p>I work from Hackney Bridge in East London. Most of my client work is remote, and I've found that suits founders well. You get fast responses, honest updates, and a store you're proud of.</p>
+        <p>But food has always been a huge passion. I started Cocoa Hernando. I got deep into fermentation. And I've recently decided to push that passion into my work.</p>
 
-        <h2>Curious whether we'd be a good fit?</h2>
+        <p>So that's what I do now.</p>
 
-        <p>Start with a free 10-minute chat. No pitch, no pressure — just an honest conversation about where your store is now and where it could be.</p>
+        <h2>What you can expect from me</h2>
+
+        <p>Great communication, hard work and passion. I'll tell you when an idea is great and when it isn't. I work with a small number of brands at a time so the ones I'm working with get my full attention.</p>
+
+        <p>I'm also a chatty northerner, so I'm always up for a chat. Especially about food and drink</p>
 
         <div className="button-holder">
-          <a href="mailto:hello@paultommo.com?subject=Hello Paul!"><button>Start with a free 10-minute chat</button></a>
+          <a href="mailto:hello@paultommo.com?subject=Hello Paul!"><button>Start with a free 15-minute chat</button></a>
         </div>
 
       </div>
 
       <div className="image">
         <StaticImage
-          src="../images/office.jpeg"
+          src="../images/dal-pakwan.jpg"
           width={500}
           quality={95}
           formats={["auto", "webp", "avif"]}
-          alt="Paul Tomlinson office"
+          alt="Paul Tomlinson eating in India"
           style={{ marginTop: `0.5rem` }}
         />
       </div>
@@ -93,6 +96,9 @@ const IndexPage = ({
     <div className="about-testimonials-container">
 
         <div className="testimonials-container">
+
+        <h2>Trusted by serious organisations</h2>
+        <p>Before I focused on craft food and drink, I built websites for academics, agencies, and global organisations. Here's what they said.</p>
 
             { allWpTestimonial.edges.map((item, index) => (
 

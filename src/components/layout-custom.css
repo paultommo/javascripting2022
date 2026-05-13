@@ -127,7 +127,7 @@ footer {
 
     /* background-color: #3b5998; */
     background-color: #000;
-    padding: 4%;
+    padding: 4% 10%;
     /* text-align: right; */
     display: flex;
     justify-content: space-between;
@@ -553,13 +553,31 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
-.homepage-section.three {
+.homepage-section.three,
+.homepage-section.why {
 
   /* justify-content:  center; */
   align-items: unset;
   flex-wrap: wrap;
-  /* background-color: #dfe3ee; */
   padding: 20px 0;
+}
+
+.homepage-section.three {
+
+  background-color: #fff;
+}
+
+.homepage-section.three h2,
+.homepage-section.three p {
+
+  color: #000;
+}
+
+.homepage-section.why .copy {
+
+  padding: 20px 10%;
+  line-height: 1.5;
+  width: 100%;
 }
 
 .homepage-section.four {
@@ -588,7 +606,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .homepage-section.cta {
   flex-wrap: wrap;
-  background-color: #fff;
+  background-color: #20823e !important;
   padding: 20px 0;
   color: #000;
 }
@@ -599,10 +617,15 @@ h1, h2, h3, h4, h5, h6, p {
   color: #000;
 }
 
-.homepage-section.cta .copy h2, 
+.homepage-section.cta .copy h2 {
+
+  color: #fff;
+}
+
+, 
 .homepage-section.cta .copy p {
 
-  color: #000;
+  color: #fff;
 }
 
 .homepage-section.four .copy .prices {
@@ -627,7 +650,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .portfolio-homepage.blog {
 
-  background-color: #20823e !important;
+  background-color: #fff !important;
 
 }
 
@@ -638,7 +661,8 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 20px;
   }
 
-  .homepage-section.three {
+  .homepage-section.three,
+  .homepage-section.why {
 
     padding: 10px 20px;
   }
@@ -696,6 +720,7 @@ h1, h2, h3, h4, h5, h6, p {
 .portfolio-homepage h3 {
 
   padding-left: 4%;
+  color: #000;
 }
 
 @media (max-width: 1000px) {
@@ -721,7 +746,12 @@ h1, h2, h3, h4, h5, h6, p {
   padding-bottom: 50px;
   display: flex;
   gap: 20px;
-  
+
+}
+
+.about-container.privacy {
+
+  flex-direction: column;
 }
 
 .about-container .copy {
@@ -757,6 +787,14 @@ h1, h2, h3, h4, h5, h6, p {
   /* background-color: #dfe3ee; */
   background-color: #fff;
   padding: 0px 0;
+  
+}
+
+.about-testimonials-container h2,
+.about-testimonials-container p
+{
+
+  color: #000 !important;
 }
 
 .about-testimonials-container .testimonials-container {
