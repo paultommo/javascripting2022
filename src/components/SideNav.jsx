@@ -27,11 +27,10 @@ class SideNav extends Component {
 			          <li><Link activeClassName="active" to="/about/">About</Link></li>
 			          {/* <li><Link activeClassName="active" to="/skills/">Skills</Link></li> */}
 			          <li><Link activeClassName="active" to="/portfolio/">Portfolio</Link></li>
-			          <li><Link activeClassName="active" to="/blog/">Blog</Link></li>
 			          <li><a href="mailto:hello@paultommo.com">Email</a></li>
 			          <li><a rel="noreferrer" target="_blank" href="http://uk.linkedin.com/in/paulrtomlinson/">LinkedIn</a></li>
 			          {/* <li><a rel="noreferrer" target="_blank" href="https://app.yunojuno.com/p/paul-r-tomlinson/">Yuno Juno</a></li> */}
-			          <li><a rel="noreferrer" target="_blank" href="https://twitter.com/paultommmo">Twitter</a></li>
+			          <li><a rel="noreferrer" target="_blank" href="https://www.instagram.com/paultommmo">Instagram</a></li>
 
 					</ul>
 
