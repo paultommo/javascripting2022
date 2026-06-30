@@ -612,6 +612,7 @@ img { display: block; max-width: 100%; }
   }
 }
 @media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
   .about-hero__grid { grid-template-columns: 1fr; }
   .about-hero__art { min-height: 0; }
   .about-hero__art .gatsby-image-wrapper { height: 380px; }
