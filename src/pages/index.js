@@ -123,6 +123,15 @@ export default function IndexPage({ data }) {
   const portfolio = data?.allWpPortfolio?.edges ?? []
   const igPosts = data?.allInstagramPost?.nodes ?? []
   const [tstIdx, setTstIdx] = useState(0)
+  const dragStart = React.useRef(null)
+  const onDragStart = e => { dragStart.current = e.clientX ?? e.touches?.[0]?.clientX }
+  const onDragEnd = (all, e) => {
+    if (dragStart.current === null) return
+    const dx = (e.clientX ?? e.changedTouches?.[0]?.clientX) - dragStart.current
+    dragStart.current = null
+    if (Math.abs(dx) < 40) return
+    setTstIdx(i => dx < 0 ? (i + 1) % all.length : (i - 1 + all.length) % all.length)
+  }
 
   return (
     <Layout>
@@ -303,7 +312,13 @@ export default function IndexPage({ data }) {
             ]
             const t = all[tstIdx]
             return (
-              <div className="pt-tst-slider">
+              <div
+                className="pt-tst-slider"
+                onMouseDown={onDragStart}
+                onMouseUp={e => onDragEnd(all, e)}
+                onTouchStart={onDragStart}
+                onTouchEnd={e => onDragEnd(all, e)}
+              >
                 <TestimonialCard onBrand quote={t.quote} name={t.name} role={t.role} stars={<Stars />} />
                 <div className="pt-tst-slider__dots">
                   {all.map((_, i) => (
