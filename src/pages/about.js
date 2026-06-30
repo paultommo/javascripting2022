@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { ArrowRight, Utensils, FlaskConical, Rocket, ChefHat } from 'lucide-react'
 import Layout from '../components/layout'
+import SeoBasic from '../components/seo'
 import Button from '../components/ds/Button'
 import SectionHeading from '../components/ds/SectionHeading'
 import ValueProp from '../components/ds/ValueProp'
@@ -33,6 +34,10 @@ const BRINGS = [
 export default function AboutPage() {
   return (
     <Layout>
+      <SeoBasic
+        title="Why craft food & drink? — About Paul Tomlinson"
+        description="I ran a chocolate business stocked in Selfridges. Now I build Shopify stores for craft food & drink founders who care as much about their website as their product."
+      />
       {/* HERO */}
       <section className="sec sec--cream about-hero" id="about">
         <div className="container about-hero__grid">

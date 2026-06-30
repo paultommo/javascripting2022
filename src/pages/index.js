@@ -16,6 +16,7 @@ import PortfolioCard from '../components/ds/PortfolioCard'
 import TestimonialCard from '../components/ds/TestimonialCard'
 import MarqueeRow from '../components/ds/MarqueeRow'
 import CTABanner from '../components/ds/CTABanner'
+import SeoBasic from '../components/seo'
 
 export const query = graphql`
   query {
@@ -135,6 +136,10 @@ export default function IndexPage({ data }) {
 
   return (
     <Layout>
+      <SeoBasic
+        title="Shopify Studio for Craft Food & Drink Brands"
+        description="I build Shopify stores for craft food & drink founders. Custom development, design, and copy — under one roof. Based in London."
+      />
       {/* HERO */}
       <Hero
         eyebrow="Shopify Studio · Craft Food & Drink"

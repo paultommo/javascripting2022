@@ -1,53 +1,41 @@
-import React from "react"
-import { Helmet } from "react-helmet"
+import React from 'react'
+import { Helmet } from 'react-helmet'
 
-const SEO = () => {
- 
-    const title = `Shopify Studio for Craft Food & Drink Brands`
-    const titleTemplate= `%s`
-    const description= `Paul Tomlinson: Impactful websites for small businesses`
-    const url= `https://paultommo.com` // No trailing slash!
-    // const siteUrl= `https://javascripting.uk` //change this when changing URL
-    const image= 'https://paultommo.com/images/static-pt.png' // Path to your image you placed in the 'static' folder
-    //const author= `@paultommmo`
-    const twitterUsername= '@paultommmo'
+const DEFAULT_TITLE = 'Shopify Studio for Craft Food & Drink Brands'
+const DEFAULT_DESCRIPTION = 'I build Shopify stores for craft food & drink founders. Custom development, design, and copy — under one roof. Based in London.'
+const DEFAULT_IMAGE = 'https://paultommo.com/images/static-pt.png'
+const SITE_URL = 'https://paultommo.com'
+const SITE_NAME = 'Paul Tomlinson Studio'
+const TWITTER_HANDLE = '@paultommmo'
 
-    console.log('img: '+image)
-  
+const SeoBasic = ({
+  title,
+  description = DEFAULT_DESCRIPTION,
+  image = DEFAULT_IMAGE,
+  url = SITE_URL,
+}) => {
+  const pageTitle = title ? `${title} | Paul Tomlinson` : `${DEFAULT_TITLE} | Paul Tomlinson`
+
   return (
-
-    console.log('img: '+image),
-
-    <Helmet title={title} titleTemplate={titleTemplate +' : '+title}>
+    <Helmet>
+      <title>{pageTitle}</title>
       <meta name="description" content={description} />
-      <meta name="image" content={image} />
-      
-      {url && <meta property="og:url" content={url} />}
 
-      {title && <meta property="og:title" content={title} />}
-
-      {description && (
-        <meta property="og:description" content={description} />
-      )}
-
-      {image && <meta property="og:image" content={image} />}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
 
       <meta name="twitter:card" content="summary_large_image" />
-
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )}
-
-      {title && <meta name="twitter:title" content={title} />}
-
-      {description && (
-        <meta name="twitter:description" content={description} />
-      )}
-
-      {image && <meta name="twitter:image" content={image} />}
+      <meta name="twitter:site" content={TWITTER_HANDLE} />
+      <meta name="twitter:creator" content={TWITTER_HANDLE} />
+      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
     </Helmet>
- 
   )
 }
 
-export default SEO
+export default SeoBasic
