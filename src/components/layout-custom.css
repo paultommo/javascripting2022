@@ -488,6 +488,11 @@ img { display: block; max-width: 100%; }
   transition: opacity .2s, filter .2s;
 }
 .pt-strip__logo:hover { filter: grayscale(0); opacity: 1; }
+.pt-strip__hs-clients {
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: 3rem; padding: var(--space-5) var(--gutter);
+}
+.pt-strip__hs-clients .pt-strip__logo { height: 30px; width: auto; }
 
 /* ============================================================
    PAGE GRIDS

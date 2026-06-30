@@ -2,7 +2,7 @@ import React from 'react'
 import { BadgeCheck, Sprout, Award, ArrowRight } from 'lucide-react'
 import Button from './ds/Button'
 
-function Hero({ eyebrow, title, body, ctaHref, cta, heroImage, onPortfolio }) {
+function Hero({ eyebrow, title, body, ctaHref, cta, heroImage, onPortfolio, hideChips }) {
   return (
     <header className="pt-hero">
       <div className="pt-hero__copy">
@@ -29,12 +29,16 @@ function Hero({ eyebrow, title, body, ctaHref, cta, heroImage, onPortfolio }) {
         <span className="pt-hero__blob pt-hero__blob--y"></span>
         <span className="pt-hero__blob pt-hero__blob--c"></span>
         {heroImage}
-        <div className="pt-hero__chip pt-hero__chip--1">
-          <Sprout size={16} style={{ color: 'var(--brand)' }} /> makes own Kombucha &amp; kefir
-        </div>
-        <div className="pt-hero__chip pt-hero__chip--2">
-          <Award size={16} style={{ color: 'var(--accent-strong)' }} /> Stocked in Selfridges
-        </div>
+        {!hideChips && (
+          <>
+            <div className="pt-hero__chip pt-hero__chip--1">
+              <Sprout size={16} style={{ color: 'var(--brand)' }} /> makes own Kombucha &amp; kefir
+            </div>
+            <div className="pt-hero__chip pt-hero__chip--2">
+              <Award size={16} style={{ color: 'var(--accent-strong)' }} /> Stocked in Selfridges
+            </div>
+          </>
+        )}
       </div>
     </header>
   )

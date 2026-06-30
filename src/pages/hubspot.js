@@ -1,370 +1,232 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SeoBasic from "../components/seo"
-import Seo from 'gatsby-plugin-wpgraphql-seo';
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import ReactHtmlParser from "react-html-parser"
-// import Testimonials from "../components/testimonials"
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import { ArrowRight, Star, Layers, Clock, Users, Gauge, Code2, Palette } from 'lucide-react'
+import Layout from '../components/layout'
+import SeoBasic from '../components/seo'
+import Hero from '../components/Hero'
+import Button from '../components/ds/Button'
+import SectionHeading from '../components/ds/SectionHeading'
+import ValueProp from '../components/ds/ValueProp'
+import TestimonialCard from '../components/ds/TestimonialCard'
+import CTABanner from '../components/ds/CTABanner'
 
 export const query = graphql`
-  query {
-   allWpPost (limit:4) {
-    edges {
-      node {
-        slug
-        title
-        featuredImage {
-          node {
-            mediaDetails {
-              sizes {
-                sourceUrl
-                width
-              }
-            }
+  query HubSpotQuery {
+    allWpTestimonial {
+      edges {
+        node {
+          id
+          title
+          content
+          featuredImage {
+            node { mediaItemUrl }
           }
         }
       }
-    }
-  }
-
-  allWpTestimonial {
-    edges {
-      node {
-        id
-        title
-        featuredImage {
-          node {
-            mediaItemUrl
-          }
-        }
-        content
-      }
-    }
-  }
-  
-
-    seoPage:wpPage(slug: {eq: "homepage"}) {
-    nodeType
-    title
-    uri
-    seo {
-        title
-        metaDesc
-        focuskw
-        metaKeywords
-        metaRobotsNoindex
-        metaRobotsNofollow
-        opengraphTitle
-        opengraphDescription
-        opengraphImage {
-            altText
-            sourceUrl
-            srcSet
-        }
-        twitterTitle
-        twitterDescription
-        twitterImage {
-            altText
-            sourceUrl
-            srcSet
-        }
-        canonical
-        cornerstone
-        schema {
-            articleType
-            pageType
-            raw
-        }
-    }
     }
   }
 `
-const axios = require('axios');
 
-const IndexPage = ({
-  data: {
-    seoPage, allWpTestimonial, allWpPost
-  },
-}) => {
-
-
-  
-  const [emailValue, setEmailValue] = useState('');
-  const [emailMessage, setEmailMessage] = useState('');
-
-  const handleMailSubmit = () => {
-
-    if(validateEmail(emailValue)){
-
-      console.log(emailValue)
-
-      axios.post('https://story-spinner-vjrm.temp-dns.com/paultommo-php/addcontact.php', {
-        headers: { 'content-type': 'application/x-www-form-urlencoded' },
-        data:{
-          email: emailValue,
-        }
-      
-      })
-      .then(response => {
-        
-        switch(true){
-
-          case response.data.id!==undefined:
-
-            setEmailMessage('Thanks for signing up!')
-
-            setEmailValue('') 
-
-          break;
-
-          case response.data.code=="duplicate_parameter":
-           
-              setEmailMessage('Email is already on the list!')
-
-          break
-
-
-        }
-
-        // console.log(response.data)
-         
-       })
-      .catch(error => {
-        console.log(error);
-      });
-
-      }
-      else{
-
-        setEmailMessage('Invalid email. Please try again!')
-      }
-
-  }
-
-  function validateEmail(email) {
-    const res = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return res.test(String(email).toLowerCase());
-  }
-
-  return(
-  <Layout>
-
-    <SeoBasic title="Paul Tomlinson: Building impactful Hubspot websites" image="https://paultommo.com/images/static-pt.png" description="Paul Tomlinson: Building impactful Hubspot websites" />
-    
-
-
-     <div className="homepage-section one">
-
-      <div className="intro">
-      
-        <h1 class="hubspot"><span className="hello">Paul Tomlinson</span>Building impactful Hubspot websites</h1>
-        
-        {/* <h2>"Working with Paul was an absolute pleasure and I’d happily recommend him to anyone..."</h2> */}
-
-        
-       
-
-        <div>
-
-      
-
-
-<a href="mailto:hello@paultommo.com?subject=Hello Paul!I'd like a free consultation"><button>Let's discuss your Hubspot project now!</button></a>
-
-<div className="hubspot-clients-section">
-
-    <h2>Hubspot clients have included:</h2>
-    <ul className="hubspot-clients">
-        <li>
-            <a href="https://skillcorner.com" target="_blank">
-            <StaticImage
-            src="../images/skillcorner.png"
-            width={150}
-            quality={53}
-            formats={["auto", "webp", "avif"]}
-            alt="Skillcorner"
-            style={{ marginTop: `0rem` }}
-        /></a>
-        </li>
-        <li>
-            <a href="https://www.bain.com/" target="_blank">
-            <StaticImage
-            src="../images/bain.png"
-            width={150}
-            quality={53}
-            formats={["auto", "webp", "avif"]}
-            alt="Bain & Company"
-            style={{ marginTop: `0rem` }}
-        /></a>
-
-
-        </li>
-        <li>
-            <a href="https://www.duettocloud.com/en-us/" target="_blank">
-            <StaticImage
-            src="../images/duetto.png"
-            width={150}
-            quality={53}
-            formats={["auto", "webp", "avif"]}
-            alt="Duetto"
-            style={{ marginTop: `0rem` }}
-        /></a>
-        </li>
-        <li>
-            <a href="https://www.vev.com/" target="_blank">
-            <StaticImage
-            src="../images/vev.png"
-            width={150}
-            quality={53}
-            formats={["auto", "webp", "avif"]}
-            alt="Vev"
-            style={{ marginTop: `0` }}
-        /></a>
-        </li>
-        <li>
-            <a href="https://www.scoutbee.com/" target="_blank">
-            <StaticImage
-            src="../images/scoutbee.png"
-            width={150}
-            quality={53}
-            formats={["auto", "webp", "avif"]}
-            alt="Scoutbee"
-            style={{ marginTop: `0` }}
-        /></a>
-        </li>
-
-    </ul>
-</div>
-
-
-
-        </div>
-
-
-      </div>
-
-        <div className="image">
-        <StaticImage
-        src="../images/paultomlinson.png"
-        width={500}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt="Paul Tomlinson"
-        style={{ marginTop: `3rem` }}
-      />
-        </div>
-
-    </div>
-
-
-    <div className="homepage-section two">
-
-
-      <div className="copy">
-
-    <h2>Your pain points:</h2>
-   
-    <ul>
-    <li>You're struggling to create a stylish, bespoke Hubspot website</li>
-    <li>Your Hubspot website is super slow</li>
-    <li>There's a poor user-experience on your Hubspot website</li>
-    </ul>
-      
-
-      <h2>My solutions:</h2>
-      <ul>
-      <li>I create high-converting, custom Hubspot websites that capture attention, build trust, and generate leads</li>
-      <li>I will ensure you have a high-performing Hubspot website</li>
-      <li>I will also ensure that your Hubspot website will provide a great user-experience</li>
-      <li>I will save you time and money. I’ll build you an intuitive, module-based Hubspot website - making website maintenance a breeze</li>
-      <li>I can also look after all your design, copy, technology, SEO and project management needs and create you something great!</li>
-      </ul>
-
-      {/* <h2>Let's talk:</h2>
-      <ul>
-        <li>If your website needs a premium upgrade, let’s chat.</li>
-        <li>Message me for a free 10-minute consultation 👋</li>
-      </ul> */}
-
-    </div>
-
-      {/* <div className="button-holder">
-
-        <a href="mailto:paul@javascripting.uk?subject=Hello Paul!"><button>Say Hello!</button></a>
-
-        </div> */}
-
-
-    </div>
-
-    <div className="homepage-section three">
-
-        {/* <Testimonials /> */}
-        <div className="testimonials-container">
-
-            { allWpTestimonial.edges.map((item, index) => (
-
-              <div key={index} className="testimonial">
-            
-                <div><img alt={item.node.title} src={item.node.featuredImage.node.mediaItemUrl} /></div>
-            
-                <div className="content">{ReactHtmlParser(item.node.content)}</div>
-                <div className="name">{item.node.title}</div>
-
-              </div>
-
-            ))
-            }
-          
-        </div>
-
-    </div>
-
-    <div className="homepage-section four">
-
-    
-        <div className="copy">
-       
-        <h3>My Prices</h3>
-
-
-            <div className="prices">
-
- 
-          <div className="work"><h3>Fixed Projects: Start from £4000</h3>Dependent on the scope of the project</div>
-          <div className="work"><h3>One-off Tasks: £400 / day</h3>For any updates or maintenance to your site</div>
-
-              </div>
-
-
-        </div>
-
-    </div>
-
-    <div className="portfolio-homepage blog">
-    <h3>From the Blog</h3>
-    <div className="portfolio">
-
-
-      { allWpPost.edges.map((item, index) => (
-
-      <>
-
-      <Link rel="prefetch" key={index} to={`/blog/${item.node.slug}`} ><div className="work">  <div className="title">{ item.node.title }</div> <img alt={item.node.title} src={item.node.featuredImage.node.mediaDetails.sizes[0].sourceUrl} /> </div></Link>
-
-      </>
-
-      ))
-      }
-
-      </div>
-      </div>
-
-  </Layout>
-  )
+const CTA_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! Let's discuss my HubSpot project"
+const CONSULT_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free HubSpot consultation"
+
+const PAINS = [
+  { icon: <Layers size={26} />, iconTone: 'brand', title: "Can't get a bespoke HubSpot look", text: "You want a website that reflects your brand, not a generic HubSpot template. Getting something truly custom feels out of reach." },
+  { icon: <Gauge size={26} />, iconTone: 'cream', title: 'Your HubSpot site is too slow', text: "Slow load times hurt SEO and drive visitors away. A poorly optimised HubSpot site can cost you leads before the page even loads." },
+  { icon: <Users size={26} />, iconTone: 'brand', title: 'Poor user experience', text: "Navigation that confuses, layouts that break on mobile, and forms that frustrate. Your HubSpot site should convert, not repel." },
+  { icon: <Clock size={26} />, iconTone: 'cream', title: 'Maintenance takes too long', text: "Updating pages, adding modules, making changes — it all takes longer than it should. You need a site built for easy maintenance." },
+]
+
+const SERVICES = [
+  { icon: <Code2 size={26} />, tone: 'brand', title: 'Custom HubSpot development', text: 'Bespoke themes, custom modules, and pixel-perfect implementations. Built to your brand, not a template.' },
+  { icon: <Gauge size={26} />, tone: 'accent', title: 'Performance optimisation', text: 'Fast load times, clean code, and a HubSpot site that scores well on Core Web Vitals — and ranks accordingly.' },
+  { icon: <Layers size={26} />, tone: 'berry', title: 'Module-based CMS', text: 'Drag-and-drop modules that let your team update pages without touching code. Built for real-world marketing teams.' },
+  { icon: <Palette size={26} />, tone: 'sky', title: 'Design & UX', text: 'A HubSpot site that looks as good as your brand deserves — clean, consistent, and built to convert visitors into leads.' },
+]
+
+const FEATURED_TESTIMONIAL = {
+  quote: 'Paul Tomlinson managed to create a miracle in such a short period of time — he redesigned an existing website into a more dynamic and user-friendly site. I am very appreciative of his professionalism, time and ingenuity.',
+  name: 'Prof. Paul Spiegel',
+  role: 'Director, Johns Hopkins Center for Humanitarian Health',
 }
 
-export default IndexPage
+const ENTITIES = {
+  '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#039;': "'", '&nbsp;': ' ',
+  '&ldquo;': '"', '&rdquo;': '"', '&#8220;': '"', '&#8221;': '"',
+  '&lsquo;': '\u2018', '&rsquo;': '\u2019', '&#8216;': '\u2018', '&#8217;': '\u2019',
+  '&ndash;': '–', '&mdash;': '—', '&#8211;': '–', '&#8212;': '—',
+}
+const stripHtml = html => html.replace(/<[^>]*>/g, '').replace(/&[#\w]+;/g, e => ENTITIES[e] ?? e).trim()
 
+const Stars = () => (
+  <>
+    {[...Array(5)].map((_, i) => (
+      <Star key={i} size={16} fill="currentColor" stroke="none" />
+    ))}
+  </>
+)
+
+const STATIC_TESTIMONIALS = [
+  { quote: 'We have loved working with Paul — he has been really proactive and sought to get to the bottom of any challenge. His outputs are to the highest standard.', name: 'Gina Artzen', role: 'Gripped' },
+  { quote: "We've made a big impact on the organic performance of the site — a fresh start, and some impressive growth in organic traffic to go with it.", name: 'Sam Robinson', role: 'Whole of the Moon Marketing' },
+  { quote: 'Paul was a pleasure to work with and was always happy to find a way of delivering what was required, even in the face of the occasional technical challenge!', name: 'Eddie May', role: 'Overdog Marketing' },
+  { quote: 'Knowledgeable about his craft, prompt to respond and thorough throughout — he went over and above to ensure the client was happy.', name: 'Cath Harris', role: 'IPSA Consulting' },
+  { quote: "Working with Paul was an absolute pleasure. He was exactly the right man for the job on a highly demanding project!", name: 'Steph Melodia', role: 'MD, Bloom Ltd' },
+  { quote: "Reliability, listening to our needs and being able to translate them into functional tools fully characterise Paul's work.", name: 'Prof. Karl Blanchet', role: 'Geneva Centre of Humanitarian Studies' },
+]
+
+export default function HubSpotPage({ data }) {
+  const testimonials = data?.allWpTestimonial?.edges ?? []
+  const [tstIdx, setTstIdx] = useState(0)
+  const dragStart = React.useRef(null)
+  const onDragStart = e => { dragStart.current = e.clientX ?? e.touches?.[0]?.clientX }
+  const onDragEnd = (all, e) => {
+    if (dragStart.current === null) return
+    const dx = (e.clientX ?? e.changedTouches?.[0]?.clientX) - dragStart.current
+    dragStart.current = null
+    if (Math.abs(dx) < 40) return
+    setTstIdx(i => dx < 0 ? (i + 1) % all.length : (i - 1 + all.length) % all.length)
+  }
+
+  return (
+    <Layout>
+      <SeoBasic
+        title="Building impactful HubSpot websites — Paul Tomlinson"
+        description="I build fast, bespoke, module-based HubSpot websites for global brands that look great and perform under pressure."
+      />
+
+      {/* HERO */}
+      <Hero
+        eyebrow="HubSpot Developer · London"
+        title="Building impactful HubSpot websites"
+        body="I've built HubSpot websites for global brands including Bain & Company, SkillCorner, and Duetto. Fast, bespoke, module-based — websites that look great and perform under pressure."
+        cta="Discuss your project"
+        ctaHref={CTA_HREF}
+        hideChips
+        onPortfolio={() => {
+          if (typeof document !== 'undefined') document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+        }}
+        heroImage={
+          <StaticImage
+            src="../images/paultomlinson.png"
+            alt="Paul Tomlinson"
+            className="pt-hero__photo"
+            width={330}
+            quality={90}
+            placeholder="none"
+          />
+        }
+      />
+
+      {/* HUBSPOT CLIENT LOGOS */}
+      <section className="pt-strip">
+        <p className="pt-strip__lbl">HubSpot clients have included</p>
+        <div className="pt-strip__hs-clients">
+          <StaticImage src="../images/skillcorner.png" alt="SkillCorner" height={30} quality={90} placeholder="none" className="pt-strip__logo" />
+          <StaticImage src="../images/bain.png" alt="Bain & Company" height={30} quality={90} placeholder="none" className="pt-strip__logo" />
+          <StaticImage src="../images/duetto.png" alt="Duetto" height={30} quality={90} placeholder="none" className="pt-strip__logo" />
+          <StaticImage src="../images/vev.png" alt="Vev" height={30} quality={90} placeholder="none" className="pt-strip__logo" />
+          <StaticImage src="../images/scoutbee.png" alt="Scoutbee" height={30} quality={90} placeholder="none" className="pt-strip__logo" />
+        </div>
+      </section>
+
+      {/* PAINS */}
+      <section className="sec sec--cream" id="problem">
+        <div className="container">
+          <SectionHeading align="center" eyebrow="Sound familiar?" title="Sound familiar?" />
+          <div className="grid-pains">
+            {PAINS.map((p, i) => (
+              <div className="pain" key={i}>
+                <ValueProp icon={p.icon} iconTone={p.iconTone} title={p.title}>{p.text}</ValueProp>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="sec sec--brand" id="services">
+        <div className="container">
+          <SectionHeading
+            align="center"
+            onDark
+            eyebrow="Here's what I do about it"
+            title="Here's what I do about it"
+            subtitle="Everything you need from a HubSpot developer — under one roof."
+          />
+          <div className="grid-svc">
+            {SERVICES.map((s, i) => (
+              <div className="svc-card" key={i}>
+                <ValueProp onDark align="center" icon={s.icon} iconTone={s.tone} title={s.title}>
+                  {s.text}
+                </ValueProp>
+              </div>
+            ))}
+          </div>
+          <div className="sec__cta">
+            <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
+              Discuss your project
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="sec sec--deep" id="testimonials">
+        <div className="container">
+          <SectionHeading align="center" onDark eyebrow="Don't just take my word for it" title="Trusted by organisations" />
+          {(() => {
+            const all = [
+              { quote: FEATURED_TESTIMONIAL.quote, name: FEATURED_TESTIMONIAL.name, role: FEATURED_TESTIMONIAL.role },
+              ...(testimonials.length > 0
+                ? testimonials
+                    .filter(({ node }) => !node.title.toLowerCase().includes('spiegel'))
+                    .map(({ node }) => ({ quote: stripHtml(node.content), name: node.title, role: '' }))
+                : STATIC_TESTIMONIALS
+              ),
+            ]
+            const t = all[tstIdx]
+            return (
+              <div
+                className="pt-tst-slider"
+                onMouseDown={onDragStart}
+                onMouseUp={e => onDragEnd(all, e)}
+                onTouchStart={onDragStart}
+                onTouchEnd={e => onDragEnd(all, e)}
+              >
+                <TestimonialCard onBrand quote={t.quote} name={t.name} role={t.role} stars={<Stars />} />
+                <div className="pt-tst-slider__dots">
+                  {all.map((_, i) => (
+                    <button
+                      key={i}
+                      className={`pt-tst-slider__dot${i === tstIdx ? ' pt-tst-slider__dot--active' : ''}`}
+                      onClick={() => setTstIdx(i)}
+                      aria-label={`Go to testimonial ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            )
+          })()}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="sec sec--cream">
+        <div className="container">
+          <CTABanner
+            eyebrow="Let's build"
+            title="Ready to build a HubSpot site that performs?"
+            subtitle="Start with a free 15-minute chat — no pitch, no pressure."
+            actions={
+              <Button variant="accent" size="lg" href={CONSULT_HREF} iconRight={<ArrowRight size={16} />}>
+                Let's have a chat
+              </Button>
+            }
+          />
+        </div>
+      </section>
+    </Layout>
+  )
+}
