@@ -84,14 +84,14 @@ export default function AboutPage() {
             <strong>I ran a chocolate business stocked in Selfridges and sold online.</strong> I know what works and what doesn't in this industry.
           </p>
           <p className="story__p">
-            What does work? Faster stores. Cleaner code. Copy written for people who read labels.
+            What does work? Faster stores. Engaging experiences. Copy written for people who read labels.
             Subscriptions and perishable shipping that don't fall over. The unglamorous compliance
             bits that craft food and drink brands can't ignore.
           </p>
           <p className="story__p">
-            So I stopped building websites for everyone, and started building them for the
-            founders I understand best — the ones obsessed with what's in the bottle, the bar,
-            or the jar.
+            So I recently stopped building websites for everyone, and started building them for the
+            founders I understand best, so if you want someone experienced, passionate and
+            knowledgable then please get in touch!
           </p>
         </div>
       </section>
