@@ -1,125 +1,131 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import ReactHtmlParser from "react-html-parser"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import { ArrowRight, Utensils, FlaskConical, Rocket, ChefHat } from 'lucide-react'
+import Layout from '../components/layout'
+import Button from '../components/ds/Button'
+import SectionHeading from '../components/ds/SectionHeading'
+import ValueProp from '../components/ds/ValueProp'
+import CTABanner from '../components/ds/CTABanner'
 
-export const query = graphql`
-  query {
+const CTA_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free consultation"
 
-  allWpTestimonial {
-    edges {
-      node {
-        id
-        title
-        featuredImage {
-          node {
-            mediaItemUrl
-          }
-        }
-        content
-      }
-    }
-  }
-
-  }
-`
-
-const IndexPage = ({
-  data: {
-    allWpTestimonial
+const BRINGS = [
+  {
+    icon: <Utensils size={26} />,
+    tone: 'brand',
+    title: 'A founder who gets it',
+    text: "I ran a chocolate business stocked in Selfridges and sold online. I know what works and what doesn't in this industry.",
   },
-}) => {
+  {
+    icon: <FlaskConical size={26} />,
+    tone: 'berry',
+    title: 'Lives the category',
+    text: 'I ferment my own kombucha and kefir, read every ingredient label, and own far too many recipe books.',
+  },
+  {
+    icon: <Rocket size={26} />,
+    tone: 'accent',
+    title: 'Building my own brand',
+    text: "I'm also building another brand of my own right now, so I'm constantly keeping on top of online trends.",
+  },
+]
 
+export default function AboutPage() {
   return (
-  <Layout>
-    <Seo title="About Paul Tomlinson | Shopify Studio for Food &amp; Wellness Brands" />
+    <Layout>
+      {/* HERO */}
+      <section className="sec sec--cream about-hero" id="about">
+        <div className="container about-hero__grid">
+          <div className="about-hero__copy">
+            <h1 className="about-hero__title">Why craft food &amp; drink?</h1>
+            <p className="about-hero__lead">
+              Firstly, because I am so passionate about food and drink. Secondly, I once owned
+              a luxury chocolate business, so I understand what your website needs.
+            </p>
+            <div className="about-hero__actions">
+              <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
+                Start with a free chat
+              </Button>
+            </div>
+          </div>
 
-    <div className="about-container">
-
-      <div className="copy">
-
-        <h1>About Paul</h1>
-
-        <p>I build Shopify stores for craft food and drink brands — because I've been a craft food founder myself.</p>
-
-        <h2>The short version</h2>
-
-        <p>I ran Cocoa Hernando, a luxury chocolate business that ended up stocked in Selfridges. I learned, the hard way, what it takes to make a small food brand work — from sourcing and packaging to margins and the painful moments when your website doesn't do justice to what's in the box.</p>
-
-        <p>Now I build Shopify stores for founders going through the same thing.</p>
-
-        <h2>Why craft food and drink?</h2>
-
-        <p>Because I'm obsessed with it. I ferment my own kombucha and kefir at home. I read every ingredient label. I'm building my own wellness product right now, which means I'm learning the modern DTC playbook from the founder's side of the table — paid acquisition, retention, subscription, social commerce, AI — and bringing all of it back to the brands I work with.</p>
-
-        <p>When you hire me, you're not hiring someone who learned about your category from a brief. You're hiring someone who lives and breathes the world of food and drink.</p>
-
-        <h2>The longer version</h2>
-
-        <p>I'm originally from Bolton, now based in Hackney, East London. I've been building websites for over twenty years.</p>
-
-        <p>I started out co-founding a web design studio with a friend, working with music industry clients including Doves and John Cale of the Velvet Underground. From there I spent years inside London's big advertising agencies — McCann, Saatchi &amp; Saatchi — building digital work for global brands. Along the way I've done some strange and wonderful things: interactive vending machines, exhibition installations, a pop-up aquarium, an animated website inside Bill Bailey's head.</p>
-
-        <p>All of that adds up to one thing: I know how to build websites that work. Custom development, clean code, real performance — not just a Shopify theme with the colours changed.</p>
-
-        <p>But food has always been a huge passion. I started Cocoa Hernando. I got deep into fermentation. And I've recently decided to push that passion into my work.</p>
-
-        <p>So that's what I do now.</p>
-
-        <h2>What you can expect from me</h2>
-
-        <p>Great communication, hard work and passion. I'll tell you when an idea is great and when it isn't. I work with a small number of brands at a time so the ones I'm working with get my full attention.</p>
-
-        <p>I'm also a chatty northerner, so I'm always up for a chat. Especially about food and drink</p>
-
-        <div className="button-holder">
-          <a href="mailto:hello@paultommo.com?subject=Hello Paul!"><button>Start with a free 15-minute chat</button></a>
+          <div className="about-hero__art">
+            <svg className="pt-hero__disc" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="250" cy="250" r="240" fill="var(--brand)" stroke="var(--ink-900)" strokeWidth="10" />
+              <circle cx="250" cy="250" r="220" fill="none" stroke="var(--ink-900)" strokeWidth="4" />
+            </svg>
+            <span className="pt-hero__blob pt-hero__blob--y"></span>
+            <span className="pt-hero__blob pt-hero__blob--c"></span>
+            <StaticImage
+              src="../images/dal-pakwan.png"
+              alt="Paul Tomlinson"
+              layout="fixed"
+              width={300}
+              height={380}
+              objectFit="cover"
+              objectPosition="center top"
+              quality={90}
+              placeholder="none"
+            />
+            <div className="pt-hero__chip pt-hero__chip--1">
+              <Utensils size={16} style={{ color: 'var(--brand)' }} /> food and drink obsessive
+            </div>
+            <div className="pt-hero__chip pt-hero__chip--2">
+              <ChefHat size={16} style={{ color: 'var(--accent-strong)' }} /> eating dal pakwan
+            </div>
+          </div>
         </div>
+      </section>
 
-      </div>
+      {/* STORY */}
+      <section className="sec--paper">
+        <div className="container story">
+          <p className="story__p">
+            <strong>I ran a chocolate business stocked in Selfridges and sold online.</strong> I know what works and what doesn't in this industry.
+          </p>
+          <p className="story__p">
+            What does work? Faster stores. Cleaner code. Copy written for people who read labels.
+            Subscriptions and perishable shipping that don't fall over. The unglamorous compliance
+            bits that craft food and drink brands can't ignore.
+          </p>
+          <p className="story__p">
+            So I stopped building websites for everyone, and started building them for the
+            founders I understand best — the ones obsessed with what's in the bottle, the bar,
+            or the jar.
+          </p>
+        </div>
+      </section>
 
-      <div className="image">
-        <StaticImage
-          src="../images/dal-pakwan.png"
-          width={500}
-          quality={95}
-          formats={["auto", "webp", "avif"]}
-          alt="Paul Tomlinson eating in India"
-          style={{ marginTop: `0.5rem` }}
-        />
-      </div>
+      {/* WHAT I BRING */}
+      <section className="sec sec--cream">
+        <div className="container">
+          <SectionHeading align="center" eyebrow="What I bring" title="More than a developer" />
+          <div className="grid-svc grid-svc--3">
+            {BRINGS.map((b, i) => (
+              <ValueProp key={i} align="center" icon={b.icon} iconTone={b.tone} title={b.title}>
+                {b.text}
+              </ValueProp>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    </div>
-
-    <div className="about-testimonials-container">
-
-        <div className="testimonials-container">
-
-        <h2>Trusted by serious organisations</h2>
-        <p>Before I focused on craft food and drink, I built websites for academics, agencies, and global organisations. Here's what they said.</p>
-
-            { allWpTestimonial.edges.map((item, index) => (
-
-              <div key={index} className="testimonial">
-
-                <div><img alt={item.node.title} src={item.node.featuredImage.node.mediaItemUrl} /></div>
-
-                <div className="content">{ReactHtmlParser(item.node.content)}</div>
-                <div className="name">{item.node.title}</div>
-
-              </div>
-
-            ))
+      {/* CTA */}
+      <section className="sec sec--cream">
+        <div className="container">
+          <CTABanner
+            tone="brand"
+            eyebrow="Let's build"
+            title="Let's build something worth the shelf"
+            subtitle="Start with a free 15-minute chat — no pitch, no pressure."
+            actions={
+              <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
+                Let's have a chat
+              </Button>
             }
-
+          />
         </div>
-
-    </div>
-
-  </Layout>
-)
+      </section>
+    </Layout>
+  )
 }
-
-export default IndexPage

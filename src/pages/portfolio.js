@@ -1,99 +1,54 @@
-
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SeoBasic from "../components/seo"
-import Seo from 'gatsby-plugin-wpgraphql-seo';
-import { Link } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
+import { ArrowRight } from 'lucide-react'
+import Layout from '../components/layout'
+import SeoBasic from '../components/seo'
+import SectionHeading from '../components/ds/SectionHeading'
+import PortfolioCard from '../components/ds/PortfolioCard'
 
 export const query = graphql`
   query {
-   allWpPortfolio(sort: {order: DESC, fields: date}) {
-    edges {
-      node {
-        thumb {
+    allWpPortfolio(sort: { order: DESC, fields: date }) {
+      edges {
+        node {
+          title
+          slug
           thumb {
-            sourceUrl
+            thumb {
+              sourceUrl
+            }
           }
         }
-        title
-        slug
       }
-    }
-  }
-  
-    seoPage:wpPage(slug: {eq: "portfolio"}) {
-    nodeType
-    title
-    uri
-    seo {
-        title
-        metaDesc
-        focuskw
-        metaKeywords
-        metaRobotsNoindex
-        metaRobotsNofollow
-        opengraphTitle
-        opengraphDescription
-        opengraphImage {
-            altText
-            sourceUrl
-            srcSet
-        }
-        twitterTitle
-        twitterDescription
-        twitterImage {
-            altText
-            sourceUrl
-            srcSet
-        }
-        canonical
-        cornerstone
-        schema {
-            articleType
-            pageType
-            raw
-        }
-    }
     }
   }
 `
 
+export default function PortfolioPage({ data }) {
+  const portfolio = data?.allWpPortfolio?.edges ?? []
 
-const IndexPage = ({
-  data: {
-    allWpPortfolio, seoPage
-  },
-}) => {
+  return (
+    <Layout>
+      <SeoBasic title="Portfolio — Paul Tomlinson" />
 
-  // const { title } =  allWpPortfolio
-
-  return(
-  <Layout>
-
-     {/* {seoPage ?
-        <Seo post={seoPage} />
-      :
-        <SeoBasic title={title} />
-     } */}
-     <SeoBasic title="Paul Tomlinson: Impactful websites for small businesses" />
-
-     <div className="portfolio">
-
-     { allWpPortfolio.edges.map((item, index) => (
-
-
-      <Link key={index} to={`/work/${item.node.slug}`} ><div> <img className="work" alt={item.node.title} src={item.node.thumb.thumb.sourceUrl} /> </div></Link>
-      
-
-      ))
-    }
-
-    </div>
-  
-    
-  </Layout>
+      <section className="sec sec--cream">
+        <div className="container">
+          <SectionHeading eyebrow="Selected work" title="Projects" />
+          <div className="grid-folio">
+            {portfolio.map(({ node }, i) => (
+              <PortfolioCard
+                key={node.slug}
+                title={node.title}
+                categoryTone={i % 2 ? 'ink' : 'accent'}
+                ctaIcon={<ArrowRight size={14} />}
+                href={`/work/${node.slug}`}
+                image={node.thumb?.thumb?.sourceUrl}
+                imageAlt={node.title}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </Layout>
   )
 }
-
-export default IndexPage
