@@ -137,8 +137,8 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <SeoBasic
-        title="Shopify Studio for Craft Food & Drink Brands"
-        description="I build Shopify stores for craft food & drink founders. Custom development, design, and copy — under one roof. Based in London."
+        title="Shopify Studio for Craft Food & Drink"
+        description="I build Shopify stores for craft food & drink founders — design, development, and copy under one roof."
       />
       {/* HERO */}
       <Hero
