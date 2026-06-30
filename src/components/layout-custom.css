@@ -513,6 +513,22 @@ img { display: block; max-width: 100%; }
 .grid-folio { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); margin-top: var(--space-2); }
 .grid-tst { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); margin-top: var(--space-8); }
 .tst-feature { grid-column: 1 / -1; }
+.pt-tst-marquee { margin-top: var(--space-8); }
+.pt-tst-marquee .pt-tc { width: 360px; flex-shrink: 0; }
+.pt-tst-slider {
+  display: flex; flex-direction: column; align-items: stretch;
+  margin-top: var(--space-8); gap: var(--space-5);
+}
+.pt-tst-slider .pt-tc { min-height: 260px; }
+.pt-tst-slider__dots {
+  display: flex; justify-content: center; gap: var(--space-3);
+}
+.pt-tst-slider__dot {
+  width: 10px; height: 10px; border-radius: 50%; border: none; cursor: pointer;
+  background: var(--green-600); opacity: 0.4; transition: opacity var(--dur-fast), background var(--dur-fast);
+  padding: 0;
+}
+.pt-tst-slider__dot--active { background: var(--accent); opacity: 1; }
 
 /* ============================================================
    INSTAGRAM SECTION

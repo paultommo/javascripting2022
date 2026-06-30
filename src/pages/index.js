@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import {
@@ -109,10 +109,20 @@ const Stars = () => (
   </>
 )
 
+const STATIC_TESTIMONIALS = [
+  { quote: 'We have loved working with Paul — he has been really proactive and sought to get to the bottom of any challenge. His outputs are to the highest standard.', name: 'Gina Artzen', role: 'Gripped' },
+  { quote: "We've made a big impact on the organic performance of the site — a fresh start, and some impressive growth in organic traffic to go with it.", name: 'Sam Robinson', role: 'Whole of the Moon Marketing' },
+  { quote: 'Paul was a pleasure to work with and was always happy to find a way of delivering what was required, even in the face of the occasional technical challenge!', name: 'Eddie May', role: 'Overdog Marketing' },
+  { quote: 'Knowledgeable about his craft, prompt to respond and thorough throughout — he went over and above to ensure the client was happy.', name: 'Cath Harris', role: 'IPSA Consulting' },
+  { quote: "Working with Paul was an absolute pleasure. He was exactly the right man for the job on a highly demanding project!", name: 'Steph Melodia', role: 'MD, Bloom Ltd' },
+  { quote: "Reliability, listening to our needs and being able to translate them into functional tools fully characterise Paul's work.", name: 'Prof. Karl Blanchet', role: 'Geneva Centre of Humanitarian Studies' },
+]
+
 export default function IndexPage({ data }) {
   const testimonials = data?.allWpTestimonial?.edges ?? []
   const portfolio = data?.allWpPortfolio?.edges ?? []
   const igPosts = data?.allInstagramPost?.nodes ?? []
+  const [tstIdx, setTstIdx] = useState(0)
 
   return (
     <Layout>
@@ -281,37 +291,33 @@ export default function IndexPage({ data }) {
             eyebrow="Don't just take my word for it"
             title="Trusted by organisations"
           />
-          <div className="grid-tst">
-            <div className="tst-feature">
-              <TestimonialCard
-                variant="feature"
-                onBrand
-                quote={FEATURED_TESTIMONIAL.quote}
-                name={FEATURED_TESTIMONIAL.name}
-                role={FEATURED_TESTIMONIAL.role}
-              />
-            </div>
-            {testimonials.length > 0
-              ? testimonials.map(({ node }) => (
-                  <TestimonialCard
-                    key={node.id}
-                    quote={stripHtml(node.content)}
-                    name={node.title}
-                    stars={<Stars />}
-                  />
-                ))
-              : [
-                  { quote: 'We have loved working with Paul — he has been really proactive and sought to get to the bottom of any challenge. His outputs are to the highest standard.', name: 'Gina Artzen', role: 'Gripped' },
-                  { quote: "We've made a big impact on the organic performance of the site — a fresh start, and some impressive growth in organic traffic to go with it.", name: 'Sam Robinson', role: 'Whole of the Moon Marketing' },
-                  { quote: 'Paul was a pleasure to work with and was always happy to find a way of delivering what was required, even in the face of the occasional technical challenge!', name: 'Eddie May', role: 'Overdog Marketing' },
-                  { quote: 'Knowledgeable about his craft, prompt to respond and thorough throughout — he went over and above to ensure the client was happy.', name: 'Cath Harris', role: 'IPSA Consulting' },
-                  { quote: "Working with Paul was an absolute pleasure. He was exactly the right man for the job on a highly demanding project!", name: 'Steph Melodia', role: 'MD, Bloom Ltd' },
-                  { quote: "Reliability, listening to our needs and being able to translate them into functional tools fully characterise Paul's work.", name: 'Prof. Karl Blanchet', role: 'Geneva Centre of Humanitarian Studies' },
-                ].map((t, i) => (
-                  <TestimonialCard key={i} quote={t.quote} name={t.name} role={t.role} stars={<Stars />} />
-                ))
-            }
-          </div>
+          {(() => {
+            const all = [
+              { quote: FEATURED_TESTIMONIAL.quote, name: FEATURED_TESTIMONIAL.name, role: FEATURED_TESTIMONIAL.role },
+              ...(testimonials.length > 0
+                ? testimonials
+                    .filter(({ node }) => !node.title.toLowerCase().includes('spiegel'))
+                    .map(({ node }) => ({ quote: stripHtml(node.content), name: node.title, role: '' }))
+                : STATIC_TESTIMONIALS
+              ),
+            ]
+            const t = all[tstIdx]
+            return (
+              <div className="pt-tst-slider">
+                <TestimonialCard onBrand quote={t.quote} name={t.name} role={t.role} stars={<Stars />} />
+                <div className="pt-tst-slider__dots">
+                  {all.map((_, i) => (
+                    <button
+                      key={i}
+                      className={`pt-tst-slider__dot${i === tstIdx ? ' pt-tst-slider__dot--active' : ''}`}
+                      onClick={() => setTstIdx(i)}
+                      aria-label={`Go to testimonial ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            )
+          })()}
         </div>
       </section>
 
