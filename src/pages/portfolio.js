@@ -31,7 +31,7 @@ export default function PortfolioPage({ data }) {
     <Layout>
       <SeoBasic title="Portfolio — Paul Tomlinson" />
 
-      <section className="sec sec--cream">
+      <section className="sec sec--cream portfolio-list">
         <div className="container">
           <SectionHeading eyebrow="Selected work" title="Projects" />
           <div className="grid-folio">

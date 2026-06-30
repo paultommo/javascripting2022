@@ -164,6 +164,7 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase; color: var(--text-strong); margin: 0; text-wrap: balance;
 }
 .pt-sh--on-dark .pt-sh__title  { color: var(--cream-50); }
+.portfolio-list .pt-sh__title { font-size: 2rem; }
 .pt-sh--on-dark .pt-sh__eyebrow { color: var(--accent); }
 .pt-sh__sub {
   font-family: var(--font-body); font-weight: 500; font-size: var(--fs-lead);
@@ -406,7 +407,7 @@ img { display: block; max-width: 100%; }
    ============================================================ */
 .pt-hero {
   max-width: var(--container); margin: 0 auto;
-  padding: clamp(2.5rem,6vw,5rem) var(--gutter) var(--section-y);
+  padding: var(--section-y) var(--gutter);
   display: grid; grid-template-columns: 1.05fr .95fr;
   gap: var(--space-8); align-items: flex-start;
 }
@@ -567,7 +568,7 @@ img { display: block; max-width: 100%; }
   gap: var(--space-8); align-items: start;
 }
 .about-hero__title {
-  font-family: var(--font-display); font-weight: 900; font-size: 3rem;
+  font-family: var(--font-display); font-weight: 900; font-size: 2rem;
   line-height: 1.02; letter-spacing: -.02em; text-transform: uppercase;
   color: var(--text-strong); margin: 0 0 var(--space-5);
 }
@@ -587,7 +588,7 @@ img { display: block; max-width: 100%; }
   box-shadow: var(--shadow-lg);
 }
 .about-hero__art .gatsby-image-wrapper {
-  width: 300px; max-width: 80%; height: auto !important;
+  width: 300px; max-width: 80%; transform: translateY(20%);
 }
 .about-hero__art img {
   position: relative; z-index: 2; width: 300px; max-width: 80%;
@@ -613,6 +614,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 768px) {
   .about-hero__grid { grid-template-columns: 1fr; }
   .about-hero__art { min-height: 0; }
+  .about-hero__art .gatsby-image-wrapper { height: 380px; }
   .story { padding-inline: var(--gutter); }
 }
 @media (max-width: 600px) {
