@@ -612,7 +612,8 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 768px) {
   .about-hero__grid { grid-template-columns: 1fr; }
-  .about-hero__art { order: -1; min-height: 0; }
+  .about-hero__art { min-height: 0; }
+  .story { padding-inline: var(--gutter); }
 }
 @media (max-width: 600px) {
   .grid-pains, .grid-svc, .grid-folio, .grid-tst, .grid-svc--3 {
