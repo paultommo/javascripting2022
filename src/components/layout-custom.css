@@ -592,7 +592,7 @@ img { display: block; max-width: 100%; }
 }
 .about-hero__art img {
   position: relative; z-index: 2; width: 300px; max-width: 80%;
-  height: auto;
+  height: auto; filter: none;
   margin-bottom: 0; border-radius: 40px;
 }
 .story { padding-block: var(--section-y); padding-inline: 0; }
