@@ -140,7 +140,7 @@ export default function SmallBusinessPage({ data }) {
             alt={name}
             className="pt-strip__logo"
             loading="lazy"
-            style={name === 'Red Bull' ? { height: '60px' } : undefined}
+            style={name === 'Red Bull' ? { height: '78px' } : ['Pepsi', 'Sky'].includes(name) ? { height: '39px' } : undefined}
           />
         ))} />
       </section>
