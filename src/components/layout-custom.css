@@ -659,3 +659,4 @@ img { display: block; max-width: 100%; }
 }
 #rcc-decline-button { background-color: var(--ink-900) !important; border-radius: var(--radius-pill) !important; }
 #rcc-confirm-button { background-color: var(--accent) !important; color: var(--ink-900) !important; border-radius: var(--radius-pill) !important; }
+
