@@ -29,7 +29,7 @@ export default function PortfolioPage({ data }) {
 
   return (
     <Layout>
-      <SeoBasic title="Portfolio — Paul Tomlinson" />
+      <SeoBasic title="Portfolio" />
 
       <section className="sec sec--cream portfolio-list">
         <div className="container">

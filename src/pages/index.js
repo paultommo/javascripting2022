@@ -137,13 +137,13 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <SeoBasic
-        title="Shopify Studio for Craft Food & Drink"
-        description="I build Shopify stores for craft food & drink founders — design, development, and copy under one roof."
+        title="Shopify Studio for Food, Drink & Wellness Brands"
+        description="I build Shopify stores for food, drink and wellness founders — design, development, and copy under one roof."
       />
       {/* HERO */}
       <Hero
         eyebrow="Shopify Studio · Craft Food & Drink"
-        title="Shopify Studio for Craft Food & Drink Brands"
+        title="Shopify Studio for Food, Drink & Wellness Brands"
         body="I've run a food business. My chocolate was stocked in Selfridges. I ferment my own kombucha and kefir at home. Now I build Shopify stores for founders like you — people obsessed with what's in the bottle, the bar, or the jar."
         cta="Let's have a chat"
         ctaHref={CTA_HREF}

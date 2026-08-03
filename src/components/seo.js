@@ -1,8 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-const DEFAULT_TITLE = 'Shopify Studio for Craft Food & Drink'
-const DEFAULT_DESCRIPTION = 'I build Shopify stores for craft food & drink founders — design, development, and copy under one roof.'
+const DEFAULT_TITLE = 'Shopify Studio for Food, Drink & Wellness Brands'
+const DEFAULT_DESCRIPTION = 'I build Shopify stores for food, drink and wellness founders — design, development, and copy under one roof.'
 const DEFAULT_IMAGE = 'https://paultommo.com/images/og-image.png'
 const SITE_URL = 'https://paultommo.com'
 const SITE_NAME = 'Paul Tomlinson Studio'

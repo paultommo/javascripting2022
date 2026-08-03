@@ -35,17 +35,18 @@ export default function AboutPage() {
   return (
     <Layout>
       <SeoBasic
-        title="Why craft food & drink? — About Paul Tomlinson"
+        title="Why food, drink and wellness brands?"
         description="I ran a chocolate business stocked in Selfridges. Now I build Shopify stores for craft food & drink founders who care as much about their website as their product."
       />
       {/* HERO */}
       <section className="sec sec--cream about-hero" id="about">
         <div className="container about-hero__grid">
           <div className="about-hero__copy">
-            <h1 className="about-hero__title">Why craft food &amp; drink?</h1>
+            <h1 className="about-hero__title">Why food, drink &amp; wellness?</h1>
             <p className="about-hero__lead">
-              Firstly, because I am so passionate about food and drink. Secondly, I once owned
-              a luxury chocolate business, so I understand what your website needs.
+              Firstly, because I am so passionate about food, drink and wellness products (I also
+              make my own kombucha, kefir and kimchi). Secondly, I once owned a luxury chocolate
+              business, so I understand what people want to see on these kind of websites.
             </p>
             <div className="about-hero__actions">
               <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
@@ -91,7 +92,7 @@ export default function AboutPage() {
           <p className="story__p">
             What does work? Faster stores. Engaging experiences. Copy written for people who read labels.
             Subscriptions and perishable shipping that don't fall over. The unglamorous compliance
-            bits that craft food and drink brands can't ignore.
+            bits that food, drink and wellness brands can't ignore.
           </p>
           <p className="story__p">
             So I recently stopped building websites for everyone, and started building them for the
