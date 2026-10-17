@@ -99,6 +99,14 @@ export default function AboutPage() {
             founders I understand best, so if you want someone experienced, passionate and
             knowledgable then please get in touch!
           </p>
+          <StaticImage
+            src="../images/cocoahernando-markets.jpeg"
+            alt="Paul Tomlinson at a market"
+            layout="fullWidth"
+            quality={90}
+            placeholder="blurred"
+            style={{ borderRadius: '14px', marginTop: '2rem' }}
+          />
         </div>
       </section>
 
