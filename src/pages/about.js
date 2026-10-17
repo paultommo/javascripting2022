@@ -27,7 +27,7 @@ const BRINGS = [
     icon: <Rocket size={26} />,
     tone: 'accent',
     title: 'Building my own brand',
-    text: "I'm also building another brand of my own right now, so I'm constantly keeping on top of online trends.",
+    text: <>I&apos;m also building another wellness brand of my own right now called <a href="https://dopameany.com" target="_blank" rel="noopener noreferrer">Dopameany</a>, so I&apos;m constantly keeping on top of online trends.</>,
   },
 ]
 
