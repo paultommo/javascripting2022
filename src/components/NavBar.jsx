@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about/' },
   { label: 'Portfolio', to: '/portfolio/' },
+  { label: 'Insights', to: '/insights/' },
 ]
 
 const CTA_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! Let's have a chat"
