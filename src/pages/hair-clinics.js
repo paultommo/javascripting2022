@@ -296,10 +296,6 @@ export default function HairClinicsPage() {
               <input type="text" name="clinic" required placeholder="Your clinic" />
             </label>
             <label className="pt-audit-form__field">
-              <span>Website</span>
-              <input type="url" name="website" required placeholder="https://yourclinic.co.uk" />
-            </label>
-            <label className="pt-audit-form__field">
               <span>Email</span>
               <input type="email" name="email" required placeholder="you@yourclinic.co.uk" />
             </label>
