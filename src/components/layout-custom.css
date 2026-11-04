@@ -701,6 +701,167 @@ img { display: block; max-width: 100%; }
 }
 
 /* ============================================================
+   HAIR CLINICS PAGE
+   ============================================================ */
+.container--narrow { max-width: var(--container-narrow); margin: 0 auto; padding: 0 var(--gutter); }
+
+.pt-compliance-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-7) 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.pt-compliance-list__item {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  line-height: var(--lh-relaxed);
+}
+.pt-compliance-list__note {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin-top: var(--space-4);
+  font-style: italic;
+}
+
+.pt-audit-steps {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-7) 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.pt-audit-steps__item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+.pt-audit-steps__num {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--brand);
+  color: var(--text-on-brand);
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pt-audit-steps__item p {
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  line-height: var(--lh-relaxed);
+  margin: 0;
+  padding-top: 0.3rem;
+}
+.pt-audit-steps__note {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: var(--space-5);
+}
+
+.pt-faq {
+  margin-top: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  border-top: var(--border-ink);
+}
+.pt-faq__item {
+  border-bottom: var(--border-ink);
+}
+.pt-faq__q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-5) 0;
+  font-family: var(--font-display);
+  font-weight: var(--fw-semi);
+  font-size: var(--fs-body);
+  color: var(--ink-900);
+  text-align: left;
+}
+.pt-faq__chevron {
+  flex-shrink: 0;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.pt-faq__chevron--open { transform: rotate(180deg); }
+.pt-faq__a {
+  font-size: var(--fs-body);
+  color: var(--text-body);
+  line-height: var(--lh-relaxed);
+  padding-bottom: var(--space-5);
+  margin: 0;
+}
+
+.pt-audit-form {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.pt-audit-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+.pt-audit-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.pt-audit-form__field span {
+  font-family: var(--font-body);
+  font-weight: var(--fw-semi);
+  font-size: var(--fs-sm);
+  color: var(--text-on-brand);
+}
+.pt-audit-form__field em {
+  font-weight: var(--fw-regular);
+  opacity: 0.7;
+}
+.pt-audit-form__field input {
+  height: 48px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  border: var(--border-ink);
+  background: var(--paper);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--text-strong);
+  outline: none;
+}
+.pt-audit-form__field input:focus {
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+.pt-audit-form__submit {
+  margin-top: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .pt-audit-form__row { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    COOKIE CONSENT OVERRIDES
    ============================================================ */
 .consentHolder {

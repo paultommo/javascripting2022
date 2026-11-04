@@ -282,20 +282,19 @@ export default function HairClinicsPage() {
           <form
             name="hair-clinic-audit"
             method="POST"
+            action="/thank-you/"
             data-netlify="true"
             className="pt-audit-form"
           >
             <input type="hidden" name="form-name" value="hair-clinic-audit" />
-            <div className="pt-audit-form__row">
-              <label className="pt-audit-form__field">
-                <span>Name</span>
-                <input type="text" name="name" required placeholder="Your name" />
-              </label>
-              <label className="pt-audit-form__field">
-                <span>Clinic name</span>
-                <input type="text" name="clinic" required placeholder="Your clinic" />
-              </label>
-            </div>
+            <label className="pt-audit-form__field">
+              <span>Name</span>
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label className="pt-audit-form__field">
+              <span>Clinic name</span>
+              <input type="text" name="clinic" required placeholder="Your clinic" />
+            </label>
             <label className="pt-audit-form__field">
               <span>Website</span>
               <input type="url" name="website" required placeholder="https://yourclinic.co.uk" />
