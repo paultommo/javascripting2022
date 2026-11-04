@@ -83,7 +83,7 @@ const COMPLIANCE = [
 const FAQS = [
   {
     q: "Do you run our Google and Meta ads too?",
-    a: "I focus on what happens after the click — the reply, the follow-up and the booking. I work alongside whoever runs your ads, or can recommend someone if you need them."
+    a: "I focus on what happens after the click - the reply, the follow-up and the booking. I work alongside whoever runs your ads, or can recommend someone if you need them."
   },
   {
     q: "Who owns the ad accounts and the website?",
@@ -103,7 +103,7 @@ const FAQS = [
   },
   {
     q: "What does it cost?",
-    a: "Projects start from £2,500 depending on what needs fixing. The audit is free and gives you enough to act on whether or not we work together."
+    a: "It depends on what needs fixing. The audit is free and gives you a clear picture - we can talk scope and cost from there."
   },
 ]
 
@@ -133,7 +133,7 @@ export default function HairClinicsPage() {
       <Hero
         eyebrow="Web Studio \xb7 Hair Loss & Hair Transplant Clinics"
         title="Stop losing London patients to Turkey before they’ve even booked a consultation"
-        body="Your surgeons do the hard part. I fix everything that happens before the consultation: the reply, the follow-up and the months someone spends deciding. I’ve had a hair transplant in London myself. I know what it took to find the right clinic — and I know what it felt like to get my confidence back afterwards."
+        body="Your surgeons do the hard part. I fix everything that happens before the consultation: the reply, the follow-up and the months someone spends deciding. I’ve had a hair transplant in London myself. I know what it took to find the right clinic - and I know what it felt like to get my confidence back afterwards."
         cta="Get a free enquiry audit"
         ctaHref={AUDIT_HREF}
         ctaSecondary="See how it works"
@@ -172,13 +172,13 @@ export default function HairClinicsPage() {
       <section className="sec--paper">
         <div className="container story">
           <p className="story__p">
-            <strong>I had my hair transplant in London.</strong> Before I chose, I priced up Turkey, watched every YouTube video I could find and read every forum thread. I enquired at several clinics. What actually made the decision for me wasn’t a clinic’s website — it was a blogger who had documented his entire journey in honest detail: the consultation, the surgery day, the shedding, the results at twelve months. I trusted him more than any clinic’s before-and-after gallery.
+            <strong>I had my hair transplant in London.</strong> Before I chose, I seriously considered Turkey and read so many forum threads. I enquired at a good number of clinics. However, what actually made the decision for me wasn’t a clinic’s website - it was a blogger who documented his entire journey and his life afterwards in honest detail: the consultation, the surgery day, the shedding, the results at twelve months. I trusted him more than any clinic’s before-and-after gallery.
           </p>
           <p className="story__p">
-            Some clinics replied within the hour. Some never replied at all. The one I chose felt like they already understood what I was worried about, before I had the nerve to ask. That mattered more than the price.
+            Once I started enquiring, some clinics replied within the hour. Some never replied at all. The one I chose felt like they already understood what I was worried about, before I had the nerve to ask. That mattered more than the price.
           </p>
           <p className="story__p">
-            I won’t pretend the outcome was just about hair. It was about not thinking about it anymore. Photographs. Walking into a room. The kind of quiet confidence you don’t notice until it’s back. That’s what patients are really deciding when they spend six months on forums before enquiring anywhere.
+            I won’t pretend the outcome was just about hair. It was about not thinking about it anymore. Photographs. Walking into a room. Obsessively looking at my hair in the mirror. The kind of quiet confidence you don’t notice until it’s back. That’s what patients are really deciding when they spend six months on forums before enquiring anywhere.
           </p>
           <p className="story__p">
             That’s what I build for clinics now: the patient journey I wish every clinic had.
@@ -229,9 +229,6 @@ export default function HairClinicsPage() {
               </li>
             ))}
           </ul>
-          <p className="pt-compliance-list__note">
-            Verify each point against current CAP guidance and ICO rules before publishing.
-          </p>
         </div>
       </section>
 
