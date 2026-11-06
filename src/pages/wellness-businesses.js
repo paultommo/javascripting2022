@@ -109,6 +109,18 @@ export default function WellnessBusinessPage({ data }) {
         }
       />
 
+      {/* TRAFFIC REFRAME */}
+      <section className="sec sec--brand">
+        <div className="container" style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto', padding: 'var(--section-y) var(--gutter)' }}>
+          <p style={{ fontSize: 'var(--fs-h2)', fontFamily: 'var(--font-display)', fontWeight: '900', color: '#fff', lineHeight: 'var(--lh-snug)', margin: 0 }}>
+            You are already paying for traffic to your website.
+          </p>
+          <p style={{ fontSize: 'var(--fs-lead)', color: '#fff', opacity: 0.85, marginTop: 'var(--space-5)', marginBottom: 0 }}>
+            I turn that traffic into more calls and booked appointments - without increasing your ad spend.
+          </p>
+        </div>
+      </section>
+
       {/* CREDIBILITY */}
       <section className="sec sec--paper">
         <div className="container story">
@@ -121,6 +133,13 @@ export default function WellnessBusinessPage({ data }) {
           <p className="story__p">
             I now build websites and booking systems for wellness businesses across London. I’m a solo operator, so you deal directly with me from the first call to launch - and beyond.
           </p>
+          <StaticImage
+            src="../images/cocoahernando-markets.jpeg"
+            alt="Paul at a market stall"
+            layout="fullWidth"
+            quality={85}
+            style={{ marginTop: ‘var(--space-8)’, borderRadius: ‘var(--radius-md)’ }}
+          />
         </div>
       </section>
 
@@ -168,7 +187,7 @@ export default function WellnessBusinessPage({ data }) {
       {/* TESTIMONIALS */}
       <section className="sec sec--deep" id="testimonials">
         <div className="container">
-          <SectionHeading align="center" onDark eyebrow="Don't just take my word for it" title="Trusted by organisations" />
+          <SectionHeading align="center" onDark eyebrow="Don't just take my word for it" title="Real results from real businesses" />
           {(() => {
             const all = STATIC_TESTIMONIALS
             const t = all[tstIdx]

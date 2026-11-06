@@ -32,7 +32,7 @@ img { display: block; max-width: 100%; }
 .sec { padding-block: var(--section-y); }
 .sec--cream { background: var(--bg-page); }
 .sec--paper { background: var(--paper); }
-.sec--brand { background: var(--brand); }
+.sec--brand { background: var(--brand); color: #fff; }
 .sec--deep  { background: var(--green-900); }
 .sec__cta { display: flex; justify-content: center; margin-top: var(--space-7); }
 .sec__head-row {

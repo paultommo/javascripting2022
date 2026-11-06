@@ -154,6 +154,18 @@ export default function HairClinicsPage() {
         }
       />
 
+      {/* TRAFFIC REFRAME */}
+      <section className="sec sec--brand">
+        <div className="container" style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto', padding: 'var(--section-y) var(--gutter)' }}>
+          <p style={{ fontSize: 'var(--fs-h2)', fontFamily: 'var(--font-display)', fontWeight: 'var(--fw-bold)', color: 'var(--text-on-brand)', lineHeight: 'var(--lh-snug)', margin: 0 }}>
+            You are already paying for traffic to your website.
+          </p>
+          <p style={{ fontSize: 'var(--fs-lead)', color: 'var(--text-on-brand)', opacity: 0.85, marginTop: 'var(--space-5)', marginBottom: 0 }}>
+            I turn that traffic into more booked consultations - without increasing your ad spend.
+          </p>
+        </div>
+      </section>
+
       {/* PAINS */}
       <section className="sec sec--cream" id="problem">
         <div className="container">
