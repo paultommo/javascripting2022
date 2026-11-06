@@ -138,7 +138,7 @@ export default function WellnessBusinessPage({ data }) {
             alt="Paul at a market stall"
             layout="fullWidth"
             quality={85}
-            style={{ marginTop: ‘var(--space-8)’, borderRadius: ‘var(--radius-md)’ }}
+            style={{ marginTop: "var(--space-8)", borderRadius: "var(--radius-md)" }}
           />
         </div>
       </section>
