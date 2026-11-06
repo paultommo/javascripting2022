@@ -66,6 +66,21 @@ const STATIC_TESTIMONIALS = [
   { quote: "A fresh start and some impressive growth in organic traffic to go with it - exactly what we needed.", name: 'Sam Robinson', role: 'London Clinic of Nutrition' },
 ]
 
+const TrafficFunnel = () => (
+  <svg width="220" height="190" viewBox="0 0 220 190" fill="none" aria-hidden="true" style={{ display: 'block', maxWidth: '100%' }}>
+    <rect x="20" y="20" width="70" height="150" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
+    <text x="55" y="42" textAnchor="middle" fill="white" fontSize="11.5" fontWeight="700" fontFamily="inherit">Traffic</text>
+    <text x="55" y="58" textAnchor="middle" fill="rgba(255,255,255,0.65)" fontSize="10" fontFamily="inherit">you pay for</text>
+    <rect x="130" y="140" width="70" height="30" rx="6" fill="rgba(255,255,255,0.28)" stroke="white" strokeWidth="1.5" />
+    <text x="165" y="160" textAnchor="middle" fill="white" fontSize="11.5" fontWeight="700" fontFamily="inherit">Bookings</text>
+    <line x1="165" y1="22" x2="165" y2="136" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeDasharray="3 3" />
+    <text x="165" y="78" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="9.5" fontFamily="inherit">this gap</text>
+    <text x="165" y="94" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="9.5" fontFamily="inherit">= revenue</text>
+    <text x="165" y="110" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="9.5" fontFamily="inherit">left behind</text>
+    <line x1="10" y1="175" x2="210" y2="175" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+  </svg>
+)
+
 export default function WellnessBusinessPage({ data }) {
   const testimonials = data?.allWpTestimonial?.edges ?? []
   const [tstIdx, setTstIdx] = useState(0)
@@ -111,13 +126,18 @@ export default function WellnessBusinessPage({ data }) {
 
       {/* TRAFFIC REFRAME */}
       <section className="sec sec--brand">
-        <div className="container" style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto', padding: 'var(--section-y) var(--gutter)' }}>
-          <p style={{ fontSize: 'var(--fs-h2)', fontFamily: 'var(--font-display)', fontWeight: '900', color: '#fff', lineHeight: 'var(--lh-snug)', margin: 0 }}>
-            You are already paying for traffic to your website.
-          </p>
-          <p style={{ fontSize: 'var(--fs-lead)', color: '#fff', opacity: 0.85, marginTop: 'var(--space-5)', marginBottom: 0 }}>
-            I turn that traffic into more calls and booked appointments - without increasing your ad spend.
-          </p>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-10)', flexWrap: 'wrap', padding: 'var(--section-y) var(--gutter)' }}>
+          <div style={{ flex: '1 1 300px' }}>
+            <p style={{ fontSize: 'var(--fs-h2)', fontFamily: 'var(--font-display)', fontWeight: '900', color: '#fff', lineHeight: 'var(--lh-snug)', margin: 0 }}>
+              You are already paying for traffic to your website.
+            </p>
+            <p style={{ fontSize: 'var(--fs-lead)', color: '#fff', opacity: 0.85, marginTop: 'var(--space-5)', marginBottom: 0 }}>
+              I turn that traffic into more calls and booked appointments - without increasing your ad spend.
+            </p>
+          </div>
+          <div style={{ flex: '0 0 auto' }}>
+            <TrafficFunnel />
+          </div>
         </div>
       </section>
 
