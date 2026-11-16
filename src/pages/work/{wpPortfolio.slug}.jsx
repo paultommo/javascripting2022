@@ -181,7 +181,7 @@ const WpPortfolio = ({
           <CTABanner
             eyebrow="Let's build"
             title="Ready to build a store your brand deserves?"
-            subtitle="Start with a free 15-minute chat — no pitch, no pressure."
+            subtitle="Start with a free 15-minute chat - no pitch, no pressure."
             actions={
               <Button variant="accent" size="lg" href={CONSULT_HREF} iconRight={<ArrowRight size={16} />}>
                 Let's have a chat

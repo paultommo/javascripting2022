@@ -104,9 +104,10 @@ export default function WellnessBusinessPage({ data }) {
       {/* HERO */}
       <Hero
         eyebrow="Web Studio \xb7 Wellness Businesses"
-        title="More booked appointments from the traffic you already get"
+        title="More booked consultations from paid traffic without increasing ad spend"
+        testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
         body="You’ve built an incredible experience - a sauna, a cold plunge studio, a med spa, a wellness clinic. Now let’s make sure every person who finds you online actually books - and comes back."
-        cta="Let's have a chat"
+        cta="Let’s have a chat"
         ctaHref={CTA_HREF}
         hideChips
         onPortfolio={() => {

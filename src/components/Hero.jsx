@@ -2,22 +2,33 @@ import React from 'react'
 import { BadgeCheck, Sprout, Award, ArrowRight } from 'lucide-react'
 import Button from './ds/Button'
 
-function Hero({ eyebrow, title, body, ctaHref, cta, heroImage, onPortfolio, hideChips }) {
+function Hero({ eyebrow, title, body, ctaHref, cta, heroImage, onPortfolio, hideChips, proof, ctaSecondary, ctaSecondaryHref, testimonial }) {
   return (
     <header className="pt-hero">
       <div className="pt-hero__copy">
         <span className="pt-hero__eyebrow">{eyebrow}</span>
         <h1 className="pt-hero__title">{title}</h1>
+        {testimonial && (
+          <figure className="pt-hero__testimonial">
+            <blockquote className="pt-hero__testimonial-quote">"{testimonial.quote}"</blockquote>
+            <figcaption className="pt-hero__testimonial-cite">- {testimonial.attribution}</figcaption>
+          </figure>
+        )}
         <p className="pt-hero__body">{body}</p>
         <div className="pt-hero__actions">
           <Button variant="accent" size="lg" href={ctaHref} iconRight={<ArrowRight size={18} />}>
             {cta}
           </Button>
-          <Button variant="secondary" size="lg" onClick={onPortfolio}>See the work</Button>
+          {ctaSecondary && (
+            <Button variant="secondary" size="lg" href={ctaSecondaryHref} onClick={onPortfolio}>{ctaSecondary}</Button>
+          )}
+          {!ctaSecondary && (
+            <Button variant="secondary" size="lg" onClick={onPortfolio}>See the work</Button>
+          )}
         </div>
         <div className="pt-hero__proof">
           <BadgeCheck size={18} style={{ color: 'var(--brand)', flexShrink: 0 }} />
-          <span>Founder-led · Shopify Plus partner · Based in London</span>
+          <span>{proof || 'Founder-led \xb7 Shopify Plus partner \xb7 Based in London'}</span>
         </div>
       </div>
 

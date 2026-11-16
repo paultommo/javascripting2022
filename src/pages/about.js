@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { ArrowRight, Utensils, FlaskConical, Rocket, ChefHat } from 'lucide-react'
+import { ArrowRight, MousePointerClick, CalendarCheck, BadgeCheck } from 'lucide-react'
 import Layout from '../components/layout'
 import SeoBasic from '../components/seo'
 import Button from '../components/ds/Button'
@@ -8,26 +8,26 @@ import SectionHeading from '../components/ds/SectionHeading'
 import ValueProp from '../components/ds/ValueProp'
 import CTABanner from '../components/ds/CTABanner'
 
-const CTA_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free consultation"
+const CTA_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free audit"
 
 const BRINGS = [
   {
-    icon: <Utensils size={26} />,
+    icon: <MousePointerClick size={26} />,
     tone: 'brand',
-    title: 'A founder who gets it',
-    text: "I ran a chocolate business stocked in Selfridges and sold online. I know what works and what doesn't in this industry.",
+    title: 'I fix both sides',
+    text: 'Most agencies handle the ads or the website. I handle both - the campaign and what happens after the click - so nothing falls through the gap.',
   },
   {
-    icon: <FlaskConical size={26} />,
-    tone: 'berry',
-    title: 'Lives the category',
-    text: 'I ferment my own kombucha and kefir, read every ingredient label, and own far too many recipe books.',
-  },
-  {
-    icon: <Rocket size={26} />,
+    icon: <CalendarCheck size={26} />,
     tone: 'accent',
-    title: 'Building my own brand',
-    text: <>I&apos;m also building another wellness brand of my own right now called <a href="https://dopameany.com" target="_blank" rel="noopener noreferrer">Dopameany</a>, so I&apos;m constantly keeping on top of online trends.</>,
+    title: 'I have been the patient',
+    text: "I have had a hair transplant in London, spent months deciding which clinic to trust, and experienced every part of the journey that clinics never see. That shapes how I build.",
+  },
+  {
+    icon: <BadgeCheck size={26} />,
+    tone: 'berry',
+    title: 'You deal with me directly',
+    text: 'No account managers, no handoffs to a junior. I write the copy, build the pages and set up the follow-up sequences myself.',
   },
 ]
 
@@ -35,22 +35,23 @@ export default function AboutPage() {
   return (
     <Layout>
       <SeoBasic
-        title="Why food, drink and wellness brands?"
-        description="I ran a chocolate business stocked in Selfridges. Now I build Shopify stores for craft food & drink founders who care as much about their website as their product."
+        title="About Paul Tomlinson"
+        description="I help service businesses get more booked leads from paid traffic without increasing ad spend. Free audit for hair clinics, dental clinics and wellness businesses."
+        url="https://paultommo.com/about/"
       />
+
       {/* HERO */}
       <section className="sec sec--cream about-hero" id="about">
         <div className="container about-hero__grid">
           <div className="about-hero__copy">
-            <h1 className="about-hero__title">Why food, drink &amp; wellness?</h1>
+            <h1 className="about-hero__title">More about Paul and why paid traffic conversion</h1>
             <p className="about-hero__lead">
-              Firstly, because I am so passionate about food, drink and wellness products (I also
-              make my own kombucha, kefir and kimchi). Secondly, I once owned a luxury chocolate
-              business, so I understand what people want to see on these kind of websites.
+              Because the problem isn't that service businesses can't get clicks.
+              It's that the clicks don't turn into booked appointments - and nobody is fixing both sides.
             </p>
             <div className="about-hero__actions">
               <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
-                Start with a free chat
+                Get a free audit
               </Button>
             </div>
           </div>
@@ -63,22 +64,12 @@ export default function AboutPage() {
             <span className="pt-hero__blob pt-hero__blob--y"></span>
             <span className="pt-hero__blob pt-hero__blob--c"></span>
             <StaticImage
-              src="../images/dal-pakwan.png"
+              src="../images/paultomlinson.png"
               alt="Paul Tomlinson"
-              layout="fixed"
-              width={300}
-              height={380}
-              objectFit="cover"
-              objectPosition="center top"
+              width={330}
               quality={90}
               placeholder="none"
             />
-            <div className="pt-hero__chip pt-hero__chip--1">
-              <Utensils size={16} style={{ color: 'var(--brand)' }} /> food and drink obsessive
-            </div>
-            <div className="pt-hero__chip pt-hero__chip--2">
-              <ChefHat size={16} style={{ color: 'var(--accent-strong)' }} /> eating dal pakwan
-            </div>
           </div>
         </div>
       </section>
@@ -87,21 +78,20 @@ export default function AboutPage() {
       <section className="sec--paper">
         <div className="container story">
           <p className="story__p">
-            <strong>I ran a chocolate business stocked in Selfridges and sold online.</strong> I know what works and what doesn't in this industry.
+            <strong>I have been building high-performing websites for over 15 years.</strong> In that time I have worked with brands of every size - from independent founders to household names - and learned what actually makes the difference between a website that earns its keep and one that just looks good.
           </p>
           <p className="story__p">
-            What does work? Faster stores. Engaging experiences. Copy written for people who read labels.
-            Subscriptions and perishable shipping that don't fall over. The unglamorous compliance
-            bits that food, drink and wellness brands can't ignore.
+            I now specialise in one thing: making websites maximise their paid traffic. Most service businesses running Google or Meta ads are paying for clicks that never turn into booked appointments. The problem is rarely the ads. It is everything that happens after the click - the speed of the reply, the booking journey, the follow-up for people who aren't ready yet. That is the gap I fix.
           </p>
           <p className="story__p">
-            So I recently stopped building websites for everyone, and started building them for the
-            founders I understand best, so if you want someone experienced, passionate and
-            knowledgable then please get in touch!
+            I also once owned a luxury chocolate business stocked in Selfridges. I sold online, ran subscriptions, and learned what makes someone buy - and what makes them disappear without saying why. That commercial instinct is what I bring to every project: not just making things look good, but making them work.
+          </p>
+          <p className="story__p">
+            Same ad budget. More leads.
           </p>
           <StaticImage
             src="../images/cocoahernando-markets.jpeg"
-            alt="Paul Tomlinson at a market"
+            alt="Paul at a market"
             layout="fullWidth"
             quality={90}
             placeholder="blurred"
@@ -110,31 +100,31 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* WHAT I BRING */}
-      <section className="sec sec--cream">
-        <div className="container">
-          <SectionHeading align="center" eyebrow="What I bring" title="More than a developer" />
-          <div className="grid-svc grid-svc--3">
-            {BRINGS.map((b, i) => (
-              <ValueProp key={i} align="center" icon={b.icon} iconTone={b.tone} title={b.title}>
-                {b.text}
-              </ValueProp>
-            ))}
-          </div>
+      {/* TESTIMONIAL */}
+      <section className="sec sec--paper">
+        <div className="container container--narrow">
+          <figure style={{ margin: 0, padding: 'var(--space-8) var(--space-6)', borderLeft: '4px solid var(--brand)', background: 'var(--surface-sunken)', borderRadius: '0 10px 10px 0' }}>
+            <blockquote style={{ margin: 0, fontSize: 'var(--fs-lead)', fontStyle: 'italic', lineHeight: 1.6, color: 'var(--text-strong)' }}>
+              "Thank you again for the website. We're very pleased with the final result, and more importantly, it is already converting visitors into customers."
+            </blockquote>
+            <figcaption style={{ marginTop: 'var(--space-4)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', fontStyle: 'normal' }}>
+              - Luka Ivic, Monokl
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="sec sec--cream">
+      <section className="sec sec--brand">
         <div className="container">
           <CTABanner
-            tone="brand"
-            eyebrow="Let's build"
-            title="Let's build something worth the shelf"
-            subtitle="Start with a free 15-minute chat — no pitch, no pressure."
+            eyebrow="Free audit"
+            title="Find out where your paid traffic is leaking"
+            subtitle="I'll review your ads and booking journey and show you the first three things I'd fix. No pitch, no obligation."
+            onDark
             actions={
               <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
-                Let's have a chat
+                Get a free audit
               </Button>
             }
           />

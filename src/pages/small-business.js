@@ -46,18 +46,18 @@ const PAINS = [
   { icon: <Store size={26} />, iconTone: 'brand', title: "Your website doesn't reflect your brand", text: "You've built a brilliant business, but your website doesn't do it justice. Potential clients click away before they even read about you." },
   { icon: <Search size={26} />, iconTone: 'cream', title: 'Missing out on Google traffic', text: "Your competitors are showing up on Google and you're not. Poor SEO means you're invisible to the customers searching for you right now." },
   { icon: <Users size={26} />, iconTone: 'brand', title: "Visitors don't stick around", text: "Slow load times, confusing navigation, and a poor mobile experience are driving potential customers straight to your competitors." },
-  { icon: <Clock size={26} />, iconTone: 'cream', title: 'No time for the website', text: "You're running a business. You don't have time to deal with a website that constantly needs fixing — it should just work." },
+  { icon: <Clock size={26} />, iconTone: 'cream', title: 'No time for the website', text: "You're running a business. You don't have time to deal with a website that constantly needs fixing - it should just work." },
 ]
 
 const SERVICES = [
   { icon: <Palette size={26} />, tone: 'brand', title: 'Design & brand', text: 'A website that looks as professional as your business actually is. Clean, consistent, and built to impress the clients you want.' },
-  { icon: <Code2 size={26} />, tone: 'accent', title: 'Website build', text: 'Fast, responsive, and built on technology that lasts. I handle everything — from CMS setup to going live.' },
-  { icon: <PenTool size={26} />, tone: 'berry', title: 'Copy that converts', text: 'Words written to speak to your customers — not generic filler. Clear, persuasive, and optimised for search.' },
+  { icon: <Code2 size={26} />, tone: 'accent', title: 'Website build', text: 'Fast, responsive, and built on technology that lasts. I handle everything - from CMS setup to going live.' },
+  { icon: <PenTool size={26} />, tone: 'berry', title: 'Copy that converts', text: 'Words written to speak to your customers - not generic filler. Clear, persuasive, and optimised for search.' },
   { icon: <Gauge size={26} />, tone: 'sky', title: 'Performance & SEO', text: 'Speed, mobile optimisation, and search visibility that brings the right people to your site and keeps them there.' },
 ]
 
 const FEATURED_TESTIMONIAL = {
-  quote: 'Paul Tomlinson managed to create a miracle in such a short period of time — he redesigned an existing website into a more dynamic and user-friendly site. I am very appreciative of his professionalism, time and ingenuity.',
+  quote: 'Paul Tomlinson managed to create a miracle in such a short period of time - he redesigned an existing website into a more dynamic and user-friendly site. I am very appreciative of his professionalism, time and ingenuity.',
   name: 'Prof. Paul Spiegel',
   role: 'Director, Johns Hopkins Center for Humanitarian Health',
 }
@@ -66,7 +66,7 @@ const ENTITIES = {
   '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#039;': "'", '&nbsp;': ' ',
   '&ldquo;': '“', '&rdquo;': '”', '&#8220;': '“', '&#8221;': '”',
   '&lsquo;': '\u2018', '&rsquo;': '\u2019', '&#8216;': '\u2018', '&#8217;': '\u2019',
-  '&ndash;': '–', '&mdash;': '—', '&#8211;': '–', '&#8212;': '—',
+  '&ndash;': '–', '&mdash;': '-', '&#8211;': '–', '&#8212;': '-',
 }
 const stripHtml = html => html.replace(/<[^>]*>/g, '').replace(/&[#\w]+;/g, e => ENTITIES[e] ?? e).trim()
 
@@ -79,10 +79,10 @@ const Stars = () => (
 )
 
 const STATIC_TESTIMONIALS = [
-  { quote: 'We have loved working with Paul — he has been really proactive and sought to get to the bottom of any challenge. His outputs are to the highest standard.', name: 'Gina Artzen', role: 'Gripped' },
-  { quote: "We\u2019ve made a big impact on the organic performance of the site — a fresh start, and some impressive growth in organic traffic to go with it.", name: 'Sam Robinson', role: 'Whole of the Moon Marketing' },
+  { quote: 'We have loved working with Paul - he has been really proactive and sought to get to the bottom of any challenge. His outputs are to the highest standard.', name: 'Gina Artzen', role: 'Gripped' },
+  { quote: "We\u2019ve made a big impact on the organic performance of the site - a fresh start, and some impressive growth in organic traffic to go with it.", name: 'Sam Robinson', role: 'Whole of the Moon Marketing' },
   { quote: 'Paul was a pleasure to work with and was always happy to find a way of delivering what was required, even in the face of the occasional technical challenge!', name: 'Eddie May', role: 'Overdog Marketing' },
-  { quote: 'Knowledgeable about his craft, prompt to respond and thorough throughout — he went over and above to ensure the client was happy.', name: 'Cath Harris', role: 'IPSA Consulting' },
+  { quote: 'Knowledgeable about his craft, prompt to respond and thorough throughout - he went over and above to ensure the client was happy.', name: 'Cath Harris', role: 'IPSA Consulting' },
   { quote: "Working with Paul was an absolute pleasure. He was exactly the right man for the job on a highly demanding project!", name: 'Steph Melodia', role: 'MD, Bloom Ltd' },
   { quote: "Reliability, listening to our needs and being able to translate them into functional tools fully characterise Paul\u2019s work.", name: 'Prof. Karl Blanchet', role: 'Geneva Centre of Humanitarian Studies' },
 ]
@@ -103,7 +103,7 @@ export default function SmallBusinessPage({ data }) {
   return (
     <Layout>
       <SeoBasic
-        title="Impactful websites for small businesses — Paul Tomlinson"
+        title="Impactful websites for small businesses - Paul Tomlinson"
         description="I build high-converting websites for small businesses that capture attention, build trust, and generate leads."
       />
 
@@ -111,7 +111,7 @@ export default function SmallBusinessPage({ data }) {
       <Hero
         eyebrow="Web Studio · Small Business"
         title="Impactful websites for small businesses"
-        body="Your business is brilliant — but does your website reflect that? I build high-converting websites for small businesses that capture attention, build trust, and generate leads."
+        body="Your business is brilliant - but does your website reflect that? I build high-converting websites for small businesses that capture attention, build trust, and generate leads."
         cta="Let's have a chat"
         ctaHref={CTA_HREF}
         hideChips
@@ -167,7 +167,7 @@ export default function SmallBusinessPage({ data }) {
             onDark
             eyebrow="Here's what I do about it"
             title="Here's what I do about it"
-            subtitle="Everything a small business needs from a website — under one roof."
+            subtitle="Everything a small business needs from a website - under one roof."
           />
           <div className="grid-svc">
             {SERVICES.map((s, i) => (
@@ -232,7 +232,7 @@ export default function SmallBusinessPage({ data }) {
           <CTABanner
             eyebrow="Let's build"
             title="Ready to build a website your business deserves?"
-            subtitle="Start with a free 15-minute chat — no pitch, no pressure."
+            subtitle="Start with a free 15-minute chat - no pitch, no pressure."
             actions={
               <Button variant="accent" size="lg" href={CONSULT_HREF} iconRight={<ArrowRight size={16} />}>
                 Let's have a chat

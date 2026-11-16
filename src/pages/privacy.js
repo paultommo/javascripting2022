@@ -5,7 +5,7 @@ import SeoBasic from '../components/seo'
 export default function PrivacyPage() {
   return (
     <Layout>
-      <SeoBasic title="Privacy Policy — Paul Tomlinson" />
+      <SeoBasic title="Privacy Policy - Paul Tomlinson" />
 
       <section className="sec sec--cream">
         <div className="container story">
