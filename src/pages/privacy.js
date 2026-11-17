@@ -7,7 +7,7 @@ export default function PrivacyPage() {
     <Layout>
       <SeoBasic title="Privacy Policy - Paul Tomlinson" />
 
-      <section className="sec sec--cream">
+      <section className="sec">
         <div className="container story">
           <h1 className="about-hero__title" style={{ marginBottom: '2rem' }}>Privacy Policy</h1>
           <p className="story__p" style={{ color: 'var(--text-muted)', fontSize: 'var(--fs-sm)' }}>Last updated: {new Date().getFullYear()}</p>

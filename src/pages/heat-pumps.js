@@ -164,7 +164,7 @@ export default function HeatPumpsPage() {
         </div>
       </section>
 
-      <section className="sec sec--cream" id="problem">
+      <section className="sec" id="problem">
         <div className="container">
           <SectionHeading align="center" eyebrow="Sound familiar?" title="Sound familiar?" />
           <div className="grid-pains">
@@ -203,7 +203,7 @@ export default function HeatPumpsPage() {
         </div>
       </section>
 
-      <section className="sec sec--cream">
+      <section className="sec">
         <div className="container">
           <SectionHeading
             eyebrow="Built for a regulated industry"
@@ -221,7 +221,7 @@ export default function HeatPumpsPage() {
         </div>
       </section>
 
-      <section className="sec sec--paper">
+      <section className="sec" id="faq">
         <div className="container container--narrow">
           <SectionHeading align="center" eyebrow="Questions installers ask" title="Questions installers ask" />
           <div className="pt-faq">

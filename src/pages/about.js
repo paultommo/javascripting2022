@@ -41,13 +41,16 @@ export default function AboutPage() {
       />
 
       {/* HERO */}
-      <section className="sec sec--cream about-hero" id="about">
+      <section className="sec about-hero" id="about">
         <div className="container about-hero__grid">
           <div className="about-hero__copy">
-            <h1 className="about-hero__title">More about Paul and why paid traffic conversion</h1>
+            <h1 className="about-hero__title">More about Paul</h1>
+            <h2 className="about-hero__subtitle">The person behind the work</h2>
             <p className="about-hero__lead">
-              Because the problem isn't that service businesses can't get clicks.
-              It's that the clicks don't turn into booked appointments - and nobody is fixing both sides.
+              I've been building websites for over 15 years. I now spend most of that time fixing one specific problem: service businesses paying for clicks that don't turn into bookings.
+            </p>
+            <p className="about-hero__lead">
+              And yes - the 90s vibe is deliberate. I grew up in the decade and love it.
             </p>
             <div className="about-hero__actions">
               <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
@@ -58,11 +61,31 @@ export default function AboutPage() {
 
           <div className="about-hero__art">
             <svg className="pt-hero__disc" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="250" cy="250" r="240" fill="var(--brand)" stroke="var(--ink-900)" strokeWidth="10" />
-              <circle cx="250" cy="250" r="220" fill="none" stroke="var(--ink-900)" strokeWidth="4" />
+              <circle cx="250" cy="250" r="232" fill="var(--magenta)" stroke="var(--green-800)" strokeWidth="6" />
+              <ellipse cx="140" cy="130" rx="6" ry="17" fill="var(--ink-900)" transform="rotate(-38 140 130)" />
+              <ellipse cx="200" cy="98" rx="5" ry="15" fill="var(--ink-900)" transform="rotate(22 200 98)" />
+              <ellipse cx="285" cy="88" rx="6" ry="16" fill="var(--ink-900)" transform="rotate(-14 285 88)" />
+              <ellipse cx="355" cy="118" rx="5" ry="15" fill="var(--ink-900)" transform="rotate(38 355 118)" />
+              <ellipse cx="385" cy="185" rx="6" ry="17" fill="var(--ink-900)" transform="rotate(52 385 185)" />
+              <ellipse cx="392" cy="265" rx="5" ry="16" fill="var(--ink-900)" transform="rotate(-28 392 265)" />
+              <ellipse cx="368" cy="348" rx="6" ry="15" fill="var(--ink-900)" transform="rotate(26 368 348)" />
+              <ellipse cx="308" cy="395" rx="5" ry="16" fill="var(--ink-900)" transform="rotate(-10 308 395)" />
+              <ellipse cx="225" cy="412" rx="6" ry="17" fill="var(--ink-900)" transform="rotate(42 225 412)" />
+              <ellipse cx="148" cy="382" rx="5" ry="15" fill="var(--ink-900)" transform="rotate(-48 148 382)" />
+              <ellipse cx="108" cy="302" rx="6" ry="16" fill="var(--ink-900)" transform="rotate(16 108 302)" />
+              <ellipse cx="102" cy="218" rx="5" ry="17" fill="var(--ink-900)" transform="rotate(-24 102 218)" />
+              <ellipse cx="122" cy="162" rx="6" ry="15" fill="var(--ink-900)" transform="rotate(44 122 162)" />
+              <ellipse cx="175" cy="195" rx="5" ry="16" fill="var(--ink-900)" transform="rotate(-58 175 195)" />
+              <ellipse cx="242" cy="158" rx="6" ry="15" fill="var(--ink-900)" transform="rotate(30 242 158)" />
+              <ellipse cx="322" cy="168" rx="5" ry="17" fill="var(--ink-900)" transform="rotate(-18 322 168)" />
+              <ellipse cx="345" cy="242" rx="6" ry="16" fill="var(--ink-900)" transform="rotate(55 345 242)" />
+              <ellipse cx="302" cy="318" rx="5" ry="15" fill="var(--ink-900)" transform="rotate(-33 302 318)" />
+              <ellipse cx="198" cy="325" rx="6" ry="16" fill="var(--ink-900)" transform="rotate(20 198 325)" />
+              <ellipse cx="162" cy="268" rx="5" ry="17" fill="var(--ink-900)" transform="rotate(-44 162 268)" />
+              <ellipse cx="230" cy="230" rx="5" ry="14" fill="var(--ink-900)" transform="rotate(10 230 230)" />
+              <ellipse cx="290" cy="210" rx="6" ry="15" fill="var(--ink-900)" transform="rotate(-62 290 210)" />
+              <ellipse cx="260" cy="310" rx="5" ry="16" fill="var(--ink-900)" transform="rotate(35 260 310)" />
             </svg>
-            <span className="pt-hero__blob pt-hero__blob--y"></span>
-            <span className="pt-hero__blob pt-hero__blob--c"></span>
             <StaticImage
               src="../images/paultomlinson.png"
               alt="Paul Tomlinson"
@@ -75,19 +98,19 @@ export default function AboutPage() {
       </section>
 
       {/* STORY */}
-      <section className="sec--paper">
+      <section className="sec sec--pt-tight">
         <div className="container story">
           <p className="story__p">
-            <strong>I have been building high-performing websites for over 15 years.</strong> In that time I have worked with brands of every size - from independent founders to household names - and learned what actually makes the difference between a website that earns its keep and one that just looks good.
+            <strong>I have been building websites for over 15 years.</strong> In that time I have worked with businesses of every size - from solo founders to well-known brands - and learned what actually makes the difference between a website that brings in customers and one that just looks good.
           </p>
           <p className="story__p">
-            I now specialise in one thing: making websites maximise their paid traffic. Most service businesses running Google or Meta ads are paying for clicks that never turn into booked appointments. The problem is rarely the ads. It is everything that happens after the click - the speed of the reply, the booking journey, the follow-up for people who aren't ready yet. That is the gap I fix.
+            I now focus on one thing: helping service businesses get more bookings from the ads they are already running. Most businesses on Google or Meta are paying for clicks that often don't turn into booked appointments. The problem is rarely the ads themselves. It is usually what happens after the click - how quickly someone gets a response, how easy it is to book, and whether there is any follow-up for people who weren't ready straight away. That is the part I fix.
           </p>
           <p className="story__p">
-            I also once owned a luxury chocolate business stocked in Selfridges. I sold online, ran subscriptions, and learned what makes someone buy - and what makes them disappear without saying why. That commercial instinct is what I bring to every project: not just making things look good, but making them work.
+            I also once owned a luxury chocolate business stocked in Selfridges. I sold online, ran a subscription service, and learned what makes someone buy - and what makes them leave without saying why. That experience is what I bring to every project: not just making websites look good, but making them turn visitors into booked leads.
           </p>
           <p className="story__p">
-            Same ad budget. More leads.
+            Same ad budget. More bookings.
           </p>
           <StaticImage
             src="../images/cocoahernando-markets.jpeg"
@@ -95,19 +118,19 @@ export default function AboutPage() {
             layout="fullWidth"
             quality={90}
             placeholder="blurred"
-            style={{ borderRadius: '14px', marginTop: '2rem' }}
+            style={{ marginTop: '2rem', border: '3px solid #111', boxShadow: '6px 6px 0 #111' }}
           />
         </div>
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="sec sec--paper">
+      <section className="sec sec--pt-tight">
         <div className="container container--narrow">
-          <figure style={{ margin: 0, padding: 'var(--space-8) var(--space-6)', borderLeft: '4px solid var(--brand)', background: 'var(--surface-sunken)', borderRadius: '0 10px 10px 0' }}>
-            <blockquote style={{ margin: 0, fontSize: 'var(--fs-lead)', fontStyle: 'italic', lineHeight: 1.6, color: 'var(--text-strong)' }}>
+          <figure className="pt-quote pt-quote--feature">
+            <blockquote className="pt-hero__testimonial-quote">
               "Thank you again for the website. We're very pleased with the final result, and more importantly, it is already converting visitors into customers."
             </blockquote>
-            <figcaption style={{ marginTop: 'var(--space-4)', fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', fontStyle: 'normal' }}>
+            <figcaption className="pt-hero__testimonial-cite">
               - Luka Ivic, Monokl
             </figcaption>
           </figure>

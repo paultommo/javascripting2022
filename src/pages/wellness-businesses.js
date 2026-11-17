@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import { ArrowRight, Star, Flame, TrendingUp, Users, Clock, Palette, Code2, Bot, Gauge, ShoppingBag } from 'lucide-react'
+import { ArrowRight, Flame, TrendingUp, Users, Clock, Palette, Code2, Bot, Gauge } from 'lucide-react'
 import Layout from '../components/layout'
 import SeoBasic from '../components/seo'
 import Hero from '../components/Hero'
 import Button from '../components/ds/Button'
 import SectionHeading from '../components/ds/SectionHeading'
 import ValueProp from '../components/ds/ValueProp'
-import TestimonialCard from '../components/ds/TestimonialCard'
 import CTABanner from '../components/ds/CTABanner'
 
 export const query = graphql`
@@ -45,27 +44,6 @@ const SERVICES = [
   { icon: <Gauge size={26} />, tone: "sky", title: "Clients who come back without being chased", text: "Post-visit messages, re-booking reminders, membership prompts. It feels personal. It runs on its own." },
 ]
 
-const ENTITIES = {
-  '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#039;': "'", '&nbsp;': ' ',
-  '&ldquo;': '“', '&rdquo;': '”', '&#8220;': '“', '&#8221;': '”',
-  '&lsquo;': '‘', '&rsquo;': '’', '&#8216;': '‘', '&#8217;': '’',
-  '&ndash;': '–', '&mdash;': '-', '&#8211;': '–', '&#8212;': '-',
-}
-const stripHtml = html => html.replace(/<[^>]*>/g, '').replace(/&[#\w]+;/g, e => ENTITIES[e] ?? e).trim()
-
-const Stars = () => (
-  <>
-    {[...Array(5)].map((_, i) => (
-      <Star key={i} size={16} fill="currentColor" stroke="none" />
-    ))}
-  </>
-)
-
-const STATIC_TESTIMONIALS = [
-  { quote: "Thank you again for the website. We’re very pleased with the final result, and more importantly, it is already converting visitors into customers.", name: 'Luka Ivic', role: 'Monokl' },
-  { quote: "A fresh start and some impressive growth in organic traffic to go with it - exactly what we needed.", name: 'Sam Robinson', role: 'London Clinic of Nutrition' },
-]
-
 const TrafficFunnel = () => (
   <svg width="220" height="190" viewBox="0 0 220 190" fill="none" aria-hidden="true" style={{ display: 'block', maxWidth: '100%' }}>
     <rect x="20" y="20" width="70" height="150" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
@@ -81,19 +59,7 @@ const TrafficFunnel = () => (
   </svg>
 )
 
-export default function WellnessBusinessPage({ data }) {
-  const testimonials = data?.allWpTestimonial?.edges ?? []
-  const [tstIdx, setTstIdx] = useState(0)
-  const dragStart = React.useRef(null)
-  const onDragStart = e => { dragStart.current = e.clientX ?? e.touches?.[0]?.clientX }
-  const onDragEnd = (all, e) => {
-    if (dragStart.current === null) return
-    const dx = (e.clientX ?? e.changedTouches?.[0]?.clientX) - dragStart.current
-    dragStart.current = null
-    if (Math.abs(dx) < 40) return
-    setTstIdx(i => dx < 0 ? (i + 1) % all.length : (i - 1 + all.length) % all.length)
-  }
-
+export default function WellnessBusinessPage() {
   return (
     <Layout>
       <SeoBasic
@@ -143,7 +109,7 @@ export default function WellnessBusinessPage({ data }) {
       </section>
 
       {/* CREDIBILITY */}
-      <section className="sec sec--paper">
+      <section className="sec">
         <div className="container story">
           <p className="story__p">
             <strong>I previously owned a luxury chocolate business stocked in Selfridges and Harvey Nichols.</strong> I sold online and through wholesale, ran subscriptions, and handled everything from packaging and product development to the website and email marketing.
@@ -159,13 +125,13 @@ export default function WellnessBusinessPage({ data }) {
             alt="Paul at a market stall"
             layout="fullWidth"
             quality={85}
-            style={{ marginTop: "var(--space-8)", borderRadius: "var(--radius-md)" }}
+            style={{ marginTop: "var(--space-8)", border: '3px solid #111', boxShadow: '6px 6px 0 #111' }}
           />
         </div>
       </section>
 
       {/* PAINS */}
-      <section className="sec sec--cream" id="problem">
+      <section className="sec" id="problem">
         <div className="container">
           <SectionHeading align="center" eyebrow="Sound familiar?" title="Sound familiar?" />
           <div className="grid-pains">
@@ -205,40 +171,8 @@ export default function WellnessBusinessPage({ data }) {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="sec sec--deep" id="testimonials">
-        <div className="container">
-          <SectionHeading align="center" onDark eyebrow="Don't just take my word for it" title="Real results from real businesses" />
-          {(() => {
-            const all = STATIC_TESTIMONIALS
-            const t = all[tstIdx]
-            return (
-              <div
-                className="pt-tst-slider"
-                onMouseDown={onDragStart}
-                onMouseUp={e => onDragEnd(all, e)}
-                onTouchStart={onDragStart}
-                onTouchEnd={e => onDragEnd(all, e)}
-              >
-                <TestimonialCard onBrand quote={t.quote} name={t.name} role={t.role} stars={<Stars />} />
-                <div className="pt-tst-slider__dots">
-                  {all.map((_, i) => (
-                    <button
-                      key={i}
-                      className={`pt-tst-slider__dot${i === tstIdx ? ' pt-tst-slider__dot--active' : ''}`}
-                      onClick={() => setTstIdx(i)}
-                      aria-label={`Go to testimonial ${i + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-            )
-          })()}
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="sec sec--cream">
+      <section className="sec">
         <div className="container">
           <CTABanner
             eyebrow="Let's build"

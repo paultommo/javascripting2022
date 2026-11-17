@@ -16,17 +16,17 @@ const HOW = [
   {
     icon: <MousePointerClick size={26} />, tone: 'brand',
     title: 'Better ads',
-    text: 'Campaign, targeting, copy and landing page - all working together so the right people click and the click is worth something.',
+    text: 'The right audience, the right message, and a landing page that follows through. So the people who click are the people most likely to book.',
   },
   {
     icon: <CalendarCheck size={26} />, tone: 'accent',
     title: 'A booking journey that converts',
-    text: 'Most leads go cold after the click. A booking page, instant confirmation and a follow-up sequence keep leads warm until they\'re ready.',
+    text: 'Most people who click an ad don\'t book straight away. A clear booking page, an instant confirmation, and a follow-up email keeps them moving until they do.',
   },
   {
     icon: <TrendingUp size={26} />, tone: 'berry',
     title: 'More booked leads. Same budget.',
-    text: 'You\'re already paying for the traffic. We make it work harder - without increasing what you spend on ads.',
+    text: 'You\'re already paying for the clicks. The goal is to get more bookings from the same budget - not spend more to get there.',
   },
 ]
 
@@ -58,17 +58,17 @@ const SECTORS = [
 ]
 
 const TrafficFunnel = () => (
-  <svg width="220" height="190" viewBox="0 0 220 190" fill="none" aria-hidden="true" style={{ display: 'block', maxWidth: '100%' }}>
-    <rect x="20" y="20" width="70" height="150" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
-    <text x="55" y="42" textAnchor="middle" fill="white" fontSize="11.5" fontWeight="700" fontFamily="inherit">Traffic</text>
-    <text x="55" y="58" textAnchor="middle" fill="rgba(255,255,255,0.65)" fontSize="10" fontFamily="inherit">you pay for</text>
-    <rect x="130" y="140" width="70" height="30" rx="6" fill="rgba(255,255,255,0.28)" stroke="white" strokeWidth="1.5" />
-    <text x="165" y="160" textAnchor="middle" fill="white" fontSize="11.5" fontWeight="700" fontFamily="inherit">Bookings</text>
-    <line x1="165" y1="22" x2="165" y2="136" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeDasharray="3 3" />
-    <text x="165" y="78" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="9.5" fontFamily="inherit">this gap</text>
-    <text x="165" y="94" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="9.5" fontFamily="inherit">= revenue</text>
-    <text x="165" y="110" textAnchor="middle" fill="rgba(255,255,255,0.45)" fontSize="9.5" fontFamily="inherit">left behind</text>
-    <line x1="10" y1="175" x2="210" y2="175" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+  <svg width="286" height="247" viewBox="0 0 220 190" fill="none" aria-hidden="true" style={{ display: 'block', maxWidth: '100%' }}>
+    <rect x="20" y="20" width="70" height="150" rx="6" fill="rgba(0,0,0,0.08)" stroke="rgba(0,0,0,0.4)" strokeWidth="1.5" />
+    <text x="55" y="42" textAnchor="middle" fill="#111" fontSize="11.5" fontWeight="700" fontFamily="inherit">Traffic</text>
+    <text x="55" y="58" textAnchor="middle" fill="rgba(0,0,0,0.55)" fontSize="10" fontFamily="inherit">you pay for</text>
+    <rect x="130" y="140" width="70" height="30" rx="6" fill="rgba(0,0,0,0.08)" stroke="#111" strokeWidth="1.5" />
+    <text x="165" y="160" textAnchor="middle" fill="#111" fontSize="11.5" fontWeight="700" fontFamily="inherit">Bookings</text>
+    <line x1="165" y1="22" x2="165" y2="136" stroke="rgba(0,0,0,0.25)" strokeWidth="1" strokeDasharray="3 3" />
+    <text x="165" y="78" textAnchor="middle" fill="#111" fontSize="9.5" fontFamily="inherit">this gap</text>
+    <text x="165" y="94" textAnchor="middle" fill="#111" fontSize="9.5" fontFamily="inherit">= revenue</text>
+    <text x="165" y="110" textAnchor="middle" fill="#111" fontSize="9.5" fontFamily="inherit">left behind</text>
+    <line x1="10" y1="175" x2="210" y2="175" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
   </svg>
 )
 
@@ -84,9 +84,10 @@ export default function IndexPage() {
       {/* HERO */}
       <Hero
         eyebrow="Paid Traffic · Service Businesses · London"
-        title="Paul Tomlinson: More booked leads from paid traffic without increasing ad spend"
+        title="More booked leads from your paid traffic"
+        subtitle="Without increasing your ad spend"
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
-        body="You're already paying for the clicks. I fix the ads and the booking journey so more of them turn into booked appointments - same budget, more revenue."
+        body="You're already paying for the clicks. I fix the ads and the booking journey so more of them turn into booked appointments - same budget, more leads."
         cta="Get a free audit"
         ctaHref={CTA_HREF}
         ctaSecondary="See how it works"
@@ -108,11 +109,11 @@ export default function IndexPage() {
       <section className="sec sec--brand">
         <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-10)', flexWrap: 'wrap', padding: 'var(--section-y) var(--gutter)' }}>
           <div style={{ flex: '1 1 300px' }}>
-            <p style={{ fontSize: 'var(--fs-h2)', fontFamily: 'var(--font-display)', fontWeight: '900', color: '#fff', lineHeight: 'var(--lh-snug)', margin: 0 }}>
+            <p style={{ fontSize: 'var(--fs-h2)', fontFamily: 'var(--font-display)', fontWeight: '900', color: '#111', lineHeight: 'var(--lh-snug)', margin: 0 }}>
               You are already paying for traffic to your website.
             </p>
             <p style={{ fontSize: 'var(--fs-lead)', color: '#fff', opacity: 0.85, marginTop: 'var(--space-5)', marginBottom: 0 }}>
-              Most of it doesn't turn into a booked appointment. I fix both sides - the ads and the journey after the click.
+              A big chunk of traffic doesn't turn into a booked appointment. I fix both sides - the ads and the journey after the click.
             </p>
           </div>
           <div style={{ flex: '0 0 auto' }}>
@@ -122,7 +123,7 @@ export default function IndexPage() {
       </section>
 
       {/* HOW */}
-      <section className="sec sec--cream" id="how">
+      <section className="sec" id="how">
         <div className="container">
           <SectionHeading
             align="center"
@@ -143,15 +144,15 @@ export default function IndexPage() {
       </section>
 
       {/* CTA */}
-      <section className="sec sec--brand">
+      <section className="sec">
         <div className="container">
           <CTABanner
             eyebrow="Free audit"
             title="Find out where your paid traffic is leaking"
-            subtitle="I'll review your ads and booking journey and show you the first three things I'd fix. No pitch deck, no obligation."
-            onDark
+            subtitle="I'll look at your ads and your booking process and tell you the first three things I'd change. No sales pitch, no obligation."
+            tone="cream"
             actions={
-              <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
+              <Button variant="primary" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
                 Get a free audit
               </Button>
             }

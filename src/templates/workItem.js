@@ -1,8 +1,13 @@
 import React from 'react'
+import { ArrowRight } from 'lucide-react'
 import Layout from '../components/layout'
+import Button from '../components/ds/Button'
+import CTABanner from '../components/ds/CTABanner'
 import { useQuery, gql } from '@apollo/client';
 import { motion } from "framer-motion";
 import { useLocation } from '@reach/router';
+
+const CTA_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free audit"
 
 const APOLLO_QUERY = gql`
 query Project($id: String!) {
@@ -69,11 +74,27 @@ function WorkItems(){
 
   return (
     <Layout>
-      <section>
-        <div className="work-container">
+      <section className="sec">
+        <div className="container">
           <div>
             {content}
           </div>
+        </div>
+      </section>
+
+      <section className="sec sec--brand">
+        <div className="container">
+          <CTABanner
+            eyebrow="Free audit"
+            title="Find out where your paid traffic is leaking"
+            subtitle="I'll review your ads and booking journey and show you the first three things I'd fix. No pitch, no obligation."
+            onDark
+            actions={
+              <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
+                Get a free audit
+              </Button>
+            }
+          />
         </div>
       </section>
     </Layout>

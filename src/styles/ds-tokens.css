@@ -2,12 +2,12 @@
    Paul Tomlinson Studio - Design Tokens
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800;900&family=Questrial&family=Pacifico&display=swap');
 
 :root {
   /* --- Fonts --- */
-  --font-display: 'Archivo', 'Hanken Grotesk', system-ui, sans-serif;
-  --font-body:    'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-display: 'League Spartan', system-ui, sans-serif;
+  --font-body:    'Questrial', system-ui, sans-serif;
 
   /* Weights */
   --fw-regular: 400;
@@ -38,7 +38,18 @@
   --ls-caps:    0.04em;
   --ls-eyebrow: 0.14em;
 
-  /* --- Green ramp (brand anchor) --- */
+  /* --- Neon / 90s brand palette --- */
+  --magenta:      #FF1A8C;
+  --magenta-dark: #CC1070;
+  --magenta-deep: #991055;
+  --neon-green:   #5EF26A;
+  --neon-teal:    #3BCFCF;
+  --near-black:   #0D0D0D;
+  --grad-y:       #F4BF2E;
+  --grad-p:       #E87A99;
+  --grad-brand:   linear-gradient(175deg, #F4BF2E 0%, #E87A99 100%);
+
+  /* --- Green ramp (kept for compatibility) --- */
   --green-50:  #F1F8F3;
   --green-100: #E0F0E5;
   --green-200: #BEE2CA;
@@ -50,29 +61,29 @@
   --green-800: #114227;
   --green-900: #0B3320;
 
-  /* --- Cream / paper neutrals --- */
+  /* --- Neutrals --- */
   --paper:        #FFFFFF;
-  --cream-50:     #FDF9F0;
-  --cream-100:    #FBF5E9;
-  --cream-200:    #F4EAD6;
-  --cream-300:    #EADFC6;
+  --cream-50:     #FAFAFA;
+  --cream-100:    #F5F5F5;
+  --cream-200:    #EBEBEB;
+  --cream-300:    #DCDCDC;
 
-  /* --- Ink (warm near-black green) --- */
-  --ink-900: #14211A;
-  --ink-700: #2E3D33;
-  --ink-500: #51614F;
-  --ink-300: #8A968A;
+  /* --- Ink --- */
+  --ink-900: #111111;
+  --ink-700: #333333;
+  --ink-500: #666666;
+  --ink-300: #999999;
 
   /* --- Yellow accent ramp --- */
   --yellow-300: #FFE08A;
   --yellow-400: #FFD24D;
-  --yellow-500: #FFC83D;
-  --yellow-600: #F2B100;
-  --yellow-700: #C98F00;
+  --yellow-500: var(--grad-y);
+  --yellow-600: #D4A020;
+  --yellow-700: #A87C00;
 
   /* --- Support hues --- */
-  --berry-500:  #C24A6B;
-  --sky-500:    #3E7CB1;
+  --berry-500:  var(--magenta);
+  --sky-500:    var(--neon-teal);
 
   /* --- Functional --- */
   --success: #2E8B4E;
@@ -80,30 +91,30 @@
   --danger:  #C0392B;
 
   /* --- Semantic Aliases --- */
-  --brand:            var(--green-600);
-  --brand-strong:     var(--green-700);
-  --brand-deep:       var(--green-800);
-  --accent:           var(--yellow-500);
+  --brand:            var(--magenta);
+  --brand-strong:     var(--magenta-dark);
+  --brand-deep:       var(--magenta-deep);
+  --accent:           var(--grad-y);
   --accent-strong:    var(--yellow-600);
 
-  --bg-page:          var(--cream-100);
-  --bg-alt:           var(--cream-200);
-  --bg-brand:         var(--green-600);
-  --bg-brand-deep:    var(--green-800);
+  --bg-page:          var(--paper);
+  --bg-alt:           var(--cream-100);
+  --bg-brand:         var(--magenta);
+  --bg-brand-deep:    var(--near-black);
   --surface-card:     var(--paper);
   --surface-sunken:   var(--cream-50);
 
   --text-strong:      var(--ink-900);
   --text-body:        var(--ink-700);
   --text-muted:       var(--ink-500);
-  --text-on-brand:    var(--cream-50);
+  --text-on-brand:    #FFFFFF;
   --text-on-accent:   var(--ink-900);
 
   --border-soft:      var(--cream-300);
   --border-strong:    var(--ink-900);
-  --border-brand:     var(--green-600);
+  --border-brand:     var(--magenta);
 
-  --focus-ring:       var(--green-500);
+  --focus-ring:       var(--magenta);
 
   /* --- Radii --- */
   --radius-sm:   8px;
@@ -123,7 +134,7 @@
   --shadow-lg: 0 24px 56px rgba(20, 33, 26, 0.14);
   --shadow-pop:       4px 4px 0 var(--ink-900);
   --shadow-pop-lg:    7px 7px 0 var(--ink-900);
-  --shadow-pop-brand: 6px 6px 0 var(--green-800);
+  --shadow-pop-brand: 6px 6px 0 var(--magenta-dark);
 
   /* --- Motion --- */
   --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);

@@ -188,7 +188,7 @@ export default function HairClinicsPage() {
       </section>
 
       {/* PAINS */}
-      <section className="sec sec--cream" id="problem">
+      <section className="sec" id="problem">
         <div className="container">
           <SectionHeading align="center" eyebrow="Sound familiar?" title="Sound familiar?" />
           <div className="grid-pains">
@@ -202,7 +202,7 @@ export default function HairClinicsPage() {
       </section>
 
       {/* PERSONAL STORY */}
-      <section className="sec--paper">
+      <section className="sec">
         <div className="container story">
           <p className="story__p">
             <strong>I had my hair transplant in London.</strong> Before I chose, I seriously considered Turkey and read so many forum threads. I enquired at a good number of clinics. However, what actually made the decision for me wasn’t a clinic’s website - it was a blogger who documented his entire journey and his life afterwards in honest detail: the consultation, the surgery day, the shedding, the results at twelve months. I trusted him more than any clinic’s before-and-after gallery.
@@ -247,7 +247,7 @@ export default function HairClinicsPage() {
       </section>
 
       {/* COMPLIANCE */}
-      <section className="sec sec--cream">
+      <section className="sec">
         <div className="container">
           <SectionHeading
             eyebrow="Built for a regulated industry"
@@ -266,7 +266,7 @@ export default function HairClinicsPage() {
       </section>
 
       {/* AUDIT OFFER */}
-      <section className="sec sec--paper" id="audit-offer">
+      <section className="sec" id="audit-offer">
         <div className="container container--narrow">
           <SectionHeading
             align="center"
@@ -293,7 +293,7 @@ export default function HairClinicsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="sec sec--cream">
+      <section className="sec">
         <div className="container container--narrow">
           <SectionHeading align="center" eyebrow="Questions clinics ask" title="Questions clinics ask" />
           <div className="pt-faq">

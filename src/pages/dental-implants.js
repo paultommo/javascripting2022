@@ -188,7 +188,7 @@ export default function DentalImplantsPage() {
       </section>
 
       {/* PAINS */}
-      <section className="sec sec--cream" id="problem">
+      <section className="sec" id="problem">
         <div className="container">
           <SectionHeading align="center" eyebrow="Sound familiar?" title="Sound familiar?" />
           <div className="grid-pains">
@@ -202,7 +202,7 @@ export default function DentalImplantsPage() {
       </section>
 
       {/* PERSONAL STORY */}
-      <section className="sec--paper">
+      <section className="sec">
         <div className="container story">
           <p className="story__p">
             <strong>I have had a lot of dental work over the years.</strong> Not implants, but the kind of treatment decisions that keep you up at night comparing prices across four countries. I know what it feels like to research at midnight, to find a clinic you trust but struggle to justify the London premium, to enquire somewhere and hear nothing back for two days.
@@ -247,7 +247,7 @@ export default function DentalImplantsPage() {
       </section>
 
       {/* COMPLIANCE */}
-      <section className="sec sec--cream">
+      <section className="sec">
         <div className="container">
           <SectionHeading
             eyebrow="Built for a regulated industry"
@@ -266,7 +266,7 @@ export default function DentalImplantsPage() {
       </section>
 
       {/* AUDIT OFFER */}
-      <section className="sec sec--paper" id="audit-offer">
+      <section className="sec" id="audit-offer">
         <div className="container container--narrow">
           <SectionHeading
             align="center"
@@ -293,7 +293,7 @@ export default function DentalImplantsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="sec sec--cream">
+      <section className="sec">
         <div className="container container--narrow">
           <SectionHeading align="center" eyebrow="Questions clinics ask" title="Questions clinics ask" />
           <div className="pt-faq">

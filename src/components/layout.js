@@ -20,6 +20,11 @@ const Layout = ({ children }) => (
       cookieName="MMCookie"
       expires={150}
       enableDeclineButton
+      onAccept={() => {
+        if (typeof window.gtag === 'function') {
+          window.gtag('consent', 'update', { analytics_storage: 'granted' })
+        }
+      }}
     >
       This website uses cookies to improve user experience. By using this website you consent to
       their usage in accordance with our{' '}

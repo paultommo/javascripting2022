@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { Menu, X } from 'lucide-react'
 import { InstagramIcon, LinkedInIcon } from './SocialIcons'
 import Button from './ds/Button'
-import LogoScript from './LogoScript'
+import logoNeon from '../images/logo-neon.png'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
@@ -13,16 +13,21 @@ const NAV_LINKS = [
 
 const CTA_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! Let's have a chat"
 
-function NavBar({ logo }) {
+function NavBar() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
     <>
-      <nav className="pt-nav">
+      <nav className={`pt-nav${scrolled ? ' pt-nav--scrolled' : ''}`}>
         <Link className="pt-nav__logo" to="/">
-          {logo
-            ? <img src={logo} alt="Paul Tomlinson" />
-            : <LogoScript height={32} strokeColor="#000" />}
+          <img src={logoNeon} alt="Paul Tomlinson" />
         </Link>
 
         <div className="pt-nav__links">

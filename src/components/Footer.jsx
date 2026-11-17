@@ -1,19 +1,72 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { Mail } from 'lucide-react'
 import { InstagramIcon, LinkedInIcon } from './SocialIcons'
-import LogoScript from './LogoScript'
+import logoNeon from '../images/logo-neon.png'
 
-function Footer({ logo }) {
+function GazettaForm() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [message, setMessage] = useState('')
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    if (!email || status === 'loading') return
+    setStatus('loading')
+
+    try {
+      const res = await fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      const data = await res.json()
+      if (data.result === 'success') {
+        setStatus('success')
+      } else {
+        setStatus('error')
+        setMessage(data.msg || 'Something went wrong.')
+      }
+    } catch {
+      setStatus('error')
+      setMessage('Network error — please try again.')
+    }
+  }
+
+  if (status === 'success') {
+    return <p className="pt-foot__mc-success">Check your inbox — we've sent you a confirmation email. Click the link to complete your sign up.</p>
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="pt-foot__mc-form" noValidate>
+      <div className="pt-foot__mc-row">
+        <input
+          type="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          placeholder="Your email"
+          required
+          disabled={status === 'loading'}
+          className="pt-foot__mc-input"
+        />
+        <button type="submit" disabled={status === 'loading'} className="pt-btn pt-btn--accent pt-btn--sm">
+          {status === 'loading' ? '…' : 'Sign up'}
+        </button>
+      </div>
+      {status === 'error' && <p className="pt-foot__mc-error">{message}</p>}
+    </form>
+  )
+
+}
+
+function Footer() {
   const year = new Date().getFullYear()
 
   return (
     <footer className="pt-foot">
       <div className="pt-foot__inner">
         <div className="pt-foot__brand">
-          {logo
-            ? <img src={logo} alt="Paul Tomlinson" />
-            : <LogoScript height={40} style={{ marginLeft: '-4px' }} strokeColor="#000" />}
+          <img src={logoNeon} alt="Paul Tomlinson" style={{ height: 57, width: 'auto' }} />
           <div className="pt-foot__social">
             <a href="https://www.instagram.com/paultommmo" target="_blank" rel="noreferrer" aria-label="Instagram">
               <InstagramIcon size={20} />
@@ -49,13 +102,9 @@ function Footer({ logo }) {
         </div>
 
         <div className="pt-foot__news">
-          <h4>Want to learn more?</h4>
-          <a
-            href="mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free consultation"
-            className="pt-btn pt-btn--accent pt-btn--md"
-          >
-            <span>Let's have a chat</span>
-          </a>
+          <h4>Sign up to the Gazetta</h4>
+          <p className="pt-foot__news-copy">One real finding from a real audit, every week. See exactly where paid traffic stops turning into bookings.</p>
+          <GazettaForm />
         </div>
       </div>
 

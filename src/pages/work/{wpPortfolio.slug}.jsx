@@ -9,7 +9,7 @@ import getImage from "../../functions/getImage"
 import Button from "../../components/ds/Button"
 import CTABanner from "../../components/ds/CTABanner"
 
-const CONSULT_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free consultation"
+const CONSULT_HREF = "mailto:hello@paultommo.com?subject=Hello Paul! I'd like a free audit"
 
 export const query = graphql`
   query($slug: String) {
@@ -144,7 +144,7 @@ const WpPortfolio = ({
       }
 
       {/* HEADER */}
-      <section className="sec sec--cream work-single__sec">
+      <section className="sec work-single__sec">
         <div className="container">
           <div className="work-single__header">
             <h1 className="work-single__title">{title}</h1>
@@ -176,15 +176,15 @@ const WpPortfolio = ({
       )}
 
       {/* CTA */}
-      <section className="sec sec--cream">
+      <section className="sec sec--brand">
         <div className="container">
           <CTABanner
-            eyebrow="Let's build"
-            title="Ready to build a store your brand deserves?"
-            subtitle="Start with a free 15-minute chat - no pitch, no pressure."
+            eyebrow="Free audit"
+            title="Find out where your paid traffic is leaking"
+            subtitle="I'll review your ads and booking journey and show you the first three things I'd fix. No pitch, no obligation."
             actions={
               <Button variant="accent" size="lg" href={CONSULT_HREF} iconRight={<ArrowRight size={16} />}>
-                Let's have a chat
+                Get a free audit
               </Button>
             }
           />
