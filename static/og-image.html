@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OG Image Preview — 1200×630</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800;900&family=Questrial&display=swap">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #ccc; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+
+    .og {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(175deg, #F4BF2E 0%, #E87A99 100%);
+      display: flex;
+      align-items: stretch;
+      flex-shrink: 0;
+    }
+
+    .dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.11) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+
+    .logo {
+      position: absolute;
+      top: 36px;
+      left: 48px;
+      height: 100px;
+      width: auto;
+      z-index: 2;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      padding: 0 0 0 220px;
+    }
+
+    .copy {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 48px 48px 20%;
+    }
+
+    .setup {
+      font-family: 'Questrial', system-ui, sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: rgba(17,17,17,0.72);
+      letter-spacing: 0.01em;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .headline {
+      font-family: 'League Spartan', system-ui, sans-serif;
+      font-size: 100px;
+      font-weight: 900;
+      color: #111111;
+      text-transform: uppercase;
+      letter-spacing: -0.025em;
+      line-height: 0.88;
+      text-wrap: balance;
+      margin: 0;
+    }
+
+    .url {
+      font-family: 'League Spartan', system-ui, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: rgba(17,17,17,0.55);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 24px;
+    }
+
+    .testimonial {
+      width: 400px;
+      flex-shrink: 0;
+      background: #111111;
+      border-left: 3px solid #F4BF2E;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 36px;
+    }
+
+    .t-label {
+      font-family: 'League Spartan', system-ui, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #FF1A8C;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+
+    .t-quote {
+      font-family: 'Questrial', system-ui, sans-serif;
+      font-size: 28px;
+      line-height: 1.45;
+      color: #FDFAF3;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .t-cite {
+      font-family: 'League Spartan', system-ui, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(253,250,243,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="og">
+    <div class="dots"></div>
+    <img class="logo" src="/images/logo-neon.png" alt="paultommo.com" />
+    <div class="content">
+      <div class="copy">
+        <p class="setup">You're already paying for the clicks.</p>
+        <h1 class="headline">Let's turn them into bookings.</h1>
+        <p class="url">paultommo.com</p>
+      </div>
+      <div class="testimonial">
+        <p class="t-label">Client result</p>
+        <blockquote class="t-quote">"Thank you again for the website. It is already converting visitors into customers."</blockquote>
+        <cite class="t-cite">— Luka Ivic, Monokl</cite>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
