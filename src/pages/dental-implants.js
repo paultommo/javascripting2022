@@ -147,7 +147,7 @@ export default function DentalImplantsPage() {
       {/* HERO */}
       <Hero
         eyebrow="Web Studio \xb7 Dental Implant Clinics"
-        title="More booked consultations from paid traffic without increasing ad spend"
+        title="Your ads are working. Your follow-up isn't."
         body="Your clinicians do the hard part. I fix everything that happens before the consultation: the reply, the follow-up and the months someone spends deciding whether London is worth the price difference."
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
         cta="Get a free enquiry audit"

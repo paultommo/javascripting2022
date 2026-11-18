@@ -110,7 +110,7 @@ export default function SmallBusinessPage({ data }) {
       {/* HERO */}
       <Hero
         eyebrow="Web Studio · Small Business"
-        title="Impactful websites for small businesses"
+        title="Your ads are working. Your follow-up isn't."
         body="Your business is brilliant - but does your website reflect that? I build high-converting websites for small businesses that capture attention, build trust, and generate leads."
         cta="Let's have a chat"
         ctaHref={CTA_HREF}

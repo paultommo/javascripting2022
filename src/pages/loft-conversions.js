@@ -119,7 +119,7 @@ export default function LoftConversionsPage() {
 
       <Hero
         eyebrow="Web Studio - Loft Conversion Companies"
-        title="More booked surveys from paid traffic without increasing ad spend"
+        title="Your ads are working. Your follow-up isn't."
         body="Your estimators do the hard part. I fix everything that happens before the survey: the reply, the follow-up and the months a homeowner spends deciding whether to go ahead."
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
         cta="Get a free enquiry audit"

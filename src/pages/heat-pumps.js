@@ -125,7 +125,7 @@ export default function HeatPumpsPage() {
 
       <Hero
         eyebrow="Web Studio - Heat Pump Installers"
-        title="More booked surveys from paid traffic without increasing ad spend"
+        title="Your ads are working. Your follow-up isn't."
         body="Your installers do the hard part. I fix everything that happens before the survey: the reply, the grant explanation, and the months a homeowner spends deciding whether a heat pump is right for them."
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
         cta="Get a free enquiry audit"

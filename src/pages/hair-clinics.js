@@ -147,7 +147,7 @@ export default function HairClinicsPage() {
       {/* HERO */}
       <Hero
         eyebrow="Web Studio \xb7 Hair Loss & Hair Transplant Clinics"
-        title="More booked consultations from paid traffic without increasing ad spend"
+        title="Your ads are working. Your follow-up isn't."
         body="Your surgeons do the hard part. I fix everything that happens before the consultation: the reply, the follow-up and the months someone spends deciding. I’ve had a hair transplant in London myself. I know what it took to find the right clinic - and I know what it felt like to get my confidence back afterwards."
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
         cta="Get a free enquiry audit"
