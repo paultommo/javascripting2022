@@ -116,7 +116,7 @@ const TrafficFunnel = () => (
 
 export default function HeatPumpsPage() {
   return (
-    <Layout>
+    <Layout hideNav>
       <SeoBasic
         title="More Booked Surveys for Heat Pump Installers"
         description="More booked surveys from paid traffic for heat pump installers. Fast replies, long-cycle follow-up and grant information that converts. Free enquiry audit."

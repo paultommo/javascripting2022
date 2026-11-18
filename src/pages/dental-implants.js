@@ -137,7 +137,7 @@ const TrafficFunnel = () => (
 
 export default function DentalImplantsPage() {
   return (
-    <Layout>
+    <Layout hideNav>
       <SeoBasic
         title="Patient Acquisition for Dental Implant Clinics in London"
         description="More booked consultations for London dental implant clinics. Fast replies, long-cycle follow-up and fewer no-shows. Free enquiry audit."
@@ -205,16 +205,16 @@ export default function DentalImplantsPage() {
       <section className="sec">
         <div className="container story">
           <p className="story__p">
-            <strong>I have had a lot of dental work over the years.</strong> Not implants, but the kind of treatment decisions that keep you up at night comparing prices across four countries. I know what it feels like to research at midnight, to find a clinic you trust but struggle to justify the London premium, to enquire somewhere and hear nothing back for two days.
+            <strong>I had a hair transplant in London.</strong> Not the same treatment, but the same kind of decision. The kind where you spend months on forums at midnight, compare clinics across four countries, and talk yourself in and out of it a dozen times before you enquire anywhere.
           </p>
           <p className="story__p">
-            What I found every time was that the clinic I chose wasn't the one with the most polished website. It was the one that responded quickly, explained the process clearly, and made me feel like they understood my concerns before I'd fully articulated them. That matters more than price, more often than clinics realise.
+            The clinic I chose wasn't the one with the best website. It was the one that replied quickly, explained things clearly, and made me feel like they'd done this a thousand times before I'd even booked a consultation. That's what made the difference. Not the price. Not the brochure.
           </p>
           <p className="story__p">
-            The patients considering implants in London are not just buying a clinical outcome. They are buying confidence - in a smile, in a conversation, in not thinking about it anymore. That's the decision they're making over the six months they spend on forums before they enquire anywhere.
+            Patients considering implants in London are making the same kind of decision. They're not just buying a clinical outcome. They're buying the feeling of not thinking about it anymore. And they're making that decision over six months of research before they contact anyone.
           </p>
           <p className="story__p">
-            That's what I build for clinics now: the patient journey that keeps London competitive.
+            That's what I build for clinics now: the patient journey that makes London worth it.
           </p>
         </div>
       </section>

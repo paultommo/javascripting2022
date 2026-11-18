@@ -1,16 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 import CookieConsent from 'react-cookie-consent'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import logoNeon from '../images/logo-neon.png'
 import '../styles/ds-tokens.css'
 import './layout.css'
 import './layout-custom.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, hideNav }) => (
   <>
-    <NavBar />
-    <main>{children}</main>
+    {!hideNav ? <NavBar /> : (
+      <header style={{ padding: '1rem clamp(1.25rem,4vw,3rem) 0' }}>
+        <Link to="/">
+          <img src={logoNeon} alt="Paul Tomlinson" style={{ height: 88, width: 'auto', display: 'block' }} />
+        </Link>
+      </header>
+    )}
+    <main className={hideNav ? 'lp-main' : undefined}>{children}</main>
     <Footer />
     <CookieConsent
       containerClasses="consentHolder"

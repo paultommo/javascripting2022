@@ -110,7 +110,7 @@ const TrafficFunnel = () => (
 
 export default function LoftConversionsPage() {
   return (
-    <Layout>
+    <Layout hideNav>
       <SeoBasic
         title="More Booked Surveys for Loft Conversion Companies"
         description="More booked surveys from paid traffic for loft conversion companies. Fast replies, long-cycle follow-up and fewer wasted survey slots. Free enquiry audit."

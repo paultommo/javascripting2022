@@ -449,6 +449,9 @@ img { display: block; max-width: 100%; }
 .pt-hero {
   max-width: var(--container); margin: 0 auto;
   padding: calc(var(--section-y) * 0.5) var(--gutter) var(--section-y);
+}
+.lp-main .pt-hero {
+  padding-top: 0;
   display: grid; grid-template-columns: 1.05fr .95fr;
   gap: var(--space-8); align-items: flex-start;
 }

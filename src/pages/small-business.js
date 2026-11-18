@@ -101,7 +101,7 @@ export default function SmallBusinessPage({ data }) {
   }
 
   return (
-    <Layout>
+    <Layout hideNav>
       <SeoBasic
         title="Impactful websites for small businesses - Paul Tomlinson"
         description="I build high-converting websites for small businesses that capture attention, build trust, and generate leads."
@@ -146,7 +146,7 @@ export default function SmallBusinessPage({ data }) {
       </section>
 
       {/* PAINS */}
-      <section className="sec sec--cream" id="problem">
+      <section className="sec" id="problem">
         <div className="container">
           <SectionHeading align="center" eyebrow="Sound familiar?" title="Sound familiar?" />
           <div className="grid-pains">
@@ -160,11 +160,10 @@ export default function SmallBusinessPage({ data }) {
       </section>
 
       {/* SERVICES */}
-      <section className="sec sec--brand" id="services">
+      <section className="sec" id="services">
         <div className="container">
           <SectionHeading
             align="center"
-            onDark
             eyebrow="Here's what I do about it"
             title="Here's what I do about it"
             subtitle="Everything a small business needs from a website - under one roof."
@@ -172,7 +171,7 @@ export default function SmallBusinessPage({ data }) {
           <div className="grid-svc">
             {SERVICES.map((s, i) => (
               <div className="svc-card" key={i}>
-                <ValueProp onDark align="center" icon={s.icon} iconTone={s.tone} title={s.title}>
+                <ValueProp align="center" icon={s.icon} iconTone={s.tone} title={s.title}>
                   {s.text}
                 </ValueProp>
               </div>
@@ -187,9 +186,9 @@ export default function SmallBusinessPage({ data }) {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="sec sec--deep" id="testimonials">
+      <section className="sec" id="testimonials">
         <div className="container">
-          <SectionHeading align="center" onDark eyebrow="Don't just take my word for it" title="Trusted by organisations" />
+          <SectionHeading align="center" eyebrow="Don't just take my word for it" title="Trusted by organisations" />
           {(() => {
             const all = [
               { quote: FEATURED_TESTIMONIAL.quote, name: FEATURED_TESTIMONIAL.name, role: FEATURED_TESTIMONIAL.role },
@@ -209,7 +208,7 @@ export default function SmallBusinessPage({ data }) {
                 onTouchStart={onDragStart}
                 onTouchEnd={e => onDragEnd(all, e)}
               >
-                <TestimonialCard onBrand quote={t.quote} name={t.name} role={t.role} stars={<Stars />} />
+                <TestimonialCard quote={t.quote} name={t.name} role={t.role} stars={<Stars />} />
                 <div className="pt-tst-slider__dots">
                   {all.map((_, i) => (
                     <button
@@ -227,7 +226,7 @@ export default function SmallBusinessPage({ data }) {
       </section>
 
       {/* CTA */}
-      <section className="sec sec--cream">
+      <section className="sec">
         <div className="container">
           <CTABanner
             eyebrow="Let's build"

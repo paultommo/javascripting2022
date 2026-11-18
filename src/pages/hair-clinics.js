@@ -137,7 +137,7 @@ const TrafficFunnel = () => (
 
 export default function HairClinicsPage() {
   return (
-    <Layout>
+    <Layout hideNav>
       <SeoBasic
         title="Patient Acquisition for Hair Transplant Clinics in London"
         description="More booked consultations for London hair loss and hair transplant clinics. Fast replies, long-cycle follow-up and fewer no-shows. Free enquiry audit."

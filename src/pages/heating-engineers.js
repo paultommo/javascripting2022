@@ -110,7 +110,7 @@ const TrafficFunnel = () => (
 
 export default function HeatingEngineersPage() {
   return (
-    <Layout>
+    <Layout hideNav>
       <SeoBasic
         title="More Booked Jobs for Heating Engineers"
         description="More booked jobs from paid traffic for heating engineers and boiler installation companies. Fast replies, follow-up and fewer wasted visits. Free enquiry audit."

@@ -61,7 +61,7 @@ const TrafficFunnel = () => (
 
 export default function WellnessBusinessPage() {
   return (
-    <Layout>
+    <Layout hideNav>
       <SeoBasic
         title="More bookings for your wellness business"
         description="I help saunas, cold plunge studios, med spas and aesthetic clinics in London turn their website into a booking machine - without spending more on ads."
@@ -118,7 +118,7 @@ export default function WellnessBusinessPage() {
             That experience taught me what high-end service and product businesses actually need online - not just technically, but commercially. I know what makes a customer book, what makes them come back, and what makes them leave without saying why.
           </p>
           <p className="story__p">
-            I now build websites and booking systems for wellness businesses across London. I’m a solo operator, so you deal directly with me from the first call to launch - and beyond.
+            I work with wellness businesses across London on exactly this - the gap between the click and the booking. I’m a solo operator, so you deal directly with me from the first conversation to the fix, and beyond.
           </p>
           <StaticImage
             src="../images/cocoahernando-markets.jpeg"
