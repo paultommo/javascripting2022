@@ -954,8 +954,6 @@ img { display: block; max-width: 100%; }
   background-color: var(--green-800) !important;
   font-family: var(--font-body) !important;
 }
-#rcc-decline-button { background-color: var(--ink-900) !important; border-radius: var(--radius-pill) !important; }
-#rcc-confirm-button { background-color: var(--accent) !important; color: var(--ink-900) !important; border-radius: var(--radius-pill) !important; }
 
 /* ── Work Funnel Case Studies ───────────────────────────────── */
 .wf-hero__title {

@@ -28,6 +28,38 @@ const Layout = ({ children, hideNav }) => (
       cookieName="MMCookie"
       expires={150}
       enableDeclineButton
+      buttonStyle={{
+        fontFamily: "'League Spartan', system-ui, sans-serif",
+        fontWeight: 800,
+        fontSize: '0.875rem',
+        textTransform: 'uppercase',
+        letterSpacing: '0.02em',
+        background: '#F4BF2E',
+        color: '#111111',
+        border: '2px solid #111111',
+        borderRadius: 0,
+        boxShadow: '4px 4px 0 #111111',
+        padding: '0.7em 1.5em',
+        cursor: 'pointer',
+        margin: '0 0 0 1rem',
+        lineHeight: 1,
+      }}
+      declineButtonStyle={{
+        fontFamily: "'League Spartan', system-ui, sans-serif",
+        fontWeight: 800,
+        fontSize: '0.875rem',
+        textTransform: 'uppercase',
+        letterSpacing: '0.02em',
+        background: 'transparent',
+        color: '#ffffff',
+        border: '2px solid rgba(255,255,255,0.5)',
+        borderRadius: 0,
+        boxShadow: 'none',
+        padding: '0.7em 1.5em',
+        cursor: 'pointer',
+        margin: '0 0 0 0.5rem',
+        lineHeight: 1,
+      }}
       onAccept={() => {
         if (typeof window.gtag === 'function') {
           window.gtag('consent', 'update', { analytics_storage: 'granted' })
