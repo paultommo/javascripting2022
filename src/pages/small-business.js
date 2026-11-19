@@ -112,7 +112,7 @@ export default function SmallBusinessPage({ data }) {
         eyebrow="Web Studio · Small Business"
         title="Your ads are working. Your follow-up isn't."
         body="Your business is brilliant - but does your website reflect that? I build high-converting websites for small businesses that capture attention, build trust, and generate leads."
-        cta="Let's have a chat"
+        cta="Get a free video audit today"
         ctaHref={CTA_HREF}
         hideChips
         onPortfolio={() => {
@@ -179,7 +179,7 @@ export default function SmallBusinessPage({ data }) {
           </div>
           <div className="sec__cta">
             <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
-              Let's have a chat
+              Get a free video audit today
             </Button>
           </div>
         </div>
@@ -234,7 +234,7 @@ export default function SmallBusinessPage({ data }) {
             subtitle="Start with a free 15-minute chat - no pitch, no pressure."
             actions={
               <Button variant="accent" size="lg" href={CONSULT_HREF} iconRight={<ArrowRight size={16} />}>
-                Let's have a chat
+                Get a free video audit today
               </Button>
             }
           />

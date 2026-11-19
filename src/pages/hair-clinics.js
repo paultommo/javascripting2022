@@ -150,7 +150,7 @@ export default function HairClinicsPage() {
         title="Your ads are working. Your follow-up isn't."
         body="Your surgeons do the hard part. I fix everything that happens before the consultation: the reply, the follow-up and the months someone spends deciding. I’ve had a hair transplant in London myself. I know what it took to find the right clinic - and I know what it felt like to get my confidence back afterwards."
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
-        cta="Get a free enquiry audit"
+        cta="Get a free video audit today"
         ctaHref={AUDIT_HREF}
         ctaSecondary="See how it works"
         proof="Founder-led \xb7 London-based \xb7 A hair transplant patient myself"
@@ -240,7 +240,7 @@ export default function HairClinicsPage() {
           </div>
           <div className="sec__cta">
             <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
-              Get a free enquiry audit
+              Get a free video audit today
             </Button>
           </div>
         </div>
@@ -308,9 +308,9 @@ export default function HairClinicsPage() {
           <SectionHeading
             align="center"
             onDark
-            eyebrow="Free enquiry audit"
-            title="Find out where your patients are slipping away"
-            subtitle="Request a free enquiry audit. You’ll get a short video within 5 working days showing the first three things I’d fix."
+            eyebrow="Free · No obligation"
+            title="Let me show you in a video where your paid traffic is leaking"
+            subtitle="Drop your website URL below. I’ll go through your enquiry process the way a real patient would and send you a 5-minute video within 5 working days."
           />
           <form
             name="hair-clinic-audit"
@@ -321,27 +321,15 @@ export default function HairClinicsPage() {
           >
             <input type="hidden" name="form-name" value="hair-clinic-audit" />
             <label className="pt-audit-form__field">
-              <span>Name</span>
-              <input type="text" name="name" required placeholder="Your name" />
-            </label>
-            <label className="pt-audit-form__field">
-              <span>Clinic name</span>
-              <input type="text" name="clinic" required placeholder="Your clinic" />
-            </label>
-            <label className="pt-audit-form__field">
-              <span>Website</span>
+              <span>Your clinic website</span>
               <input type="url" name="website" required placeholder="https://yourclinic.co.uk" />
             </label>
             <label className="pt-audit-form__field">
-              <span>Email</span>
+              <span>Where should I send the video?</span>
               <input type="email" name="email" required placeholder="you@yourclinic.co.uk" />
             </label>
-            <label className="pt-audit-form__field">
-              <span>Phone <em>(optional)</em></span>
-              <input type="tel" name="phone" placeholder="+44..." />
-            </label>
             <button type="submit" className="pt-btn pt-btn--accent pt-btn--lg pt-audit-form__submit">
-              Request your free audit <ArrowRight size={16} />
+              Send me a free video audit <ArrowRight size={16} />
             </button>
           </form>
         </div>

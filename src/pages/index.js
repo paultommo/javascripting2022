@@ -88,7 +88,7 @@ export default function IndexPage() {
         subtitle="Without increasing your ad spend"
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
         body="You're already paying for the clicks. I fix the ads and the booking journey so more of them turn into booked appointments - same budget, more leads."
-        cta="Get a free audit"
+        cta="Get a free video audit today"
         ctaHref={CTA_HREF}
         ctaSecondary="See how it works"
         ctaSecondaryHref="#how"
@@ -153,7 +153,7 @@ export default function IndexPage() {
             tone="cream"
             actions={
               <Button variant="primary" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
-                Get a free audit
+                Get a free video audit today
               </Button>
             }
           />

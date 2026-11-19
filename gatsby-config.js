@@ -59,8 +59,8 @@ siteMetadata: {
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `gatsby-starter-default`,
-      short_name: `starter`,
+      name: `Paul Tomlinson`,
+      short_name: `PaulTommo`,
       start_url: `/`,
       background_color: `#ffffff`,
       // This will impact how browsers show your PWA/website

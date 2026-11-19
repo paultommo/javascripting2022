@@ -128,7 +128,7 @@ export default function HeatPumpsPage() {
         title="Your ads are working. Your follow-up isn't."
         body="Your installers do the hard part. I fix everything that happens before the survey: the reply, the grant explanation, and the months a homeowner spends deciding whether a heat pump is right for them."
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
-        cta="Get a free enquiry audit"
+        cta="Get a free video audit today"
         ctaHref={AUDIT_HREF}
         ctaSecondary="See how it works"
         proof="Founder-led - London-based"
@@ -197,7 +197,7 @@ export default function HeatPumpsPage() {
           </div>
           <div className="sec__cta">
             <Button variant="accent" size="lg" href={AUDIT_HREF} iconRight={<ArrowRight size={16} />}>
-              Get a free enquiry audit
+              Get a free video audit today
             </Button>
           </div>
         </div>
@@ -235,9 +235,9 @@ export default function HeatPumpsPage() {
           <SectionHeading
             align="center"
             onDark
-            eyebrow="Free enquiry audit"
-            title="Find out where your leads are slipping away"
-            subtitle="Request a free enquiry audit. You'll get a short video within 5 working days showing the first three things I'd fix."
+            eyebrow="Free · No obligation"
+            title="Let me show you in a video where your paid traffic is leaking"
+            subtitle="Drop your website URL below. I'll go through your enquiry process the way a real customer would and send you a 5-minute video within 5 working days."
           />
           <form
             name="heat-pump-audit"
@@ -248,27 +248,15 @@ export default function HeatPumpsPage() {
           >
             <input type="hidden" name="form-name" value="heat-pump-audit" />
             <label className="pt-audit-form__field">
-              <span>Name</span>
-              <input type="text" name="name" required placeholder="Your name" />
-            </label>
-            <label className="pt-audit-form__field">
-              <span>Company name</span>
-              <input type="text" name="company" required placeholder="Your company" />
-            </label>
-            <label className="pt-audit-form__field">
-              <span>Website</span>
+              <span>Your company website</span>
               <input type="url" name="website" required placeholder="https://yourcompany.co.uk" />
             </label>
             <label className="pt-audit-form__field">
-              <span>Email</span>
+              <span>Where should I send the video?</span>
               <input type="email" name="email" required placeholder="you@yourcompany.co.uk" />
             </label>
-            <label className="pt-audit-form__field">
-              <span>Phone <em>(optional)</em></span>
-              <input type="tel" name="phone" placeholder="+44..." />
-            </label>
             <button type="submit" className="pt-btn pt-btn--accent pt-btn--lg pt-audit-form__submit">
-              Request your free audit <ArrowRight size={16} />
+              Send me a free video audit <ArrowRight size={16} />
             </button>
           </form>
         </div>

@@ -54,7 +54,7 @@ export default function AboutPage() {
             </p>
             <div className="about-hero__actions">
               <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
-                Get a free audit
+                Get a free video audit today
               </Button>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
             onDark
             actions={
               <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
-                Get a free audit
+                Get a free video audit today
               </Button>
             }
           />

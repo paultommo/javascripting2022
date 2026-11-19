@@ -73,7 +73,7 @@ export default function WellnessBusinessPage() {
         title="Your ads are working. Your follow-up isn't."
         testimonial={{ quote: "Thank you again for the website...it is already converting visitors into customers.", attribution: "Luka Ivic, Monokl" }}
         body="You’ve built an incredible experience - a sauna, a cold plunge studio, a med spa, a wellness clinic. Now let’s make sure every person who finds you online actually books - and comes back."
-        cta="Let’s have a chat"
+        cta="Get a free video audit today"
         ctaHref={CTA_HREF}
         hideChips
         onPortfolio={() => {
@@ -165,7 +165,7 @@ export default function WellnessBusinessPage() {
           </div>
           <div className="sec__cta">
             <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
-              Let’s have a chat
+              Get a free video audit today
             </Button>
           </div>
         </div>
