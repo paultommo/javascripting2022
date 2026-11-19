@@ -16,7 +16,7 @@ function Hero({ eyebrow, title, subtitle, body, ctaHref, cta, heroImage, onPortf
           </figure>
         )}
         <div className="pt-hero__actions">
-          <Button variant="accent" size="lg" href={ctaHref} iconRight={<ArrowRight size={18} />}>
+          <Button variant="primary" size="lg" href={ctaHref} iconRight={<ArrowRight size={18} />}>
             {cta}
           </Button>
           {ctaSecondary && (
