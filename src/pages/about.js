@@ -53,7 +53,7 @@ export default function AboutPage() {
               And yes - the 90s vibe is deliberate. I grew up in the decade and love it.
             </p>
             <div className="about-hero__actions">
-              <Button variant="accent" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
+              <Button variant="primary" size="lg" href={CTA_HREF} iconRight={<ArrowRight size={16} />}>
                 Get a free video audit today
               </Button>
             </div>
