@@ -69,12 +69,12 @@ export default function WorkFunnelPage({ meta, hero, problems, fixes, gapClosed 
       <section className="sec sec--brand">
         <div className="container">
           <CTABanner
-            eyebrow="Free audit"
-            title="Find out where your paid traffic is leaking"
-            subtitle="I'll review your ads and booking journey and show you the first three things I'd fix. No pitch, no obligation."
+            eyebrow="Free · No obligation"
+            title="Let me show you in a video where your paid traffic is leaking"
+            subtitle="I'll go through your enquiry process the way a real customer would and send you a 5-minute video showing the first three things I'd fix. No pitch, no obligation."
             actions={
               <Button variant="accent" size="lg" href={AUDIT_HREF} iconRight={<ArrowRight size={16} />}>
-                Get a free audit
+                Get a free video audit today
               </Button>
             }
           />

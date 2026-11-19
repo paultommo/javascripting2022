@@ -15,7 +15,6 @@ function Hero({ eyebrow, title, subtitle, body, ctaHref, cta, heroImage, onPortf
             <figcaption className="pt-hero__testimonial-cite">- {testimonial.attribution}</figcaption>
           </figure>
         )}
-        <p className="pt-hero__body">{body}</p>
         <div className="pt-hero__actions">
           <Button variant="accent" size="lg" href={ctaHref} iconRight={<ArrowRight size={18} />}>
             {cta}
@@ -27,6 +26,7 @@ function Hero({ eyebrow, title, subtitle, body, ctaHref, cta, heroImage, onPortf
             <Button variant="secondary" size="lg" onClick={onPortfolio}>See the work</Button>
           )}
         </div>
+        <p className="pt-hero__body">{body}</p>
         <div className="pt-hero__proof">
           <BadgeCheck size={18} style={{ color: 'var(--brand)', flexShrink: 0 }} />
           <span>{proof || 'Founder-led \xb7 Shopify Plus partner \xb7 Based in London'}</span>

@@ -472,7 +472,7 @@ img { display: block; max-width: 100%; }
   font-size: var(--fs-lead); line-height: 1.5; color: var(--text-body);
   max-width: 46ch; margin: 0 0 var(--space-6);
 }
-.pt-hero__actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.pt-hero__actions { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-6); }
 .pt-hero__proof {
   display: none;
 }
